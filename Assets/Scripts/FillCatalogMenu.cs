@@ -51,7 +51,8 @@ public class FillCatalogMenu : MonoBehaviour
         CatalogInfo assetList = JsonUtility.FromJson<CatalogInfo>(jsonFile.text);
 
         catalogInventory.rootVisualElement.Q<Label>("roomName").text = assetList.catalogInfo[currentRoom].room;
-        
+
+    
         foreach (Category category in assetList.catalogInfo[currentRoom].categories)
         {
             TemplateContainer catalogTypeContainer = catalogTypeTemplate.Instantiate();
@@ -61,6 +62,7 @@ public class FillCatalogMenu : MonoBehaviour
                 TemplateContainer cardContainer = cardTemplate.Instantiate();
                 cardContainer.Q<Label>("furnitureName").text = furniture.size;  
                 cardContainer.Q<Label>("furnitureSize").text = "("+furniture.width+" x "+furniture.length+")";
+                cardContainer.Q<VisualElement>("furnitureImage").style.backgroundImage = (StyleBackground)Resources.Load<Texture>("Thumbnails/placeHolder");
 
                 catalogTypeContainer.Q("furnitureList").Add(cardContainer);
             }

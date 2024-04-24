@@ -127,6 +127,8 @@
     align-self: center;
     align-items: center;
     justify-content: center;
+    background-image: none;
+    -unity-background-scale-mode: scale-and-crop;
 }
 
 .sizeLabel {
