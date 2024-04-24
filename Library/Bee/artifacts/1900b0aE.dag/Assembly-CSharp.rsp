@@ -361,6 +361,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Input/PlayerInput.cs"
 "Assets/Scripts/EventOnlyInteractable.cs"
+"Assets/Scripts/FillCatalogMenu.cs"
 "Assets/Scripts/InputManager.cs"
 "Assets/Scripts/Interactable.cs"
 "Assets/Scripts/InteractablesScripts/cubeTest.cs"
