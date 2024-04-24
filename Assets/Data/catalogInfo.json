@@ -1,0 +1,317 @@
+{
+    "catalogInfo":[
+        {
+            "room": "Dormitorio",
+            "categories":[
+                {
+                    "category": "Camas",
+                    "types":[
+                        {
+                            "size":"1 plaza",
+                            "width": "0.90 m",
+                            "length": "1.90 m"
+                        },
+                        {
+                            "size":"1.5 plaza",
+                            "width": "1.35 m",
+                            "length": "1.90 m"
+                        },
+                        {
+                            "size":"Queen",
+                            "width": "1.50 m",
+                            "length": "1.90 m"
+                        },
+                        {
+                            "size":"King",
+                            "width": "1.80 m",
+                            "length": "2.00 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Escritorios",
+                    "types":[
+                        {
+                            "size":"Mediano",
+                            "width": "1.10 m",
+                            "length": "0.60 m"
+                        },
+                        {
+                            "size":"Esquina",
+                            "width": "1.75 m",
+                            "length": "1.30 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Mesas de noche",
+                    "types":[
+                        {
+                            "size":"Mediana",
+                            "width": "0.65 m",
+                            "length": "0.55 m"
+                        },
+                        {
+                            "size":"Pequeña",
+                            "width": "0.35 m",
+                            "length": "0.35 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Armarios",
+                    "types":[
+                        {
+                            "size":"Bajo",
+                            "width": "0.90 m",
+                            "length": "0.40 m"
+                        },
+                        {
+                            "size":"Mediano",
+                            "width": "0.90 m",
+                            "length": "0.60 m"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "1.80 m",
+                            "length": "0.60 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Asientos",
+                    "types":[
+                        {
+                            "size":"Silla",
+                            "width": "0.50 m",
+                            "length": "0.57 m"
+                        },
+                        {
+                            "size":"Sillon",
+                            "width": "0.80 m",
+                            "length": "0.87 m"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "room": "Cocina",
+            "categories":[
+                {
+                    "category": "Electrodomésticos",
+                    "types":[
+                        {
+                            "size":"Estufa",
+                            "width": "0.70 m",
+                            "length": "0.75 m"
+                        },
+                        {
+                            "size":"Nevera Mediana",
+                            "width": "0.60 m",
+                            "length": "0.70 m"
+                        },
+                        {
+                            "size":"Nevera de puerta doble",
+                            "width": "1.00 m",
+                            "length": "0.80 m"
+                        },
+                        {
+                            "size":"Nevera de puerta francesa",
+                            "width": "1.20 m",
+                            "length": "0.90 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Gabinetes",
+                    "types":[
+                        {
+                            "size":"Pequeño",
+                            "width": "0.50 m",
+                            "length": "0.50 m"
+                        },
+                        {
+                            "size":"Mediano",
+                            "width": "1.00 m",
+                            "length": "0.60 m"
+                        },
+                        {
+                            "size":"Esquina",
+                            "width": "2.60 m",
+                            "length": "1.50 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Fregaderos",
+                    "types":[
+                        {
+                            "size":"Mediano",
+                            "width": "0.90 m",
+                            "length": "0.65 m"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "1.30 m",
+                            "length": "0.60 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Asientos",
+                    "types":[
+                        {
+                            "size":"Banco",
+                            "width": "0.50 m",
+                            "length": "0.40 m"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "room": "Sala",
+            "categories":[
+                {
+                    "category": "Sofás",
+                    "types":[
+                        {
+                            "size":"Individual",
+                            "width": "0.80 m",
+                            "length": "0.80 m"
+                        },
+                        {
+                            "size":"2 plazas",
+                            "width": "1.40 m",
+                            "length": "0.80 m"
+                        },
+                        {
+                            "size":"3 plazas",
+                            "width": "1.80 m",
+                            "length": "0.80 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Mesas auxiliares",
+                    "types":[
+                        {
+                            "size":"Pequeña",
+                            "width": "0.40 m",
+                            "length": "0.30 m"
+                        },
+                        {
+                            "size":"Mediana",
+                            "width": "0.50 m",
+                            "length": "0.40 m"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "0.60 m",
+                            "length": "0.50 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Gabinetes",
+                    "types":[
+                        {
+                            "size":"Mediano",
+                            "width": "1.20 m",
+                            "length": "0.50 m"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "2.00 m",
+                            "length": "0.45 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Estanterías",
+                    "types":[
+                        {
+                            "size":"Pequeña",
+                            "width": "0.40 m",
+                            "length": "0.35 m"
+                        },
+                        {
+                            "size":"Mediana",
+                            "width": "0.60 m",
+                            "length": "0.40 m"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "1.20 m",
+                            "length": "0.40 m"
+                        },
+                        {
+                            "size":"Esquina",
+                            "width": "0.30 m",
+                            "length": "0.30 m"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "room": "Comedor",
+            "categories":[
+                {
+                    "category": "Mesas",
+                    "types":[
+                        {
+                            "size":"Para 4 personas",
+                            "width": "0.75 m",
+                            "length": "1.20 m"
+                        },
+                        {
+                            "size":"Para 6 personas",
+                            "width": "0.75 m",
+                            "length": "1.50 m"
+                        },
+                        {
+                            "size":"Para 8 personas",
+                            "width": "0.90 m",
+                            "length": "1.80 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Aparadores",
+                    "types":[
+                        {
+                            "size":"Pequeño",
+                            "width": "0.50 m",
+                            "length": "0.60 m"
+                        },
+                        {
+                            "size":"Mediano",
+                            "width": "0.40 m",
+                            "length": "1.20 m"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "0.50 m",
+                            "length": "1.60 m"
+                        }
+                    ]
+                },
+                {
+                    "category": "Asientos",
+                    "types":[
+                        {
+                            "size":"Silla",
+                            "width": "0.50 m",
+                            "length": "0.55 m"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
