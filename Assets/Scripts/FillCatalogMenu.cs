@@ -22,6 +22,8 @@ public class FillCatalogMenu : MonoBehaviour
         public string size;
         public string width;
         public string length;
+
+        public string thumbnail;
     }
 
     [Serializable]
@@ -44,7 +46,7 @@ public class FillCatalogMenu : MonoBehaviour
     }
 
     private void OnEnable(){
-        currentRoom = 1;
+        currentRoom = 0;
 
         catalogInventory = GetComponent<UIDocument>();
 
@@ -62,7 +64,7 @@ public class FillCatalogMenu : MonoBehaviour
                 TemplateContainer cardContainer = cardTemplate.Instantiate();
                 cardContainer.Q<Label>("furnitureName").text = furniture.size;  
                 cardContainer.Q<Label>("furnitureSize").text = "("+furniture.width+" x "+furniture.length+")";
-                cardContainer.Q<VisualElement>("furnitureImage").style.backgroundImage = (StyleBackground)Resources.Load<Texture>("Thumbnails/placeHolder");
+                cardContainer.Q<VisualElement>("furnitureImage").style.backgroundImage = (StyleBackground)Resources.Load<Texture>("Thumbnails/"+furniture.thumbnail);
 
                 catalogTypeContainer.Q("furnitureList").Add(cardContainer);
             }

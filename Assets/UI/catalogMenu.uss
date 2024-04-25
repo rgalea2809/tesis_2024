@@ -17,7 +17,7 @@
     opacity: 1;
     visibility: visible;
     overflow: hidden;
-    width: 65%;
+    width: 70%;
     height: 80px;
     align-self: auto;
     max-height: 90%;

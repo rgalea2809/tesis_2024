@@ -9,22 +9,26 @@
                         {
                             "size":"1 plaza",
                             "width": "0.90 m",
-                            "length": "1.90 m"
+                            "length": "1.90 m",
+                            "thumbnail": "cama-1-plaza"
                         },
                         {
                             "size":"1.5 plaza",
                             "width": "1.35 m",
-                            "length": "1.90 m"
+                            "length": "1.90 m",
+                            "thumbnail": "cama-1-5-plaza"
                         },
                         {
                             "size":"Queen",
                             "width": "1.50 m",
-                            "length": "1.90 m"
+                            "length": "1.90 m",
+                            "thumbnail": "cama-queen"
                         },
                         {
                             "size":"King",
                             "width": "1.80 m",
-                            "length": "2.00 m"
+                            "length": "2.00 m",
+                            "thumbnail": "cama-king"
                         }
                     ]
                 },
@@ -34,12 +38,14 @@
                         {
                             "size":"Mediano",
                             "width": "1.10 m",
-                            "length": "0.60 m"
+                            "length": "0.60 m",
+                            "thumbnail": "desk"
                         },
                         {
                             "size":"Esquina",
                             "width": "1.75 m",
-                            "length": "1.30 m"
+                            "length": "1.30 m",
+                            "thumbnail": "escritorio-esquina"
                         }
                     ]
                 },
@@ -49,12 +55,14 @@
                         {
                             "size":"Mediana",
                             "width": "0.65 m",
-                            "length": "0.55 m"
+                            "length": "0.55 m",
+                            "thumbnail": "mesa-de-noche"
                         },
                         {
                             "size":"Pequeña",
                             "width": "0.35 m",
-                            "length": "0.35 m"
+                            "length": "0.35 m",
+                            "thumbnail": "mesa-de-noche-pequeña"
                         }
                     ]
                 },
@@ -64,17 +72,20 @@
                         {
                             "size":"Bajo",
                             "width": "0.90 m",
-                            "length": "0.40 m"
+                            "length": "0.40 m",
+                            "thumbnail": "armario-bajo"
                         },
                         {
                             "size":"Mediano",
                             "width": "0.90 m",
-                            "length": "0.60 m"
+                            "length": "0.60 m",
+                            "thumbnail": "armario"
                         },
                         {
                             "size":"Grande",
                             "width": "1.80 m",
-                            "length": "0.60 m"
+                            "length": "0.60 m",
+                            "thumbnail": "armario-grande"
                         }
                     ]
                 },
@@ -84,12 +95,14 @@
                         {
                             "size":"Silla",
                             "width": "0.50 m",
-                            "length": "0.57 m"
+                            "length": "0.57 m",
+                            "thumbnail": "silla-dormitorio"
                         },
                         {
                             "size":"Sillon",
                             "width": "0.80 m",
-                            "length": "0.87 m"
+                            "length": "0.87 m",
+                            "thumbnail": "sofa-dormitorio"
                         }
                     ]
                 }
@@ -105,22 +118,26 @@
                         {
                             "size":"Estufa",
                             "width": "0.70 m",
-                            "length": "0.75 m"
+                            "length": "0.75 m",
+                            "thumbnail": "estufa"
                         },
                         {
                             "size":"Nevera Mediana",
                             "width": "0.60 m",
-                            "length": "0.70 m"
+                            "length": "0.70 m",
+                            "thumbnail": "refrigerador"
                         },
                         {
                             "size":"Nevera de puerta doble",
                             "width": "1.00 m",
-                            "length": "0.80 m"
+                            "length": "0.80 m",
+                            "thumbnail": "refrigerador-puerta-doble"
                         },
                         {
                             "size":"Nevera de puerta francesa",
                             "width": "1.20 m",
-                            "length": "0.90 m"
+                            "length": "0.90 m",
+                            "thumbnail": "refrigerador-puerta-francesa"
                         }
                     ]
                 },
@@ -130,17 +147,20 @@
                         {
                             "size":"Pequeño",
                             "width": "0.50 m",
-                            "length": "0.50 m"
+                            "length": "0.50 m",
+                            "thumbnail": "gabinete-cocina-pequeño"
                         },
                         {
                             "size":"Mediano",
                             "width": "1.00 m",
-                            "length": "0.60 m"
+                            "length": "0.60 m",
+                            "thumbnail": "gabinete-cocina"
                         },
                         {
                             "size":"Esquina",
                             "width": "2.60 m",
-                            "length": "1.50 m"
+                            "length": "1.50 m",
+                            "thumbnail": "gabinete-cocina-esquina"
                         }
                     ]
                 },
@@ -150,12 +170,14 @@
                         {
                             "size":"Mediano",
                             "width": "0.90 m",
-                            "length": "0.65 m"
+                            "length": "0.65 m",
+                            "thumbnail": "fregadero"
                         },
                         {
                             "size":"Grande",
                             "width": "1.30 m",
-                            "length": "0.60 m"
+                            "length": "0.60 m",
+                            "thumbnail": "fregadero-grande"
                         }
                     ]
                 },
@@ -165,7 +187,8 @@
                         {
                             "size":"Banco",
                             "width": "0.50 m",
-                            "length": "0.40 m"
+                            "length": "0.40 m",
+                            "thumbnail": "banco"
                         }
                     ]
                 }
@@ -181,17 +204,20 @@
                         {
                             "size":"Individual",
                             "width": "0.80 m",
-                            "length": "0.80 m"
+                            "length": "0.80 m",
+                            "thumbnail": "sofa-sala-individual"
                         },
                         {
                             "size":"2 plazas",
                             "width": "1.40 m",
-                            "length": "0.80 m"
+                            "length": "0.80 m",
+                            "thumbnail": "sofa-sala-2-plazas"
                         },
                         {
                             "size":"3 plazas",
                             "width": "1.80 m",
-                            "length": "0.80 m"
+                            "length": "0.80 m",
+                            "thumbnail": "sofa-sala-3-plazas"
                         }
                     ]
                 },
@@ -201,17 +227,20 @@
                         {
                             "size":"Pequeña",
                             "width": "0.40 m",
-                            "length": "0.30 m"
+                            "length": "0.30 m",
+                            "thumbnail": "mesa-de-centro-pequeña"
                         },
                         {
                             "size":"Mediana",
                             "width": "0.50 m",
-                            "length": "0.40 m"
+                            "length": "0.40 m",
+                            "thumbnail": "mesa-de-centro"
                         },
                         {
                             "size":"Grande",
                             "width": "0.60 m",
-                            "length": "0.50 m"
+                            "length": "0.50 m",
+                            "thumbnail": "mesa-de-centro-grande"
                         }
                     ]
                 },
@@ -221,12 +250,14 @@
                         {
                             "size":"Mediano",
                             "width": "1.20 m",
-                            "length": "0.50 m"
+                            "length": "0.50 m",
+                            "thumbnail": "gabinete-tv"
                         },
                         {
                             "size":"Grande",
                             "width": "2.00 m",
-                            "length": "0.45 m"
+                            "length": "0.45 m",
+                            "thumbnail": "gabinete-tv-grande"
                         }
                     ]
                 },
@@ -236,22 +267,26 @@
                         {
                             "size":"Pequeña",
                             "width": "0.40 m",
-                            "length": "0.35 m"
+                            "length": "0.35 m",
+                            "thumbnail": "estanteria-pequeña"
                         },
                         {
                             "size":"Mediana",
                             "width": "0.60 m",
-                            "length": "0.40 m"
+                            "length": "0.40 m",
+                            "thumbnail": "estanteria"
                         },
                         {
                             "size":"Grande",
                             "width": "1.20 m",
-                            "length": "0.40 m"
+                            "length": "0.40 m",
+                            "thumbnail": "estanteria-grande"
                         },
                         {
                             "size":"Esquina",
                             "width": "0.30 m",
-                            "length": "0.30 m"
+                            "length": "0.30 m",
+                            "thumbnail": "estanteria-esquina"
                         }
                     ]
                 }
@@ -267,17 +302,20 @@
                         {
                             "size":"Para 4 personas",
                             "width": "0.75 m",
-                            "length": "1.20 m"
+                            "length": "1.20 m",
+                            "thumbnail": "mesa-4-personas"
                         },
                         {
                             "size":"Para 6 personas",
                             "width": "0.75 m",
-                            "length": "1.50 m"
+                            "length": "1.50 m",
+                            "thumbnail": "mesa-6-personas"
                         },
                         {
                             "size":"Para 8 personas",
                             "width": "0.90 m",
-                            "length": "1.80 m"
+                            "length": "1.80 m",
+                            "thumbnail": "mesa-8-personas"
                         }
                     ]
                 },
@@ -287,17 +325,20 @@
                         {
                             "size":"Pequeño",
                             "width": "0.50 m",
-                            "length": "0.60 m"
+                            "length": "0.60 m",
+                            "thumbnail": "aparador-pequeña"
                         },
                         {
                             "size":"Mediano",
                             "width": "0.40 m",
-                            "length": "1.20 m"
+                            "length": "1.20 m",
+                            "thumbnail": "aparador"
                         },
                         {
                             "size":"Grande",
                             "width": "0.50 m",
-                            "length": "1.60 m"
+                            "length": "1.60 m",
+                            "thumbnail": "aparador-grande"
                         }
                     ]
                 },
@@ -307,7 +348,8 @@
                         {
                             "size":"Silla",
                             "width": "0.50 m",
-                            "length": "0.55 m"
+                            "length": "0.55 m",
+                            "thumbnail": "silla-comedor"
                         }
                     ]
                 }
