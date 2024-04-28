@@ -370,6 +370,7 @@
 "Assets/Scripts/PlayerScripts/PlayerLook.cs"
 "Assets/Scripts/PlayerScripts/PlayerMotor.cs"
 "Assets/Scripts/PlayerScripts/PlayerUI.cs"
+"Assets/Scripts/SpawnFurniture.cs"
 -langversion:9.0
 
 /deterministic

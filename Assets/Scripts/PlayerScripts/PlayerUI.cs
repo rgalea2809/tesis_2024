@@ -28,7 +28,7 @@ public class PlayerUI : MonoBehaviour
 
     private void Update(){
         pauseMenu.enabled = isPause;
-        catalogMenu.enabled = isCatalogOpen;
+        catalogMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isCatalogOpen);
     }
 
     public void ToogleIsPause(){

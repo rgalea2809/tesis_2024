@@ -62,6 +62,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Catalog"",
+                    ""type"": ""Button"",
+                    ""id"": ""f7816ebf-1d7c-40e4-a5c9-320d23af9b8e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,6 +161,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de21b387-ec3d-4377-aba1-a8318da7b137"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Catalog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +184,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_BasicControls_Look = m_BasicControls.FindAction("Look", throwIfNotFound: true);
         m_BasicControls_Push = m_BasicControls.FindAction("Push", throwIfNotFound: true);
         m_BasicControls_Interact = m_BasicControls.FindAction("Interact", throwIfNotFound: true);
+        m_BasicControls_Catalog = m_BasicControls.FindAction("Catalog", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -229,6 +250,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_BasicControls_Look;
     private readonly InputAction m_BasicControls_Push;
     private readonly InputAction m_BasicControls_Interact;
+    private readonly InputAction m_BasicControls_Catalog;
     public struct BasicControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -237,6 +259,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_BasicControls_Look;
         public InputAction @Push => m_Wrapper.m_BasicControls_Push;
         public InputAction @Interact => m_Wrapper.m_BasicControls_Interact;
+        public InputAction @Catalog => m_Wrapper.m_BasicControls_Catalog;
         public InputActionMap Get() { return m_Wrapper.m_BasicControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +281,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Catalog.started += instance.OnCatalog;
+            @Catalog.performed += instance.OnCatalog;
+            @Catalog.canceled += instance.OnCatalog;
         }
 
         private void UnregisterCallbacks(IBasicControlsActions instance)
@@ -274,6 +300,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Catalog.started -= instance.OnCatalog;
+            @Catalog.performed -= instance.OnCatalog;
+            @Catalog.canceled -= instance.OnCatalog;
         }
 
         public void RemoveCallbacks(IBasicControlsActions instance)
@@ -297,5 +326,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnPush(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnCatalog(InputAction.CallbackContext context);
     }
 }

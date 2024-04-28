@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\InteractablesScripts\cubeTest.cs" />
     <Compile Include="Assets\Input\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\SpawnFurniture.cs" />
     <Compile Include="Assets\Scripts\InteractionEvent.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerLook.cs" />
