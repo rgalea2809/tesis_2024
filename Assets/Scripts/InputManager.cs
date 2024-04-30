@@ -29,6 +29,11 @@ public class InputManager : MonoBehaviour
         // basicControls.Pause.performed += ctx => OnOpenMenu();
         basicControls.Catalog.performed += ctx => OnOpenCatalog();
         
+        
+    }
+
+    void Start(){
+        basicControls.Disable();
     }
 
     // Update is called once per frame
@@ -80,6 +85,13 @@ public class InputManager : MonoBehaviour
     {
         basicControls.Enable();
         menu.ToogleIsCatalogOpen();
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void OnRoomSelected()
+    {
+        basicControls.Enable();
+        menu.ToogleIsRoomMenuOpen();
         Cursor.lockState = CursorLockMode.Locked;
     }
 

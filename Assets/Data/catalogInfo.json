@@ -110,92 +110,6 @@
         },
 
         {
-            "room": "Cocina",
-            "categories":[
-                {
-                    "category": "Electrodomésticos",
-                    "types":[
-                        {
-                            "size":"Estufa",
-                            "width": "0.70 m",
-                            "length": "0.75 m",
-                            "thumbnail": "estufa"
-                        },
-                        {
-                            "size":"Nevera Mediana",
-                            "width": "0.60 m",
-                            "length": "0.70 m",
-                            "thumbnail": "refrigerador"
-                        },
-                        {
-                            "size":"Nevera de puerta doble",
-                            "width": "1.00 m",
-                            "length": "0.80 m",
-                            "thumbnail": "refrigerador-puerta-doble"
-                        },
-                        {
-                            "size":"Nevera de puerta francesa",
-                            "width": "1.20 m",
-                            "length": "0.90 m",
-                            "thumbnail": "refrigerador-puerta-francesa"
-                        }
-                    ]
-                },
-                {
-                    "category": "Gabinetes",
-                    "types":[
-                        {
-                            "size":"Pequeño",
-                            "width": "0.50 m",
-                            "length": "0.50 m",
-                            "thumbnail": "gabinete-cocina-pequeño"
-                        },
-                        {
-                            "size":"Mediano",
-                            "width": "1.00 m",
-                            "length": "0.60 m",
-                            "thumbnail": "gabinete-cocina"
-                        },
-                        {
-                            "size":"Esquina",
-                            "width": "2.60 m",
-                            "length": "1.50 m",
-                            "thumbnail": "gabinete-cocina-esquina"
-                        }
-                    ]
-                },
-                {
-                    "category": "Fregaderos",
-                    "types":[
-                        {
-                            "size":"Mediano",
-                            "width": "0.90 m",
-                            "length": "0.65 m",
-                            "thumbnail": "fregadero"
-                        },
-                        {
-                            "size":"Grande",
-                            "width": "1.30 m",
-                            "length": "0.60 m",
-                            "thumbnail": "fregadero-grande"
-                        }
-                    ]
-                },
-                {
-                    "category": "Asientos",
-                    "types":[
-                        {
-                            "size":"Banco",
-                            "width": "0.50 m",
-                            "length": "0.40 m",
-                            "thumbnail": "banco"
-                        }
-                    ]
-                }
-            ]
-        },
-
-        {
             "room": "Sala",
             "categories":[
                 {
@@ -287,6 +201,92 @@
                             "width": "0.30 m",
                             "length": "0.30 m",
                             "thumbnail": "estanteria-esquina"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "room": "Cocina",
+            "categories":[
+                {
+                    "category": "Electrodomésticos",
+                    "types":[
+                        {
+                            "size":"Estufa",
+                            "width": "0.70 m",
+                            "length": "0.75 m",
+                            "thumbnail": "estufa"
+                        },
+                        {
+                            "size":"Nevera Mediana",
+                            "width": "0.60 m",
+                            "length": "0.70 m",
+                            "thumbnail": "refrigerador"
+                        },
+                        {
+                            "size":"Nevera de puerta doble",
+                            "width": "1.00 m",
+                            "length": "0.80 m",
+                            "thumbnail": "refrigerador-puerta-doble"
+                        },
+                        {
+                            "size":"Nevera de puerta francesa",
+                            "width": "1.20 m",
+                            "length": "0.90 m",
+                            "thumbnail": "refrigerador-puerta-francesa"
+                        }
+                    ]
+                },
+                {
+                    "category": "Gabinetes",
+                    "types":[
+                        {
+                            "size":"Pequeño",
+                            "width": "0.50 m",
+                            "length": "0.50 m",
+                            "thumbnail": "gabinete-cocina-pequeño"
+                        },
+                        {
+                            "size":"Mediano",
+                            "width": "1.00 m",
+                            "length": "0.60 m",
+                            "thumbnail": "gabinete-cocina"
+                        },
+                        {
+                            "size":"Esquina",
+                            "width": "2.60 m",
+                            "length": "1.50 m",
+                            "thumbnail": "gabinete-cocina-esquina"
+                        }
+                    ]
+                },
+                {
+                    "category": "Fregaderos",
+                    "types":[
+                        {
+                            "size":"Mediano",
+                            "width": "0.90 m",
+                            "length": "0.65 m",
+                            "thumbnail": "fregadero"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "1.30 m",
+                            "length": "0.60 m",
+                            "thumbnail": "fregadero-grande"
+                        }
+                    ]
+                },
+                {
+                    "category": "Asientos",
+                    "types":[
+                        {
+                            "size":"Banco",
+                            "width": "0.50 m",
+                            "length": "0.40 m",
+                            "thumbnail": "banco"
                         }
                     ]
                 }
