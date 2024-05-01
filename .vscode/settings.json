@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "proyecto_vr_tesis_2024.sln"
+    "dotnet.defaultSolution": "tesis_2024.sln"
 }

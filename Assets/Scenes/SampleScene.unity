@@ -322,7 +322,19 @@ MonoBehaviour:
   roomBtn: {fileID: 9197481963319205126, guid: 9f5ae43089faa7f4d81f84bc370909dd, type: 3}
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1721362035}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnRoomSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &306719626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1497,7 @@ MonoBehaviour:
   promptText: {fileID: 37768979}
   pauseMenu: {fileID: 553051341}
   catalogMenu: {fileID: 306719627}
+  roomSelectionMenu: {fileID: 37828768}
 --- !u!1001 &6687670240039574972
 PrefabInstance:
   m_ObjectHideFlags: 0

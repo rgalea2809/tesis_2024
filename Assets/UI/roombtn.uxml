@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/roomSelectionMenu.uss?fileID=7433441132597879392&amp;guid=b4a4383cab6d3454a9ed5e913b72bacc&amp;type=3#roomSelectionMenu" />
     <Style src="project://database/Assets/UI/catalogMenu.uss?fileID=7433441132597879392&amp;guid=29200675edf65924fbc58e66c588baa7&amp;type=3#catalogMenu" />
-    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="roomBtn">
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="roomBtn" class="roomBtn">
         <ui:VisualElement class="roomCard" style="flex-grow: 1;">
             <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="roomCardLabel" class="roomCardLabel" />
             <ui:VisualElement class="cardArrow" />
