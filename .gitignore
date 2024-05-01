@@ -458,6 +458,9 @@ sysinfo.txt
 InitTestScene*.unity.meta
 InitTestScene*.unity
 
+.Logs/
+.UserSettings/
+
 
 ### VisualStudio ###
 
@@ -613,6 +616,8 @@ InitTestScene*.unity
 
 # BeatPulse healthcheck temp database
 
+
+.Temp/
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
 # Ionide (cross platform F# VS Code tools) working folder
