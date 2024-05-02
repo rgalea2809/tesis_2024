@@ -1,0 +1,16 @@
+.panelStyle {
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.58);
+}
+
+.containerStyle {
+    width: 75%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    max-height: 80%;
+}
