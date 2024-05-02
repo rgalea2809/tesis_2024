@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
 
     private PlayerMotor motor;
     private PlayerLook  look;
-    // private PlayerUI menu;
+    private PlayerUI menu;
     
     
     void Awake()
@@ -24,9 +24,9 @@ public class InputManager : MonoBehaviour
 
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
-        // menu = GetComponent<PlayerUI>();
+        menu = GetComponent<PlayerUI>();
  
-        // basicControls.Pause.performed += ctx => OnOpenMenu();
+        basicControls.Pause.performed += ctx => OnOpenMenu();
         // basicControls.Catalog.performed += ctx => OnOpenCatalog();
         
     }
@@ -53,21 +53,19 @@ public class InputManager : MonoBehaviour
         basicControls.Disable();
     }
 
-    // private void OnOpenMenu()
-    // {
-    //     playerInput.UI.Enable();
-    //     menu.ToogleIsPause();
-    //     Cursor.lockState = CursorLockMode.None;
-    //     playerInput.basicControls.Disable();
-    // }
+     private void OnOpenMenu()
+     {
+         menu.ToogleIsPause();
+         Cursor.lockState = CursorLockMode.None;
+         basicControls.Disable();
+     }
 
-    // public void OnCloseMenu()
-    // {
-    //     playerInput.basicControls.Enable();
-    //     menu.ToogleIsPause();
-    //     Cursor.lockState = CursorLockMode.Locked;
-    //     playerInput.UI.Disable();
-    // }
+     public void OnCloseMenu()
+     {
+         basicControls.Enable();
+         menu.ToogleIsPause();
+         Cursor.lockState = CursorLockMode.Locked;
+     }
 
     // private void OnOpenCatalog()
     // {

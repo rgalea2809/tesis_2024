@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class PlayerUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI promptText;
-    [SerializeField] private Canvas pauseMenu;
+    [SerializeField] private UIDocument pauseMenu;
     [SerializeField] private Canvas catalogMenu;	
     
     private bool isPause;
