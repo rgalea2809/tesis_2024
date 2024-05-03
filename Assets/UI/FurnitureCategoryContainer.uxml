@@ -1,8 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/catalogMenu.uss?fileID=7433441132597879392&amp;guid=29200675edf65924fbc58e66c588baa7&amp;type=3#catalogMenu" />
-    <ui:VisualElement name="CardContainer" class="furnitureContainer" style="flex-grow: 1;">
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="furnitureLabel" class="furnitureLabel" />
-        <ui:VisualElement class="line" style="flex-grow: 1;" />
-        <ui:GroupBox name="furnitureList" class="furnitureList" />
-    </ui:VisualElement>
-</ui:UXML>

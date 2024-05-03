@@ -26,14 +26,9 @@ public class InputManager : MonoBehaviour
         look = GetComponent<PlayerLook>();
         menu = GetComponent<PlayerUI>();
  
-        // basicControls.Pause.performed += ctx => OnOpenMenu();
-        basicControls.Catalog.performed += ctx => OnOpenCatalog();
+        basicControls.Pause.performed += ctx => OnOpenMenu();
+        // basicControls.Catalog.performed += ctx => OnOpenCatalog();
         
-        
-    }
-
-    void Start(){
-        basicControls.Disable();
     }
 
     // Update is called once per frame
@@ -58,42 +53,35 @@ public class InputManager : MonoBehaviour
         basicControls.Disable();
     }
 
-    // private void OnOpenMenu()
+     private void OnOpenMenu()
+     {
+         menu.ToogleIsPause();
+         Cursor.lockState = CursorLockMode.None;
+         basicControls.Disable();
+     }
+
+     public void OnCloseMenu()
+     {
+         basicControls.Enable();
+         menu.ToogleIsPause();
+         Cursor.lockState = CursorLockMode.Locked;
+     }
+
+    // private void OnOpenCatalog()
     // {
     //     playerInput.UI.Enable();
-    //     menu.ToogleIsPause();
+    //     menu.ToogleIsCatalogOpen();
     //     Cursor.lockState = CursorLockMode.None;
     //     playerInput.basicControls.Disable();
     // }
 
-    // public void OnCloseMenu()
+    // public void OnCloseCatalog()
     // {
     //     playerInput.basicControls.Enable();
-    //     menu.ToogleIsPause();
+    //     menu.ToogleIsCatalogOpen();
     //     Cursor.lockState = CursorLockMode.Locked;
     //     playerInput.UI.Disable();
     // }
-
-    private void OnOpenCatalog()
-    {
-        menu.ToogleIsCatalogOpen();
-        Cursor.lockState = CursorLockMode.None;
-        basicControls.Disable();
-    }
-
-    public void OnCloseCatalog()
-    {
-        basicControls.Enable();
-        menu.ToogleIsCatalogOpen();
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    public void OnRoomSelected()
-    {
-        basicControls.Enable();
-        menu.ToogleIsRoomMenuOpen();
-        Cursor.lockState = CursorLockMode.Locked;
-    }
 
     public void CloseGame(){
         Application.Quit();

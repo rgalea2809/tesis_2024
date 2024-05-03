@@ -2,27 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class PlayerUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI promptText;
-    [SerializeField] private Canvas pauseMenu;
-    [SerializeField] private UIDocument catalogMenu;	
-    [SerializeField] private UIDocument roomSelectionMenu;
+    [SerializeField] private UIDocument pauseMenu;
+    [SerializeField] private Canvas catalogMenu;	
     
     private bool isPause;
     private bool isCatalogOpen;
-
-    private bool isRoomMenuOpen;
     // Start is called before the first frame update
     void Start()
     {
+        pauseMenu.enabled = false;
         isPause = false;
         isCatalogOpen = false;
-        isRoomMenuOpen = true;
-        
     }
 
     // Update is called once per frame
@@ -32,8 +27,7 @@ public class PlayerUI : MonoBehaviour
 
     private void Update(){
         pauseMenu.enabled = isPause;
-        catalogMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isCatalogOpen);
-        roomSelectionMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isRoomMenuOpen);
+        catalogMenu.enabled = isCatalogOpen;
     }
 
     public void ToogleIsPause(){
@@ -42,10 +36,6 @@ public class PlayerUI : MonoBehaviour
 
     public void ToogleIsCatalogOpen(){
         isCatalogOpen  = !isCatalogOpen ;
-    }
-
-    public void ToogleIsRoomMenuOpen(){
-        isRoomMenuOpen = !isRoomMenuOpen;
     }
 
 }

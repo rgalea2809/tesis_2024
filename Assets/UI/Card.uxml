@@ -1,8 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/catalogMenu.uss?fileID=7433441132597879392&amp;guid=29200675edf65924fbc58e66c588baa7&amp;type=3#catalogMenu" />
-    <ui:VisualElement name="card" focusable="false" class="card" style="flex-grow: 1;">
-        <ui:VisualElement name="furnitureImage" class="image" style="background-image: none; -unity-background-scale-mode: scale-and-crop;" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="furnitureName" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="furnitureSize" style="font-size: 12px;" />
-    </ui:VisualElement>
-</ui:UXML>

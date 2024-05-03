@@ -42,9 +42,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Catalog",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "f7816ebf-1d7c-40e4-a5c9-320d23af9b8e",
+                    "id": "7ffccb9b-7c97-4b25-b31a-d1f9a8751446",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -142,12 +142,12 @@
                 },
                 {
                     "name": "",
-                    "id": "de21b387-ec3d-4377-aba1-a8318da7b137",
-                    "path": "<Keyboard>/c",
+                    "id": "0ec7dfb7-6bcc-40be-b13d-9422670b74f5",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Catalog",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
