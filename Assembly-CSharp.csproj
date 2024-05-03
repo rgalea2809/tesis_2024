@@ -64,20 +64,23 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UIScripts\ControlersMenuFunctions.cs" />
     <Compile Include="Assets\Scripts\EventOnlyInteractable.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerUI.cs" />
-    <Compile Include="Assets\Scripts\PauseMenuFunctions.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\InteractablesScripts\cubeTest.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\MainMenuFunctions.cs" />
     <Compile Include="Assets\Input\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\SpawnFurniture.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\PauseMenuFunctions.cs" />
     <Compile Include="Assets\Scripts\InteractionEvent.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\UIScripts\RoomSelection.cs" />
     <Compile Include="Assets\Scripts\UIScripts\FillCatalogMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerLook.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInteract.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\CreditsFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -57,6 +57,9 @@ public class InputManager : MonoBehaviour
         basicControls.Disable();
     }
 
+    //Menu input management//////////////////////////////////////////////////////////////////
+
+    //pause menu
      private void OnOpenMenu()
      {
          menu.ToogleIsPause();
@@ -64,13 +67,7 @@ public class InputManager : MonoBehaviour
          basicControls.Disable();
      }
 
-     public void OnCloseMenu()
-     {
-         basicControls.Enable();
-         menu.ToogleIsPause();
-         Cursor.lockState = CursorLockMode.Locked;
-     }
-
+    //catalog menu
     private void OnOpenCatalog()
     {
         menu.ToogleIsCatalogOpen();
@@ -78,20 +75,10 @@ public class InputManager : MonoBehaviour
         basicControls.Disable();
     }
 
-    public void OnCloseCatalog()
-    {
+    public void OnClosingMenu(){
         basicControls.Enable();
-        menu.ToogleIsCatalogOpen();
         Cursor.lockState = CursorLockMode.Locked;
     }
-
-    public void OnRoomSelected()
-    {
-        basicControls.Enable();
-        menu.ToogleIsRoomMenuOpen();
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
 
     public void CloseGame(){
         Application.Quit();

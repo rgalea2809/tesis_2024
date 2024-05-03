@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/panelCreditsStyle.uss?fileID=7433441132597879392&amp;guid=05b8ae5cbaa983b418233d254d3fae54&amp;type=3#panelCreditsStyle" />
-    <ui:VisualElement name="panel" class="panelcreditsStyle panelCreditsStyle">
+    <Style src="project://database/Assets/UI/catalogMenu.uss?fileID=7433441132597879392&amp;guid=29200675edf65924fbc58e66c588baa7&amp;type=3#catalogMenu" />
+    <ui:VisualElement name="Panel" class="panelcreditsStyle panelCreditsStyle hide">
         <ui:VisualElement name="container" class="containerCreditsStyle" style="flex-grow: 1; padding-top: 50px; padding-bottom: 50px; padding-left: 50px;">
             <ui:Label tabindex="-1" text="Créditos" parse-escape-sequences="true" display-tooltip-when-elided="true" name="creditsTitle" style="font-size: 70px; margin-top: 0; justify-content: center; align-self: center; align-items: center; -unity-font-style: bold;" />
             <ui:ScrollView style="flex-wrap: wrap;">

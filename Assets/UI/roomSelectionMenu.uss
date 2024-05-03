@@ -33,19 +33,25 @@
     border-right-color: rgba(209, 204, 204, 0.16);
     border-top-color: rgba(209, 204, 204, 0.16);
     border-bottom-color: rgba(209, 204, 204, 0.16);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.77);
     font-size: 40px;
     -unity-font-style: bold;
     color: rgb(127, 127, 127);
     position: absolute;
-    margin-top: 0;
+    margin-top: 15px;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
     padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
 }
 
 .menuBody {
@@ -105,4 +111,11 @@
 
 .roomBtn:hover roomCardLabels {
     font-size: 40px;
+}
+
+.goBackMenu:hover {
+    background-color: rgba(199, 199, 199, 0.89);
+    color: rgb(255, 255, 255);
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
 }
