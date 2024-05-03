@@ -8,16 +8,20 @@ public class PlayerUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI promptText;
     [SerializeField] private UIDocument pauseMenu;
-    [SerializeField] private Canvas catalogMenu;	
+    [SerializeField] private UIDocument catalogMenu;	
+    [SerializeField] private UIDocument roomSelectionMenu;
     
     private bool isPause;
     private bool isCatalogOpen;
+
+    private bool isRoomMenuOpen;
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.enabled = false;
         isPause = false;
         isCatalogOpen = false;
+        isRoomMenuOpen = true;
+        
     }
 
     // Update is called once per frame
@@ -27,7 +31,8 @@ public class PlayerUI : MonoBehaviour
 
     private void Update(){
         pauseMenu.enabled = isPause;
-        catalogMenu.enabled = isCatalogOpen;
+        catalogMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isCatalogOpen);
+        roomSelectionMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isRoomMenuOpen);
     }
 
     public void ToogleIsPause(){
@@ -37,5 +42,10 @@ public class PlayerUI : MonoBehaviour
     public void ToogleIsCatalogOpen(){
         isCatalogOpen  = !isCatalogOpen ;
     }
+
+    public void ToogleIsRoomMenuOpen(){
+        isRoomMenuOpen = !isRoomMenuOpen;
+    }
+
 
 }

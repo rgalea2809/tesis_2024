@@ -27,8 +27,12 @@ public class InputManager : MonoBehaviour
         menu = GetComponent<PlayerUI>();
  
         basicControls.Pause.performed += ctx => OnOpenMenu();
-        // basicControls.Catalog.performed += ctx => OnOpenCatalog();
+        basicControls.Catalog.performed += ctx => OnOpenCatalog();
         
+    }
+
+    void Start(){
+        basicControls.Disable();
     }
 
     // Update is called once per frame
@@ -67,21 +71,27 @@ public class InputManager : MonoBehaviour
          Cursor.lockState = CursorLockMode.Locked;
      }
 
-    // private void OnOpenCatalog()
-    // {
-    //     playerInput.UI.Enable();
-    //     menu.ToogleIsCatalogOpen();
-    //     Cursor.lockState = CursorLockMode.None;
-    //     playerInput.basicControls.Disable();
-    // }
+    private void OnOpenCatalog()
+    {
+        menu.ToogleIsCatalogOpen();
+        Cursor.lockState = CursorLockMode.None;
+        basicControls.Disable();
+    }
 
-    // public void OnCloseCatalog()
-    // {
-    //     playerInput.basicControls.Enable();
-    //     menu.ToogleIsCatalogOpen();
-    //     Cursor.lockState = CursorLockMode.Locked;
-    //     playerInput.UI.Disable();
-    // }
+    public void OnCloseCatalog()
+    {
+        basicControls.Enable();
+        menu.ToogleIsCatalogOpen();
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void OnRoomSelected()
+    {
+        basicControls.Enable();
+        menu.ToogleIsRoomMenuOpen();
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
 
     public void CloseGame(){
         Application.Quit();

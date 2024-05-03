@@ -71,6 +71,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Catalog"",
+                    ""type"": ""Button"",
+                    ""id"": ""7c4d30cf-6c36-45a1-a41d-96d0c8f791c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +181,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f7def7da-c33e-4f30-8b0c-359eb3ed14f9"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Catalog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +205,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_BasicControls_Push = m_BasicControls.FindAction("Push", throwIfNotFound: true);
         m_BasicControls_Interact = m_BasicControls.FindAction("Interact", throwIfNotFound: true);
         m_BasicControls_Pause = m_BasicControls.FindAction("Pause", throwIfNotFound: true);
+        m_BasicControls_Catalog = m_BasicControls.FindAction("Catalog", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +272,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_BasicControls_Push;
     private readonly InputAction m_BasicControls_Interact;
     private readonly InputAction m_BasicControls_Pause;
+    private readonly InputAction m_BasicControls_Catalog;
     public struct BasicControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -260,6 +282,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Push => m_Wrapper.m_BasicControls_Push;
         public InputAction @Interact => m_Wrapper.m_BasicControls_Interact;
         public InputAction @Pause => m_Wrapper.m_BasicControls_Pause;
+        public InputAction @Catalog => m_Wrapper.m_BasicControls_Catalog;
         public InputActionMap Get() { return m_Wrapper.m_BasicControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +307,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @Catalog.started += instance.OnCatalog;
+            @Catalog.performed += instance.OnCatalog;
+            @Catalog.canceled += instance.OnCatalog;
         }
 
         private void UnregisterCallbacks(IBasicControlsActions instance)
@@ -303,6 +329,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @Catalog.started -= instance.OnCatalog;
+            @Catalog.performed -= instance.OnCatalog;
+            @Catalog.canceled -= instance.OnCatalog;
         }
 
         public void RemoveCallbacks(IBasicControlsActions instance)
@@ -327,5 +356,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnPush(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnCatalog(InputAction.CallbackContext context);
     }
 }
