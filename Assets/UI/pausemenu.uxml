@@ -1,8 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/panelStyle.uss?fileID=7433441132597879392&amp;guid=7921bb9588a89b64f9db069a22470e1d&amp;type=3#panelStyle" />
-    <ui:VisualElement name="panel" class="panelStyle" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.58);">
-        <ui:VisualElement name="container" class="containerStyle" style="flex-grow: 1; background-color: rgba(182, 182, 182, 0.5);">
-            <ui:Label tabindex="-1" text="Menú" parse-escape-sequences="true" display-tooltip-when-elided="true" name="menuTitle" class="textStyle" style="margin-top: 0;" />
+    <ui:VisualElement name="panel" class="panelStyle">
+        <ui:VisualElement name="container" class="containerStyle">
+            <ui:Label tabindex="-1" text="Menú" parse-escape-sequences="true" display-tooltip-when-elided="true" name="menuTitle" class="textStyle" style="margin-top: 0; -unity-font-style: bold;" />
             <ui:Button text="Reanudar" parse-escape-sequences="true" display-tooltip-when-elided="true" name="resumeBtn" class="resumeBtnStyle" />
             <ui:Button text="Controles" parse-escape-sequences="true" display-tooltip-when-elided="true" name="controlesBtn" class="resumeBtnStyle" />
             <ui:Button text="Salir" parse-escape-sequences="true" display-tooltip-when-elided="true" name="salirBtn" class="reanudarBtnStyle salirBtnStyle" style="padding-left: 0;" />
