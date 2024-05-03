@@ -6,9 +6,11 @@ using UnityEngine.UIElements;
 
 public class PauseMenuFunctions : MonoBehaviour
 {
-
-
-    public UnityEvent onClick;
+    public UnityEvent evntResumeBtn;
+    
+    public UnityEvent evntControlsBtn;
+    
+    public UnityEvent evntExitBtn;
 
     private UIDocument pauseMenu;
 
@@ -22,12 +24,23 @@ public class PauseMenuFunctions : MonoBehaviour
     void Start()
     {
         pauseMenu.rootVisualElement.Q("resumeBtn").RegisterCallback<ClickEvent>(resumeOnClick);
+        pauseMenu.rootVisualElement.Q("controlesBtn").RegisterCallback<ClickEvent>(controlsOnClick);
+        pauseMenu.rootVisualElement.Q("salirBtn").RegisterCallback<ClickEvent>(exitOnClick);
     }
 
     public void resumeOnClick(ClickEvent evt)
     {
-        Debug.Log("Hola");
-        onClick.Invoke();
+        evntResumeBtn.Invoke();
+    }   
+
+     public void controlsOnClick(ClickEvent evt)
+    {
+        evntControlsBtn.Invoke();
+    }   
+
+     public void exitOnClick(ClickEvent evt)
+    {
+        evntExitBtn.Invoke();
     }   
 
 

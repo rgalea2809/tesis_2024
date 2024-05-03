@@ -13,6 +13,7 @@ public class RoomSelection : MonoBehaviour
     public FillCatalogMenu fillFunc;
     public VisualTreeAsset roomBtn;
     public UnityEvent onClick;
+    public UnityEvent goBack;
 
     private enum roomNames {
         Dormitorio,
@@ -24,6 +25,8 @@ public class RoomSelection : MonoBehaviour
     void Start()
     {
         roomList = GetComponent<UIDocument>();
+        //goBackBtn
+        roomList.rootVisualElement.Q("goBackBtn").RegisterCallback<ClickEvent>(ctx=>goBack.Invoke());
         fillRoomList();
     }
 
