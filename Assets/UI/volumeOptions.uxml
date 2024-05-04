@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/volumeOptions.uss?fileID=7433441132597879392&amp;guid=62f91d5308831c84493fe0aaaa82fb83&amp;type=3#volumeOptions" />
+    <ui:VisualElement name="Panel" class="panel hide" style="flex-grow: 1;">
+        <ui:VisualElement class="menu" style="flex-grow: 1;">
+            <ui:VisualElement class="header" style="flex-grow: 1;">
+                <ui:Label tabindex="-1" text="Volumenes" parse-escape-sequences="true" display-tooltip-when-elided="true" class="menuName" />
+                <ui:Button text="&lt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="goBackBtn" class="goBackBtn" />
+            </ui:VisualElement>
+            <ui:VisualElement class="body" style="flex-grow: 1;">
+                <ui:DoubleField label="Ancho&#10;" value="0" name="Ancho" class="input" />
+                <ui:DoubleField label="Largo&#10;" value="0" name="Largo" class="input" />
+                <ui:DoubleField label="Alto&#10;" value="0" name="Alto" class="input" />
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="errorLabel" class="errorLabel" />
+                <ui:Button text="Crear" parse-escape-sequences="true" display-tooltip-when-elided="true" name="createBtn" class="createBtn" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

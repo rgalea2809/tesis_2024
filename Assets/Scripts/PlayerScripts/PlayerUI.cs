@@ -13,15 +13,15 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private UIDocument mainMenu;
     [SerializeField] private UIDocument creditsMenu;
     [SerializeField] private UIDocument controlsMenu;
+    [SerializeField] private UIDocument volumeOptions;
     
     private bool isPause;
     private bool isCatalogOpen;
-
     private bool isInMainMenu;
     private bool isCreditsOpen;
     private bool isControlsOpen;
-
     private bool isRoomMenuOpen;
+    private bool isVolumeMenuOpen;
 
     private bool isGameStarted;
     // Start is called before the first frame update
@@ -34,6 +34,7 @@ public class PlayerUI : MonoBehaviour
         isCreditsOpen = false;
         isControlsOpen =false;
         isGameStarted =false;
+        isVolumeMenuOpen =false;
     }
 
     // Update is called once per frame
@@ -48,6 +49,7 @@ public class PlayerUI : MonoBehaviour
         mainMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isInMainMenu);
         creditsMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isCreditsOpen);
         controlsMenu.rootVisualElement.Q("Panel").EnableInClassList("hide",!isControlsOpen);
+        volumeOptions.rootVisualElement.Q("Panel").EnableInClassList("hide",!isVolumeMenuOpen);
     }
 
     public void ToogleIsPause(){
@@ -84,6 +86,12 @@ public class PlayerUI : MonoBehaviour
         else
             isPause = !isPause;
     }
+
+    public void ToogleIsVolumeMenuOpen(){
+        isVolumeMenuOpen = !isVolumeMenuOpen;
+    }
+
+    
 
 
 }

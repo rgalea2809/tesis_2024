@@ -11,6 +11,8 @@ public class FillCatalogMenu : MonoBehaviour
 {
     public UnityEvent onClick;
 
+    public UnityEvent evntNewVolume;
+
     private UIDocument catalogInventory;
     public VisualTreeAsset catalogTypeTemplate;
     public TextAsset jsonFile;
@@ -93,6 +95,19 @@ public class FillCatalogMenu : MonoBehaviour
 
             catalogInventory.rootVisualElement.Q("CatalogList").Add(catalogTypeContainer);
         }
+
+        TemplateContainer volumeContainer = catalogTypeTemplate.Instantiate();
+        volumeContainer.Q<Label>("furnitureLabel").text = "Volumenes";
+
+        TemplateContainer card = cardTemplate.Instantiate();
+        card.Q<Label>("furnitureName").text = "Nuevo volumen";  
+        card.Q<Label>("furnitureSize").text = "";
+        card.Q<VisualElement>("furnitureImage").style.backgroundImage = (StyleBackground)Resources.Load<Texture>("Thumbnails/placeHolder");
+        card.RegisterCallback<ClickEvent>(ctx=>evntNewVolume.Invoke());
+        volumeContainer.Q("furnitureList").Add(card);
+
+        
+        catalogInventory.rootVisualElement.Q("CatalogList").Add(volumeContainer);
     }
 
     private void spawnItem(string itemName){

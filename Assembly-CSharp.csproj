@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\InteractionEvent.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\UIScripts\RoomSelection.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\volumeCreation.cs" />
     <Compile Include="Assets\Scripts\UIScripts\FillCatalogMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerLook.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInteract.cs" />
@@ -88,6 +89,7 @@
     <None Include="Assets\UI\creditsMenu.uxml" />
     <None Include="Assets\UI\Card.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\UI\volumeOptions.uss" />
     <None Include="Assets\UI\CatalogMenu.uxml" />
     <None Include="Assets\UI\CatalogListMenu.uxml" />
     <None Include="Assets\UI\pausemenu.uxml" />
@@ -107,6 +109,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\UI\panelStyle.uss" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\UI\volumeOptions.uxml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\UI\FurnitureCategoryContainer.uxml" />
