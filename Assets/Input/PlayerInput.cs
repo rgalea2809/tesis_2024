@@ -194,6 +194,158 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""PreviewControls"",
+            ""id"": ""cc828108-8a68-4d5a-a419-f7652fc56fb5"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""6e9cac48-457c-4074-8314-4a9c2436bbd5"",
+                    ""expectedControlType"": ""Vector3"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""d0d2735c-501b-44a3-a8cb-5e7561b4ba23"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9c63194-c3c4-4246-94b2-be32b8d53e5e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a922d2c4-1bf0-4971-aabc-b2d9b57e1821"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""f962bfea-d3a9-48ed-bb13-1b5d87a3caaf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""ef8a6674-f550-4ce0-b4d4-8ed4df4a0108"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""af1baafc-755b-4722-8106-fa4e563b19fd"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2494bbf7-e5fd-4d06-af3c-ca1e279157cc"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""91469d4f-a22b-406b-8dc8-64161accc72a"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""c1c84fb4-6cbf-4887-bf16-3aa1996190ec"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34ae93a8-f619-48ee-9ea1-a09c6fa681e6"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""22f68af3-ecec-4cd4-bb19-c0ae03c06978"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a5d706c-60a5-4685-9402-3aace331a0ca"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4da99d0f-4bbb-4681-be00-7e96e3486513"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -206,6 +358,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_BasicControls_Interact = m_BasicControls.FindAction("Interact", throwIfNotFound: true);
         m_BasicControls_Pause = m_BasicControls.FindAction("Pause", throwIfNotFound: true);
         m_BasicControls_Catalog = m_BasicControls.FindAction("Catalog", throwIfNotFound: true);
+        // PreviewControls
+        m_PreviewControls = asset.FindActionMap("PreviewControls", throwIfNotFound: true);
+        m_PreviewControls_Movement = m_PreviewControls.FindAction("Movement", throwIfNotFound: true);
+        m_PreviewControls_Look = m_PreviewControls.FindAction("Look", throwIfNotFound: true);
+        m_PreviewControls_Confirm = m_PreviewControls.FindAction("Confirm", throwIfNotFound: true);
+        m_PreviewControls_Pause = m_PreviewControls.FindAction("Pause", throwIfNotFound: true);
+        m_PreviewControls_Cancel = m_PreviewControls.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -349,6 +508,84 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         }
     }
     public BasicControlsActions @BasicControls => new BasicControlsActions(this);
+
+    // PreviewControls
+    private readonly InputActionMap m_PreviewControls;
+    private List<IPreviewControlsActions> m_PreviewControlsActionsCallbackInterfaces = new List<IPreviewControlsActions>();
+    private readonly InputAction m_PreviewControls_Movement;
+    private readonly InputAction m_PreviewControls_Look;
+    private readonly InputAction m_PreviewControls_Confirm;
+    private readonly InputAction m_PreviewControls_Pause;
+    private readonly InputAction m_PreviewControls_Cancel;
+    public struct PreviewControlsActions
+    {
+        private @PlayerInput m_Wrapper;
+        public PreviewControlsActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_PreviewControls_Movement;
+        public InputAction @Look => m_Wrapper.m_PreviewControls_Look;
+        public InputAction @Confirm => m_Wrapper.m_PreviewControls_Confirm;
+        public InputAction @Pause => m_Wrapper.m_PreviewControls_Pause;
+        public InputAction @Cancel => m_Wrapper.m_PreviewControls_Cancel;
+        public InputActionMap Get() { return m_Wrapper.m_PreviewControls; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PreviewControlsActions set) { return set.Get(); }
+        public void AddCallbacks(IPreviewControlsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_PreviewControlsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PreviewControlsActionsCallbackInterfaces.Add(instance);
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
+            @Confirm.started += instance.OnConfirm;
+            @Confirm.performed += instance.OnConfirm;
+            @Confirm.canceled += instance.OnConfirm;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
+        }
+
+        private void UnregisterCallbacks(IPreviewControlsActions instance)
+        {
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
+            @Confirm.started -= instance.OnConfirm;
+            @Confirm.performed -= instance.OnConfirm;
+            @Confirm.canceled -= instance.OnConfirm;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
+        }
+
+        public void RemoveCallbacks(IPreviewControlsActions instance)
+        {
+            if (m_Wrapper.m_PreviewControlsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IPreviewControlsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_PreviewControlsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_PreviewControlsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public PreviewControlsActions @PreviewControls => new PreviewControlsActions(this);
     public interface IBasicControlsActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -357,5 +594,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnCatalog(InputAction.CallbackContext context);
+    }
+    public interface IPreviewControlsActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }
