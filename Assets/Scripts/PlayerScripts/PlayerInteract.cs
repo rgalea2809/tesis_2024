@@ -43,6 +43,12 @@ public class PlayerInteract : MonoBehaviour
                 }
                 if(inputManager.getbasicControls().Push.IsPressed()){
                     objectInteracted.BasePush(inputManager.getbasicControls().Movement.ReadValue<Vector2>(),transform.eulerAngles.y);
+                    if(inputManager.getbasicControls().Rotate.WasPressedThisFrame()){
+                        objectInteracted.transform.Rotate(0,90,0);
+                    }
+                }
+                if(inputManager.getbasicControls().Delete.IsPressed()){
+                    Destroy(hitInfo.collider.gameObject);
                 }
             }
         }

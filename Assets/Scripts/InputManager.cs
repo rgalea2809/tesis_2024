@@ -37,6 +37,7 @@ public class InputManager : MonoBehaviour
         previewControls.Pause.performed += ctx => OnOpenMenu();
         previewControls.Cancel.performed += ctx => OnCancelPreview();
         previewControls.Confirm.performed += ctx => OnConfirmPlacement();
+        previewControls.Rotation.performed += ctx => spawnFunction.rotateItem();
     }
 
     void Start(){
@@ -55,6 +56,8 @@ public class InputManager : MonoBehaviour
     {
         look.ProcessLook(basicControls.Look.ReadValue<Vector2>());
         look.ProcessLook(previewControls.Look.ReadValue<Vector2>());
+        spawnFunction.positionUpdating();
+        look.movePosWithCamera();
     }
 
     private void OnEnable()

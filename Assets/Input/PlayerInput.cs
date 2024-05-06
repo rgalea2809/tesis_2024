@@ -80,6 +80,24 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb928209-6e33-423b-ae2c-03bfaa1fb970"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Delete"",
+                    ""type"": ""Button"",
+                    ""id"": ""4172684c-3969-4711-ab46-fd45afe81a6f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -192,6 +210,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Catalog"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c005f6e5-6ace-4dda-aa23-a6433b566119"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7e425a63-8658-49a3-b1a4-7891bae7ee04"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Delete"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -239,6 +279,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": ""Cancel"",
                     ""type"": ""Button"",
                     ""id"": ""f962bfea-d3a9-48ed-bb13-1b5d87a3caaf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Button"",
+                    ""id"": ""6010b133-d268-4e3b-9a27-70298232980f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -344,6 +393,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8faa15b5-2a0a-4694-a121-adaa4152cdfa"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -358,6 +418,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_BasicControls_Interact = m_BasicControls.FindAction("Interact", throwIfNotFound: true);
         m_BasicControls_Pause = m_BasicControls.FindAction("Pause", throwIfNotFound: true);
         m_BasicControls_Catalog = m_BasicControls.FindAction("Catalog", throwIfNotFound: true);
+        m_BasicControls_Rotate = m_BasicControls.FindAction("Rotate", throwIfNotFound: true);
+        m_BasicControls_Delete = m_BasicControls.FindAction("Delete", throwIfNotFound: true);
         // PreviewControls
         m_PreviewControls = asset.FindActionMap("PreviewControls", throwIfNotFound: true);
         m_PreviewControls_Movement = m_PreviewControls.FindAction("Movement", throwIfNotFound: true);
@@ -365,6 +427,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_PreviewControls_Confirm = m_PreviewControls.FindAction("Confirm", throwIfNotFound: true);
         m_PreviewControls_Pause = m_PreviewControls.FindAction("Pause", throwIfNotFound: true);
         m_PreviewControls_Cancel = m_PreviewControls.FindAction("Cancel", throwIfNotFound: true);
+        m_PreviewControls_Rotation = m_PreviewControls.FindAction("Rotation", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -432,6 +495,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_BasicControls_Interact;
     private readonly InputAction m_BasicControls_Pause;
     private readonly InputAction m_BasicControls_Catalog;
+    private readonly InputAction m_BasicControls_Rotate;
+    private readonly InputAction m_BasicControls_Delete;
     public struct BasicControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -442,6 +507,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_BasicControls_Interact;
         public InputAction @Pause => m_Wrapper.m_BasicControls_Pause;
         public InputAction @Catalog => m_Wrapper.m_BasicControls_Catalog;
+        public InputAction @Rotate => m_Wrapper.m_BasicControls_Rotate;
+        public InputAction @Delete => m_Wrapper.m_BasicControls_Delete;
         public InputActionMap Get() { return m_Wrapper.m_BasicControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -469,6 +536,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Catalog.started += instance.OnCatalog;
             @Catalog.performed += instance.OnCatalog;
             @Catalog.canceled += instance.OnCatalog;
+            @Rotate.started += instance.OnRotate;
+            @Rotate.performed += instance.OnRotate;
+            @Rotate.canceled += instance.OnRotate;
+            @Delete.started += instance.OnDelete;
+            @Delete.performed += instance.OnDelete;
+            @Delete.canceled += instance.OnDelete;
         }
 
         private void UnregisterCallbacks(IBasicControlsActions instance)
@@ -491,6 +564,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Catalog.started -= instance.OnCatalog;
             @Catalog.performed -= instance.OnCatalog;
             @Catalog.canceled -= instance.OnCatalog;
+            @Rotate.started -= instance.OnRotate;
+            @Rotate.performed -= instance.OnRotate;
+            @Rotate.canceled -= instance.OnRotate;
+            @Delete.started -= instance.OnDelete;
+            @Delete.performed -= instance.OnDelete;
+            @Delete.canceled -= instance.OnDelete;
         }
 
         public void RemoveCallbacks(IBasicControlsActions instance)
@@ -517,6 +596,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_PreviewControls_Confirm;
     private readonly InputAction m_PreviewControls_Pause;
     private readonly InputAction m_PreviewControls_Cancel;
+    private readonly InputAction m_PreviewControls_Rotation;
     public struct PreviewControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -526,6 +606,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Confirm => m_Wrapper.m_PreviewControls_Confirm;
         public InputAction @Pause => m_Wrapper.m_PreviewControls_Pause;
         public InputAction @Cancel => m_Wrapper.m_PreviewControls_Cancel;
+        public InputAction @Rotation => m_Wrapper.m_PreviewControls_Rotation;
         public InputActionMap Get() { return m_Wrapper.m_PreviewControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -550,6 +631,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Cancel.started += instance.OnCancel;
             @Cancel.performed += instance.OnCancel;
             @Cancel.canceled += instance.OnCancel;
+            @Rotation.started += instance.OnRotation;
+            @Rotation.performed += instance.OnRotation;
+            @Rotation.canceled += instance.OnRotation;
         }
 
         private void UnregisterCallbacks(IPreviewControlsActions instance)
@@ -569,6 +653,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Cancel.started -= instance.OnCancel;
             @Cancel.performed -= instance.OnCancel;
             @Cancel.canceled -= instance.OnCancel;
+            @Rotation.started -= instance.OnRotation;
+            @Rotation.performed -= instance.OnRotation;
+            @Rotation.canceled -= instance.OnRotation;
         }
 
         public void RemoveCallbacks(IPreviewControlsActions instance)
@@ -594,6 +681,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnCatalog(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
+        void OnDelete(InputAction.CallbackContext context);
     }
     public interface IPreviewControlsActions
     {
@@ -602,5 +691,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnConfirm(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
     }
 }

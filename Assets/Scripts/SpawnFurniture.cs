@@ -10,9 +10,6 @@ public class SpawnFurniture : MonoBehaviour
     private static GameObject obj;
     public GameObject postionPreview;
     private static bool isInPreview = false;
-
-
-
     [SerializeField] public Transform spawiningPosition;
 
     public void Spawn(string objName){
@@ -41,20 +38,28 @@ public class SpawnFurniture : MonoBehaviour
         }
     }
 
-    private void LateUpdate(){
+    public void positionUpdating(){
         if(isInPreview){
             postionPreview.transform.position = spawiningPosition.position;
         }
     }
 
     public void setInPlace(){
+        Debug.Log(postionPreview.transform.rotation.y);
+        UnityEngine.Object.Instantiate(obj,spawiningPosition.position,postionPreview.transform.localRotation);
         hidePreview();
-        UnityEngine.Object.Instantiate(obj,spawiningPosition.position, Quaternion.identity);
     }
 
     public void hidePreview(){
         postionPreview.transform.position = new Vector3(0,-5,0);
-        postionPreview.transform.rotation = Quaternion.Euler(0,0,0);
+        postionPreview.transform.localRotation = Quaternion.Euler(0,0,0);
         isInPreview = false;
     }
+
+    public void rotateItem(){
+        Debug.Log(postionPreview.transform.rotation);
+        postionPreview.transform.Rotate(0,90,0);
+    }
+
 }
+
