@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class cubeTest : Interactable 
 {
-    
     void Start()
     {
     }
@@ -31,20 +30,23 @@ public class cubeTest : Interactable
         transform.position += moveDirection * 2f * Time.deltaTime;
 
         
-        DistanceTest();
+        //DistanceTest();
     }
 
-    protected void DistanceTest(){
-        Ray fowardRay = new Ray(transform.position, transform.forward);
-        // Ray backwardRay = new Ray(transform.position,Quaternion.Euler(0,180,0) * transform.forward);
-        // Ray leftRay = new Ray(transform.position, Quaternion.Euler(0,-90,0) *transform.forward);
-        // Ray rightRay = new Ray(transform.position, Quaternion.Euler(0,90,0) *transform.forward);
-        Debug.DrawRay(fowardRay.origin,fowardRay.direction* 3f,Color.red);
-        // Debug.DrawRay(backwardRay.origin,backwardRay.direction* viewDistance,Color.red);
-        // Debug.DrawRay(leftRay.origin,leftRay.direction* viewDistance,Color.red);
-        // Debug.DrawRay(rightRay.origin,rightRay.direction* viewDistance,Color.red);
-        RaycastHit hitInfo;
-        Physics.Raycast(fowardRay, out hitInfo, 3f,1);
-        Debug.Log(hitInfo.distance - transform.lossyScale.z/2 + " " + hitInfo.collider);
-    }
+    // protected void DistanceTest(){
+    //     Ray fowardRay = new Ray(transform.position, transform.forward);
+    //     Ray backwardRay = new Ray(transform.position,Quaternion.Euler(0,180,0) * transform.forward);
+    //     Ray leftRay = new Ray(transform.position, Quaternion.Euler(0,-90,0) *transform.forward);
+    //     Ray rightRay = new Ray(transform.position, Quaternion.Euler(0,90,0) *transform.forward);
+    //     Debug.DrawRay(fowardRay.origin,fowardRay.direction* 3f,Color.red);
+    //     // Debug.DrawRay(backwardRay.origin,backwardRay.direction* viewDistance,Color.red);
+    //     // Debug.DrawRay(leftRay.origin,leftRay.direction* viewDistance,Color.red);
+    //     // Debug.DrawRay(rightRay.origin,rightRay.direction* viewDistance,Color.red);
+    //     RaycastHit hitInfo;
+    //     Physics.Raycast(fowardRay, out hitInfo, 5f,1);
+    //     Physics.Raycast(backwardRay, out hitInfo, 5f,1);
+    //     Physics.Raycast(leftRay, out hitInfo, 5f,1);
+    //     Physics.Raycast(rightRay, out hitInfo, 5f,1);
+    //     Debug.Log(hitInfo.distance - transform.lossyScale.z/2 + " " + hitInfo.collider);
+    // }
 }
