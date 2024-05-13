@@ -18,7 +18,7 @@ public class SpawnPosTracker : MonoBehaviour
         bool isLookingGround = Physics.Raycast(ray, out hitInfo, 100f,mask);
         if(isLookingGround)
         {
-            transform.position = new Vector3(hitInfo.point.x,gameObject.transform.position.y,hitInfo.point.z);
+            transform.position = new Vector3(hitInfo.point.x,transform.position.y,hitInfo.point.z);
         }
     }
 }

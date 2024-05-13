@@ -5,10 +5,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class SpawnFurniture : MonoBehaviour
-{private static GameObject obj;
+{   private static GameObject obj;
     public GameObject postionPreview;
     private static bool isInPreview = false;
     [SerializeField] public Transform spawiningPosition;
+
+    void Start(){
+        isInPreview = false;
+    }
 
     public void Spawn(string objName){
         obj = (GameObject) Resources.Load<GameObject>("Prefabs/"+objName);
@@ -27,7 +31,6 @@ public class SpawnFurniture : MonoBehaviour
         spawiningPosition.position = new Vector3(spawiningPosition.position.x,obj.transform.localScale.y/2,spawiningPosition.position.z);
         if(obj != null){
             obj.transform.localScale = new Vector3(length,heigth,width);
-            spawiningPosition.position = new Vector3(spawiningPosition.position.x,obj.transform.localScale.y/2,spawiningPosition.position.z);
             postionPreview.transform.localScale = obj.transform.localScale;
             isInPreview = true;
         }
@@ -37,8 +40,9 @@ public class SpawnFurniture : MonoBehaviour
     }
 
 
-    private void Update(){
+    void FixedUpdate(){
         if(isInPreview){
+            Debug.Log(spawiningPosition.position.x + " "+ spawiningPosition.position.y + " " +  + spawiningPosition.position.z);
             postionPreview.transform.position = spawiningPosition.position;
         }
     }

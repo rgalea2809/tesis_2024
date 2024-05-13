@@ -71,6 +71,7 @@
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\XRKnob.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\ClawMachine\UfoAbductionForce.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\ClawMachine\FlippyDoor.cs" />
+    <Compile Include="Assets\Scripts\XRScripts\UI\volumeCreation.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\XRScripts\UI\CardProperties.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />

@@ -37,7 +37,7 @@ public class fillXRCatalog : MonoBehaviour
         public Room[] catalogInfo;
     }
 
-    private SpawnFurniture spawnFunct;
+    [SerializeField] private SpawnFurniture spawnFunct;
     [SerializeField] private TextMeshProUGUI furnitureType;
     [SerializeField] private GameObject cardContainer;
 
@@ -45,11 +45,12 @@ public class fillXRCatalog : MonoBehaviour
     [SerializeField] private Button card;
     [SerializeField] private GameObject catalog;
 
+    [SerializeField] private TextMeshProUGUI menuLabel;
+
     private int catalogSize = 37;
     // Start is called before the first frame update
     void Start()
     {
-        spawnFunct = GetComponent<SpawnFurniture>();
         fillCatalogFunc(0);
     }
 
@@ -59,9 +60,10 @@ public class fillXRCatalog : MonoBehaviour
         
     }
 
-    private void fillCatalogFunc(int currentRoom){
+    public void fillCatalogFunc(int currentRoom){
         cleanCatalog();
         CatalogInfo assetList = JsonUtility.FromJson<CatalogInfo>(jsonFile.text);
+        menuLabel.text = assetList.catalogInfo[currentRoom].room;
         foreach (Category category in assetList.catalogInfo[currentRoom].categories)
         {
             TextMeshProUGUI furnitureLabel = Object.Instantiate(furnitureType,catalog.transform);
