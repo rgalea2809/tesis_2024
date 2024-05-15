@@ -12,7 +12,9 @@ public class UIXRControler : MonoBehaviour
     [SerializeField] private GameObject catalogMenu;
     [SerializeField] private GameObject volumeCreationMenu;
 
-    private bool isGameStarted = false;
+    public bool isGameStarted = false;
+    public bool didSelectFreeMode = false;
+    public bool didSelectLivingRoomType = false;
 
     void Start()
     {
@@ -25,11 +27,37 @@ public class UIXRControler : MonoBehaviour
         volumeCreationMenu.SetActive(false);
     }
 
-    public void HideMainMenu()
-    {
 
+    // Actions Handlers
+    public void SelectFreeMode()
+    {
+        ToogleMainMenu(false);
+        ToogleRoomSelectionMenu(true);
+        didSelectFreeMode = true;
     }
 
+    public void SelectTrainning()
+    {
+        ToogleMainMenu(false);
+        ToogleRoomSelectionMenu(true);
+        didSelectFreeMode = false;
+    }
+
+    public void SelectLivingRoom()
+    {
+        ToogleRoomSelectionMenu(false);
+        ToogleIsGameStarted();
+        didSelectLivingRoomType = true;
+    }
+
+    public void SelectBedroom()
+    {
+        ToogleRoomSelectionMenu(false);
+        ToogleIsGameStarted();
+        didSelectLivingRoomType = false;
+    }
+
+    // UI Togglers
     public void ToogleMainMenu(bool flag)
     {
         mainMenu.SetActive(flag);

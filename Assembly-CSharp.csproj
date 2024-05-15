@@ -119,6 +119,7 @@
     <Compile Include="Assets\Scripts\UIScripts\CreditsFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\UI\creditsMenu.uxml" />
@@ -133,6 +134,9 @@
     <None Include="Assets\UI\panelCreditsStyle.uss" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\UI\MainMenu.uxml" />
+    <None Include="Assets\Trees_WorldSpace_FREE\Shaders\HDRP\HDRP_TreeLeafSwitcher.shader" />
+    <None Include="Assets\Trees_WorldSpace_FREE\Shaders\StandardRP\BarkShaderAS.shader" />
+    <None Include="Assets\Foliage Free\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -147,6 +151,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\UI\FurnitureCategoryContainer.uxml" />
+    <None Include="Assets\Trees_WorldSpace_FREE\Shaders\StandardRP\TreeLeafSwitcherAS.shader" />
     <None Include="Assets\UI\pausemenuStyle.uss" />
     <None Include="Assets\UI\controlsMenu.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -157,6 +162,7 @@
     <None Include="Assets\UI\RoomSelectionMenu.uxml" />
     <None Include="Assets\UI\roombtn.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Trees_WorldSpace_FREE\Shaders\HDRP\HDRP_BarkSwitch.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
