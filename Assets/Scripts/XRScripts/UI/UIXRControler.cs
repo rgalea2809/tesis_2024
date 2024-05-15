@@ -14,7 +14,8 @@ public class UIXRControler : MonoBehaviour
 
     private bool isGameStarted = false;
 
-    void Start(){
+    void Start()
+    {
         mainMenu.SetActive(true);
         pauseMenu.SetActive(false);
         controlsMenu.SetActive(false);
@@ -24,38 +25,64 @@ public class UIXRControler : MonoBehaviour
         volumeCreationMenu.SetActive(false);
     }
 
-    public void ToogleMainMenu(bool flag){
+    public void HideMainMenu()
+    {
+
+    }
+
+    public void ToogleMainMenu(bool flag)
+    {
         mainMenu.SetActive(flag);
     }
-    public void TooglePauseMenu(bool flag){
+    public void TooglePauseMenu(bool flag)
+    {
         pauseMenu.SetActive(flag);
     }
-    public void ToogleControlsMenu(bool flag){
+    public void ToogleControlsMenu(bool flag)
+    {
         controlsMenu.SetActive(flag);
     }
-    public void ToogleCreditsMenu(bool flag){
+    public void ToogleCreditsMenu(bool flag)
+    {
         creditsMenu.SetActive(flag);
     }
-    public void ToogleRoomSelectionMenu(bool flag){
+    public void ToogleRoomSelectionMenu(bool flag)
+    {
         roomSelectionMenu.SetActive(flag);
     }
-    public void ToogleCatalogMenu(bool flag){
+    public void ToogleCatalogMenu(bool flag)
+    {
         catalogMenu.SetActive(flag);
     }
-    public void ToogleVolumeCreationMenu(bool flag){
+    public void ToogleVolumeCreationMenu(bool flag)
+    {
         volumeCreationMenu.SetActive(flag);
     }
-    public void GoBackFromControlsMenu(){
-        if(isGameStarted){
+    public void GoBackFromControlsMenu()
+    {
+        if (isGameStarted)
+        {
             pauseMenu.SetActive(true);
         }
-        else{
+        else
+        {
             mainMenu.SetActive(true);
         }
     }
 
-    public void ToogleIsGameStarted(){
+    public void ToogleIsGameStarted()
+    {
         isGameStarted = !isGameStarted;
     }
 
+    private void HideAllMenus()
+    {
+        mainMenu.SetActive(false);
+        pauseMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        roomSelectionMenu.SetActive(false);
+        catalogMenu.SetActive(false);
+        volumeCreationMenu.SetActive(false);
+    }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5929729560528179400}
   - component: {fileID: 5400707992126649287}
   - component: {fileID: 8724452980308875320}
+  - component: {fileID: -8116546978737045366}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.8307248, y: 0.6, z: 1.1706287}
-  m_LocalScale: {x: 0.7, y: 2, z: 0.7}
+  m_LocalScale: {x: 0.6, y: 0.1, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -301,3 +302,18 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-8116546978737045366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8246150754535010819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73727519e28a79d43a14b2420c284d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  interactableReference: {fileID: 8724452980308875320}
+  rotationAngle: 45

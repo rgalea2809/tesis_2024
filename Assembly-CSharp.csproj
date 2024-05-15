@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\UIScripts\ControlersMenuFunctions.cs" />
     <Compile Include="Assets\Scripts\EventOnlyInteractable.cs" />
     <Compile Include="Assets\Scripts\XRScripts\UI\UIXRControler.cs" />
-    <Compile Include="Assets\RotateFocusedObject.cs" />
     <Compile Include="Assets\Scripts\XRScripts\XRInputManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerUI.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\XRKnob.cs" />
@@ -85,6 +84,7 @@
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\XRLever.cs" />
     <Compile Include="Assets\Scripts\SpawnFurniture.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\XRPushButton.cs" />
+    <Compile Include="Assets\Scripts\XRScripts\GameObjectsScripts\RotateFocusedObject.cs" />
     <Compile Include="Assets\Scripts\UIScripts\PauseMenuFunctions.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\XRSlider.cs" />
     <Compile Include="Assets\Scripts\SpawnPosTracker.cs" />
