@@ -16,6 +16,10 @@ public class UIXRControler : MonoBehaviour
     public bool didSelectFreeMode = false;
     public bool didSelectLivingRoomType = false;
 
+    public bool isPaused = false;
+
+    public bool isCatalogOpen = false;
+
     void Start()
     {
         mainMenu.SetActive(true);
@@ -65,6 +69,7 @@ public class UIXRControler : MonoBehaviour
     public void TooglePauseMenu(bool flag)
     {
         pauseMenu.SetActive(flag);
+        isPaused = flag;
     }
     public void ToogleControlsMenu(bool flag)
     {
@@ -81,6 +86,7 @@ public class UIXRControler : MonoBehaviour
     public void ToogleCatalogMenu(bool flag)
     {
         catalogMenu.SetActive(flag);
+        isCatalogOpen = flag;
     }
     public void ToogleVolumeCreationMenu(bool flag)
     {

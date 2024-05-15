@@ -47,6 +47,8 @@ public class fillXRCatalog : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI menuLabel;
 
+    [SerializeField] private UIXRControler uiControler;
+
     private int catalogSize = 37;
     // Start is called before the first frame update
     void Start()
@@ -94,5 +96,6 @@ public class fillXRCatalog : MonoBehaviour
 
     private void whenClicked(string itemName){
         spawnFunct.Spawn(itemName);
+        uiControler.ToogleCatalogMenu(false);
     }
 }

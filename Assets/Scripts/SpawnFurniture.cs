@@ -48,20 +48,26 @@ public class SpawnFurniture : MonoBehaviour
     }
 
     public void setInPlace(){
-        Debug.Log(postionPreview.transform.rotation.y);
-        UnityEngine.Object.Instantiate(obj,spawiningPosition.position,postionPreview.transform.localRotation);
-        hidePreview();
+        if(isInPreview){
+            Debug.Log(postionPreview.transform.rotation.y);
+            UnityEngine.Object.Instantiate(obj,spawiningPosition.position,postionPreview.transform.localRotation);
+            hidePreview();
+        }
     }
 
     public void hidePreview(){
-        postionPreview.transform.position = new Vector3(0,-5,0);
-        postionPreview.transform.localRotation = Quaternion.Euler(0,0,0);
-        isInPreview = false;
+        if(isInPreview){
+            postionPreview.transform.position = new Vector3(0,-5,0);
+            postionPreview.transform.localRotation = Quaternion.Euler(0,0,0);
+            isInPreview = false;
+        }
     }
 
     public void rotateItem(){
-        Debug.Log(postionPreview.transform.rotation);
-        postionPreview.transform.Rotate(0,90,0);
+        if(isInPreview){
+            Debug.Log(postionPreview.transform.rotation);
+            postionPreview.transform.Rotate(0,90,0);
+        }
     }
 
 }

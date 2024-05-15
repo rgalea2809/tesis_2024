@@ -30,7 +30,7 @@ public class XRInputManager : MonoBehaviour
 
     private void RequestPauseMenu()
     {
-        if (uiControler.isGameStarted)
+        if (uiControler.isGameStarted && !uiControler.isCatalogOpen)
         {
             uiControler.TooglePauseMenu(true);
         }
@@ -38,7 +38,7 @@ public class XRInputManager : MonoBehaviour
 
     private void OnOpenCatalog()
     {
-        if (uiControler.isGameStarted)
+        if (uiControler.isGameStarted && !uiControler.isPaused)
         {
             uiControler.ToogleCatalogMenu(true);
             spawnFunc.hidePreview();
@@ -49,11 +49,6 @@ public class XRInputManager : MonoBehaviour
     void Update()
     {
 
-    }
-
-    private void debugMessage()
-    {
-        Debug.Log("Hola");
     }
 
     private void OnEnable()
