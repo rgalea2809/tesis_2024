@@ -28,7 +28,7 @@ public class SpawnFurniture : MonoBehaviour
 
     public void Spawn(float heigth, float width, float length){
         obj = (GameObject) Resources.Load<GameObject>("Prefabs/Cube");
-        spawiningPosition.position = new Vector3(spawiningPosition.position.x,obj.transform.localScale.y/2,spawiningPosition.position.z);
+        spawiningPosition.position = new Vector3(spawiningPosition.position.x,heigth/2,spawiningPosition.position.z);
         if(obj != null){
             obj.transform.localScale = new Vector3(length,heigth,width);
             postionPreview.transform.localScale = obj.transform.localScale;

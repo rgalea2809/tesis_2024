@@ -32,7 +32,7 @@ public class InputManager : MonoBehaviour
     }
 
     void Start(){
-        basicControls.Disable();
+        // basicControls.Disable();
     }
 
     // Update is called once per frame
