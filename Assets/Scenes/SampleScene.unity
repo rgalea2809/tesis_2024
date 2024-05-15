@@ -3704,6 +3704,7 @@ GameObject:
   - component: {fileID: 645435901}
   - component: {fileID: 645435900}
   - component: {fileID: 645435906}
+  - component: {fileID: 645435907}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -3990,6 +3991,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &645435907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645435899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73727519e28a79d43a14b2420c284d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  interactableReference: {fileID: 645435906}
 --- !u!1 &672593240
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,6 +6622,7 @@ MonoBehaviour:
   scrolView: {fileID: 1943694242}
   card: {fileID: 5785384118022939670, guid: 7a35603c3bb0bd244a22809c82726fec, type: 3}
   catalog: {fileID: 1909790298}
+  menuLabel: {fileID: 0}
 --- !u!1 &1253825979
 GameObject:
   m_ObjectHideFlags: 0
@@ -11128,7 +11144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1721362034
 MonoBehaviour:
   m_ObjectHideFlags: 0
