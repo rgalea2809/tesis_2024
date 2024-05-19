@@ -10,25 +10,29 @@
                             "size":"1 plaza",
                             "width": "0.90 m",
                             "length": "1.90 m",
-                            "thumbnail": "cama-1-plaza"
+                            "thumbnail": "cama-1-plaza",
+                            "prefab":"SingleSizeBed"
                         },
                         {
                             "size":"1.5 plaza",
                             "width": "1.35 m",
                             "length": "1.90 m",
-                            "thumbnail": "cama-1-5-plaza"
+                            "thumbnail": "cama-1-5-plaza",
+                            "prefab":"OneFiveSizeBed"
                         },
                         {
                             "size":"Queen",
                             "width": "1.50 m",
                             "length": "1.90 m",
-                            "thumbnail": "cama-queen"
+                            "thumbnail": "cama-queen",
+                            "prefab":"QueenSizeBed"
                         },
                         {
                             "size":"King",
                             "width": "1.80 m",
                             "length": "2.00 m",
-                            "thumbnail": "cama-king"
+                            "thumbnail": "cama-king",
+                            "prefab":"KingSizeBed"
                         }
                     ]
                 },
@@ -39,13 +43,15 @@
                             "size":"Mediano",
                             "width": "1.10 m",
                             "length": "0.60 m",
-                            "thumbnail": "desk"
+                            "thumbnail": "desk",
+                            "prefab":"Desk"
                         },
                         {
                             "size":"Esquina",
                             "width": "1.75 m",
                             "length": "1.30 m",
-                            "thumbnail": "escritorio-esquina"
+                            "thumbnail": "escritorio-esquina",
+                            "prefab":"LDesk"
                         }
                     ]
                 },
@@ -56,13 +62,15 @@
                             "size":"Mediana",
                             "width": "0.65 m",
                             "length": "0.55 m",
-                            "thumbnail": "mesa-de-noche"
+                            "thumbnail": "mesa-de-noche-pequeña",
+                            "prefab":"BedSideTable"
                         },
                         {
                             "size":"Pequeña",
                             "width": "0.35 m",
                             "length": "0.35 m",
-                            "thumbnail": "mesa-de-noche-pequeña"
+                            "thumbnail": "mesa-de-noche-pequeña",
+                            "prefab":"SmallBedSideTable"
                         }
                     ]
                 },
@@ -73,19 +81,22 @@
                             "size":"Bajo",
                             "width": "0.90 m",
                             "length": "0.40 m",
-                            "thumbnail": "armario-bajo"
+                            "thumbnail": "armario-bajo",
+                            "prefab":"LowCloset"
                         },
                         {
                             "size":"Mediano",
                             "width": "0.90 m",
                             "length": "0.60 m",
-                            "thumbnail": "armario"
+                            "thumbnail": "armario",
+                            "prefab":"Closet"
                         },
                         {
                             "size":"Grande",
                             "width": "1.80 m",
                             "length": "0.60 m",
-                            "thumbnail": "armario-grande"
+                            "thumbnail": "armario-grande",
+                            "prefab":"BigCloset"
                         }
                     ]
                 },
@@ -96,13 +107,15 @@
                             "size":"Silla",
                             "width": "0.50 m",
                             "length": "0.57 m",
-                            "thumbnail": "silla-dormitorio"
+                            "thumbnail": "silla-dormitorio",
+                            "prefab":"Chair"
                         },
                         {
                             "size":"Sillon",
                             "width": "0.80 m",
                             "length": "0.87 m",
-                            "thumbnail": "sofa-dormitorio"
+                            "thumbnail": "sofa-dormitorio",
+                            "prefab":"Sofa"
                         }
                     ]
                 }
@@ -119,19 +132,22 @@
                             "size":"Individual",
                             "width": "0.80 m",
                             "length": "0.80 m",
-                            "thumbnail": "sofa-sala-individual"
+                            "thumbnail": "sofa-sala-individual",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"2 plazas",
                             "width": "1.40 m",
                             "length": "0.80 m",
-                            "thumbnail": "sofa-sala-2-plazas"
+                            "thumbnail": "sofa-sala-2-plazas",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"3 plazas",
                             "width": "1.80 m",
                             "length": "0.80 m",
-                            "thumbnail": "sofa-sala-3-plazas"
+                            "thumbnail": "sofa-sala-3-plazas",
+                            "prefab":"Cube"
                         }
                     ]
                 },
@@ -142,19 +158,22 @@
                             "size":"Pequeña",
                             "width": "0.40 m",
                             "length": "0.30 m",
-                            "thumbnail": "mesa-de-centro-pequeña"
+                            "thumbnail": "mesa-de-centro-pequeña",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"Mediana",
                             "width": "0.50 m",
                             "length": "0.40 m",
-                            "thumbnail": "mesa-de-centro"
+                            "thumbnail": "mesa-de-centro",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"Grande",
                             "width": "0.60 m",
                             "length": "0.50 m",
-                            "thumbnail": "mesa-de-centro-grande"
+                            "thumbnail": "mesa-de-centro-grande",
+                            "prefab":"Cube"
                         }
                     ]
                 },
@@ -165,13 +184,15 @@
                             "size":"Mediano",
                             "width": "1.20 m",
                             "length": "0.50 m",
-                            "thumbnail": "gabinete-tv"
+                            "thumbnail": "gabinete-tv",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"Grande",
                             "width": "2.00 m",
                             "length": "0.45 m",
-                            "thumbnail": "gabinete-tv-grande"
+                            "thumbnail": "gabinete-tv-grande",
+                            "prefab":"Cube"
                         }
                     ]
                 },
@@ -182,174 +203,29 @@
                             "size":"Pequeña",
                             "width": "0.40 m",
                             "length": "0.35 m",
-                            "thumbnail": "estanteria-pequeña"
+                            "thumbnail": "estanteria-pequeña",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"Mediana",
                             "width": "0.60 m",
                             "length": "0.40 m",
-                            "thumbnail": "estanteria"
+                            "thumbnail": "estanteria",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"Grande",
                             "width": "1.20 m",
                             "length": "0.40 m",
-                            "thumbnail": "estanteria-grande"
+                            "thumbnail": "estanteria-grande",
+                            "prefab":"Cube"
                         },
                         {
                             "size":"Esquina",
                             "width": "0.30 m",
                             "length": "0.30 m",
-                            "thumbnail": "estanteria-esquina"
-                        }
-                    ]
-                }
-            ]
-        },
-
-        {
-            "room": "Cocina",
-            "categories":[
-                {
-                    "category": "Electrodomésticos",
-                    "types":[
-                        {
-                            "size":"Estufa",
-                            "width": "0.70 m",
-                            "length": "0.75 m",
-                            "thumbnail": "estufa"
-                        },
-                        {
-                            "size":"Nevera Mediana",
-                            "width": "0.60 m",
-                            "length": "0.70 m",
-                            "thumbnail": "refrigerador"
-                        },
-                        {
-                            "size":"Nevera de puerta doble",
-                            "width": "1.00 m",
-                            "length": "0.80 m",
-                            "thumbnail": "refrigerador-puerta-doble"
-                        },
-                        {
-                            "size":"Nevera de puerta francesa",
-                            "width": "1.20 m",
-                            "length": "0.90 m",
-                            "thumbnail": "refrigerador-puerta-francesa"
-                        }
-                    ]
-                },
-                {
-                    "category": "Gabinetes",
-                    "types":[
-                        {
-                            "size":"Pequeño",
-                            "width": "0.50 m",
-                            "length": "0.50 m",
-                            "thumbnail": "gabinete-cocina-pequeño"
-                        },
-                        {
-                            "size":"Mediano",
-                            "width": "1.00 m",
-                            "length": "0.60 m",
-                            "thumbnail": "gabinete-cocina"
-                        },
-                        {
-                            "size":"Esquina",
-                            "width": "2.60 m",
-                            "length": "1.50 m",
-                            "thumbnail": "gabinete-cocina-esquina"
-                        }
-                    ]
-                },
-                {
-                    "category": "Fregaderos",
-                    "types":[
-                        {
-                            "size":"Mediano",
-                            "width": "0.90 m",
-                            "length": "0.65 m",
-                            "thumbnail": "fregadero"
-                        },
-                        {
-                            "size":"Grande",
-                            "width": "1.30 m",
-                            "length": "0.60 m",
-                            "thumbnail": "fregadero-grande"
-                        }
-                    ]
-                },
-                {
-                    "category": "Asientos",
-                    "types":[
-                        {
-                            "size":"Banco",
-                            "width": "0.50 m",
-                            "length": "0.40 m",
-                            "thumbnail": "banco"
-                        }
-                    ]
-                }
-            ]
-        },
-
-        {
-            "room": "Comedor",
-            "categories":[
-                {
-                    "category": "Mesas",
-                    "types":[
-                        {
-                            "size":"Para 4 personas",
-                            "width": "0.75 m",
-                            "length": "1.20 m",
-                            "thumbnail": "mesa-4-personas"
-                        },
-                        {
-                            "size":"Para 6 personas",
-                            "width": "0.75 m",
-                            "length": "1.50 m",
-                            "thumbnail": "mesa-6-personas"
-                        },
-                        {
-                            "size":"Para 8 personas",
-                            "width": "0.90 m",
-                            "length": "1.80 m",
-                            "thumbnail": "mesa-8-personas"
-                        }
-                    ]
-                },
-                {
-                    "category": "Aparadores",
-                    "types":[
-                        {
-                            "size":"Pequeño",
-                            "width": "0.50 m",
-                            "length": "0.60 m",
-                            "thumbnail": "aparador-pequeña"
-                        },
-                        {
-                            "size":"Mediano",
-                            "width": "0.40 m",
-                            "length": "1.20 m",
-                            "thumbnail": "aparador"
-                        },
-                        {
-                            "size":"Grande",
-                            "width": "0.50 m",
-                            "length": "1.60 m",
-                            "thumbnail": "aparador-grande"
-                        }
-                    ]
-                },
-                {
-                    "category": "Asientos",
-                    "types":[
-                        {
-                            "size":"Silla",
-                            "width": "0.50 m",
-                            "length": "0.55 m",
-                            "thumbnail": "silla-comedor"
+                            "thumbnail": "estanteria-esquina",
+                            "prefab":"Cube"
                         }
                     ]
                 }

@@ -16,6 +16,8 @@ public class fillXRCatalog : MonoBehaviour
         public string length;
 
         public string thumbnail;
+
+        public string prefab;
     }
 
     [System.Serializable]
@@ -53,7 +55,7 @@ public class fillXRCatalog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fillCatalogFunc(0);
+        
     }
 
     // Update is called once per frame
@@ -79,7 +81,7 @@ public class fillXRCatalog : MonoBehaviour
                 cardProps.setThumbnail(Resources.Load<Texture2D>("Thumbnails/"+furniture.thumbnail));
                 cardProps.setName(furniture.size);
                 cardProps.setdimetions("("+furniture.width+" x "+furniture.length+")");
-                cardInstant.onClick.AddListener(() => whenClicked("Cube"));
+                cardInstant.onClick.AddListener(() => whenClicked(furniture.prefab));
             }
             catalogSize += 32;
         }

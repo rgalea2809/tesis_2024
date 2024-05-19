@@ -42,14 +42,12 @@ public class SpawnFurniture : MonoBehaviour
 
     void FixedUpdate(){
         if(isInPreview){
-            Debug.Log(spawiningPosition.position.x + " "+ spawiningPosition.position.y + " " +  + spawiningPosition.position.z);
             postionPreview.transform.position = spawiningPosition.position;
         }
     }
 
     public void setInPlace(){
         if(isInPreview){
-            Debug.Log(postionPreview.transform.rotation.y);
             UnityEngine.Object.Instantiate(obj,spawiningPosition.position,postionPreview.transform.localRotation);
             hidePreview();
         }
@@ -65,7 +63,6 @@ public class SpawnFurniture : MonoBehaviour
 
     public void rotateItem(){
         if(isInPreview){
-            Debug.Log(postionPreview.transform.rotation);
             postionPreview.transform.Rotate(0,90,0);
         }
     }
