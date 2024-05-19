@@ -41,7 +41,7 @@
                     "types":[
                         {
                             "size":"Mediano",
-                            "width": "1.10 m",
+                            "width": "1.35 m",
                             "length": "0.60 m",
                             "thumbnail": "desk",
                             "prefab":"Desk"
@@ -67,8 +67,8 @@
                         },
                         {
                             "size":"Pequeña",
-                            "width": "0.35 m",
-                            "length": "0.35 m",
+                            "width": "0.46 m",
+                            "length": "0.38 m",
                             "thumbnail": "mesa-de-noche-pequeña",
                             "prefab":"SmallBedSideTable"
                         }
@@ -93,8 +93,8 @@
                         },
                         {
                             "size":"Grande",
-                            "width": "1.80 m",
-                            "length": "0.60 m",
+                            "width": "2.00 m",
+                            "length": "0.47 m",
                             "thumbnail": "armario-grande",
                             "prefab":"BigCloset"
                         }
@@ -105,8 +105,8 @@
                     "types":[
                         {
                             "size":"Silla",
-                            "width": "0.50 m",
-                            "length": "0.57 m",
+                            "width": "0.60 m",
+                            "length": "0.60 m",
                             "thumbnail": "silla-dormitorio",
                             "prefab":"Chair"
                         },
@@ -129,25 +129,25 @@
                     "category": "Sofás",
                     "types":[
                         {
-                            "size":"Individual",
+                            "size":"1 plaza",
                             "width": "0.80 m",
                             "length": "0.80 m",
                             "thumbnail": "sofa-sala-individual",
-                            "prefab":"Cube"
+                            "prefab":"OneSeaterSofa"
                         },
                         {
                             "size":"2 plazas",
-                            "width": "1.40 m",
+                            "width": "1.50 m",
                             "length": "0.80 m",
                             "thumbnail": "sofa-sala-2-plazas",
-                            "prefab":"Cube"
+                            "prefab":"TwoSeaterSofa"
                         },
                         {
                             "size":"3 plazas",
-                            "width": "1.80 m",
+                            "width": "2.10 m",
                             "length": "0.80 m",
                             "thumbnail": "sofa-sala-3-plazas",
-                            "prefab":"Cube"
+                            "prefab":"ThreeSeaterSofa"
                         }
                     ]
                 },
@@ -159,21 +159,21 @@
                             "width": "0.40 m",
                             "length": "0.30 m",
                             "thumbnail": "mesa-de-centro-pequeña",
-                            "prefab":"Cube"
+                            "prefab":"SmallCenterTable"
                         },
                         {
                             "size":"Mediana",
                             "width": "0.50 m",
-                            "length": "0.40 m",
+                            "length": "0.50 m",
                             "thumbnail": "mesa-de-centro",
-                            "prefab":"Cube"
+                            "prefab":"CenterTable"
                         },
                         {
                             "size":"Grande",
                             "width": "0.60 m",
                             "length": "0.50 m",
                             "thumbnail": "mesa-de-centro-grande",
-                            "prefab":"Cube"
+                            "prefab":"BigCenterTable"
                         }
                     ]
                 },
@@ -182,17 +182,17 @@
                     "types":[
                         {
                             "size":"Mediano",
-                            "width": "1.20 m",
-                            "length": "0.50 m",
+                            "width": "1.40 m",
+                            "length": "0.90 m",
                             "thumbnail": "gabinete-tv",
-                            "prefab":"Cube"
+                            "prefab":"TvCabinet"
                         },
                         {
                             "size":"Grande",
                             "width": "2.00 m",
                             "length": "0.45 m",
                             "thumbnail": "gabinete-tv-grande",
-                            "prefab":"Cube"
+                            "prefab":"BigTVCabinet"
                         }
                     ]
                 },
@@ -201,31 +201,31 @@
                     "types":[
                         {
                             "size":"Pequeña",
-                            "width": "0.40 m",
-                            "length": "0.35 m",
+                            "width": "0.50 m",
+                            "length": "0.40 m",
                             "thumbnail": "estanteria-pequeña",
-                            "prefab":"Cube"
+                            "prefab":"SmallShelf"
                         },
                         {
                             "size":"Mediana",
-                            "width": "0.60 m",
-                            "length": "0.40 m",
-                            "thumbnail": "estanteria",
-                            "prefab":"Cube"
-                        },
-                        {
-                            "size":"Grande",
                             "width": "1.20 m",
                             "length": "0.40 m",
                             "thumbnail": "estanteria-grande",
-                            "prefab":"Cube"
+                            "prefab":"Shelf"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "1.50 m",
+                            "length": "0.40 m",
+                            "thumbnail": "estanteria-grande",
+                            "prefab":"BigShelf"
                         },
                         {
                             "size":"Esquina",
                             "width": "0.30 m",
                             "length": "0.30 m",
                             "thumbnail": "estanteria-esquina",
-                            "prefab":"Cube"
+                            "prefab":"CornerShelf"
                         }
                     ]
                 }
