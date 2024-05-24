@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2218220511203708287}
   - component: {fileID: 4110500769078608393}
   - component: {fileID: 1615409781615952548}
-  m_Layer: 0
+  - component: {fileID: -8044259712475827769}
+  m_Layer: 6
   m_Name: Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,6 +252,21 @@ MonoBehaviour:
   rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 4110500769078608393}
   rotationAngle: 90
+--- !u!114 &-8044259712475827769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168502305905124180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f516016bc64da46b13f162e0a8be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &7892060171197387703
 PrefabInstance:
   m_ObjectHideFlags: 0

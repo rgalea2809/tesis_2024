@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4247247972453012882}
   - component: {fileID: 1713760909634199469}
   - component: {fileID: 1765356378148944669}
-  m_Layer: 0
+  - component: {fileID: 8256382568415110756}
+  m_Layer: 6
   m_Name: BigShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,6 +252,21 @@ MonoBehaviour:
   rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 1713760909634199469}
   rotationAngle: 90
+--- !u!114 &8256382568415110756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7805906572716431070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f516016bc64da46b13f162e0a8be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &3298940950955821697
 PrefabInstance:
   m_ObjectHideFlags: 0

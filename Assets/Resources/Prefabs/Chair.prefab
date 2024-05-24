@@ -97,7 +97,8 @@ GameObject:
   - component: {fileID: 6464013743082591915}
   - component: {fileID: 2804929659930095092}
   - component: {fileID: 6849418116867558200}
-  m_Layer: 0
+  - component: {fileID: -6459960664835054407}
+  m_Layer: 6
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,6 +336,21 @@ MonoBehaviour:
   rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 2804929659930095092}
   rotationAngle: 90
+--- !u!114 &-6459960664835054407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873691396729472945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f516016bc64da46b13f162e0a8be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &7493509530746215488
 GameObject:
   m_ObjectHideFlags: 0

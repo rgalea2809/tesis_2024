@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7529912718364840257}
   - component: {fileID: 385369562449067057}
   - component: {fileID: 5841425412503680268}
-  m_Layer: 0
+  - component: {fileID: -1585171161421673051}
+  m_Layer: 6
   m_Name: CenterTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,6 +252,21 @@ MonoBehaviour:
   rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 385369562449067057}
   rotationAngle: 90
+--- !u!114 &-1585171161421673051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626838077185561607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f516016bc64da46b13f162e0a8be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &7928276517951982202
 PrefabInstance:
   m_ObjectHideFlags: 0
