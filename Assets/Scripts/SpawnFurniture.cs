@@ -5,65 +5,82 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class SpawnFurniture : MonoBehaviour
-{   private static GameObject obj;
+{
+    private static GameObject obj;
     public GameObject postionPreview;
     private static bool isInPreview = false;
     [SerializeField] public Transform spawiningPosition;
 
-    void Start(){
+    void Start()
+    {
         isInPreview = false;
     }
 
-    public void Spawn(string objName){
-        obj = (GameObject) Resources.Load<GameObject>("Prefabs/"+objName);
-        if(obj != null){
-            spawiningPosition.position = new Vector3(spawiningPosition.position.x,obj.transform.localScale.y/2,spawiningPosition.position.z);
+    public void Spawn(string objName)
+    {
+        obj = (GameObject)Resources.Load<GameObject>("Prefabs/" + objName);
+        if (obj != null)
+        {
+            spawiningPosition.position = new Vector3(spawiningPosition.position.x, obj.transform.localScale.y / 2, spawiningPosition.position.z);
             postionPreview.transform.localScale = obj.transform.localScale;
             isInPreview = true;
         }
-        else{
+        else
+        {
             Debug.Log("404: Object Not Found");
         }
     }
 
-    public void Spawn(float heigth, float width, float length){
-        obj = (GameObject) Resources.Load<GameObject>("Prefabs/Cube");
-        spawiningPosition.position = new Vector3(spawiningPosition.position.x,heigth/2,spawiningPosition.position.z);
-        if(obj != null){
-            obj.transform.localScale = new Vector3(length,heigth,width);
+    public void Spawn(float heigth, float width, float length)
+    {
+        obj = (GameObject)Resources.Load<GameObject>("Prefabs/Cube");
+        spawiningPosition.position = new Vector3(spawiningPosition.position.x, heigth / 2, spawiningPosition.position.z);
+        if (obj != null)
+        {
+            obj.transform.localScale = new Vector3(length, heigth, width);
             postionPreview.transform.localScale = obj.transform.localScale;
             isInPreview = true;
         }
-        else{      
+        else
+        {
             throw new Exception("404: No se pudo encontrar el modelo requerido");
         }
     }
 
 
-    void FixedUpdate(){
-        if(isInPreview){
+    void FixedUpdate()
+    {
+        if (isInPreview)
+        {
             postionPreview.transform.position = spawiningPosition.position;
         }
     }
 
-    public void setInPlace(){
-        if(isInPreview){
-            UnityEngine.Object.Instantiate(obj,spawiningPosition.position,postionPreview.transform.localRotation);
+    public void setInPlace()
+    {
+        if (isInPreview)
+        {
+            Vector3 newObjectPos = new(spawiningPosition.position.x, 0.05f, spawiningPosition.position.z);
+            UnityEngine.Object.Instantiate(obj, newObjectPos, postionPreview.transform.localRotation);
             hidePreview();
         }
     }
 
-    public void hidePreview(){
-        if(isInPreview){
-            postionPreview.transform.position = new Vector3(0,-5,0);
-            postionPreview.transform.localRotation = Quaternion.Euler(0,0,0);
+    public void hidePreview()
+    {
+        if (isInPreview)
+        {
+            postionPreview.transform.position = new Vector3(0, -5, 0);
+            postionPreview.transform.localRotation = Quaternion.Euler(0, 0, 0);
             isInPreview = false;
         }
     }
 
-    public void rotateItem(){
-        if(isInPreview){
-            postionPreview.transform.Rotate(0,90,0);
+    public void rotateItem()
+    {
+        if (isInPreview)
+        {
+            postionPreview.transform.Rotate(0, 90, 0);
         }
     }
 
