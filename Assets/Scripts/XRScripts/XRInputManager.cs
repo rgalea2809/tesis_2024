@@ -29,6 +29,7 @@ public class XRInputManager : MonoBehaviour
         basicControls.Catalog.performed += ctx => OnOpenCatalog();
         basicControls.Cancel.performed += ctx => spawnFunc.hidePreview();
         basicControls.Confirm.performed += ctx => spawnFunc.setInPlace();
+        basicControls.Rotate.performed += ctx => spawnFunc.rotateItem();
     }
 
     private void RequestPauseMenu()
@@ -51,6 +52,8 @@ public class XRInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(selectedObj != null)
+            selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
         if(rigthRay.isSelectActive && rigthRay.firstInteractableSelected != null)
         {
             Vector3 moveY = Vector3.zero;
@@ -63,13 +66,11 @@ public class XRInputManager : MonoBehaviour
 
             if(basicControls.Pause.IsPressed()){
                 Debug.Log( selectedObj + " should go up by " + (selectedObj.transform.position.y + 0.1f) );
-                selectedObj.GetComponent<Rigidbody>().MovePosition( 
-                    new Vector3(selectedObj.transform.position.x,selectedObj.transform.position.y + 0.1f,selectedObj.transform.position.x));
+                selectedObj.GetComponent<SpacingValidation>().moveInY(0.1f);
             }
             else if(basicControls.Catalog.IsPressed()){ 
                 Debug.Log( selectedObj + " should go down by " + (selectedObj.transform.position.y - 0.1f) );
-                selectedObj.GetComponent<Rigidbody>().MovePosition( 
-                    new Vector3(selectedObj.transform.position.x,selectedObj.transform.position.y - 0.1f,selectedObj.transform.position.x));
+                selectedObj.GetComponent<SpacingValidation>().moveInY(-0.1f);
 
             }
         }
@@ -111,7 +112,7 @@ public class XRInputManager : MonoBehaviour
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ;
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY;  
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY; 
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY; 
     }
 }

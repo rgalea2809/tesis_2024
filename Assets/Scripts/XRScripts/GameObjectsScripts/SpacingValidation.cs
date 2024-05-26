@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -29,6 +30,10 @@ public class SpacingValidation : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void moveInY(float moveDistance){
+            transform.position = new Vector3(transform.position.x,transform.position.y + moveDistance, transform.position.z);
     }
 
     public void CheckDistanseFromWalls(){
