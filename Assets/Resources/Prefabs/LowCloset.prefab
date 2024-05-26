@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5992482501150315296}
   - component: {fileID: 2720871263493118053}
   - component: {fileID: 846044275077584013}
-  m_Layer: 0
+  - component: {fileID: 5953824169431513347}
+  m_Layer: 6
   m_Name: LowCloset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,6 +253,21 @@ MonoBehaviour:
   destroyActionReference: {fileID: -264986529859989497, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 2720871263493118053}
   rotationAngle: 90
+--- !u!114 &5953824169431513347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576404630937161878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f516016bc64da46b13f162e0a8be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &7809745952395853441
 PrefabInstance:
   m_ObjectHideFlags: 0

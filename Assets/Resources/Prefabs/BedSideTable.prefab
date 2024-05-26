@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1927120086894392508}
   - component: {fileID: 2120990252599920767}
   - component: {fileID: 6671235283519163359}
-  m_Layer: 0
+  - component: {fileID: -8959234344011481179}
+  m_Layer: 6
   m_Name: BedSideTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,6 +253,21 @@ MonoBehaviour:
   destroyActionReference: {fileID: -264986529859989497, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 2120990252599920767}
   rotationAngle: 90
+--- !u!114 &-8959234344011481179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955686460173661711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f516016bc64da46b13f162e0a8be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &7933578991998659987
 PrefabInstance:
   m_ObjectHideFlags: 0

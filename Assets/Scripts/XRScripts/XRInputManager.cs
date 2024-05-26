@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRInputManager : MonoBehaviour
 {
     [SerializeField] private UIXRControler uiControler;
     [SerializeField] private SpawnFurniture spawnFunc;
-
+    [SerializeField] private XRRayInteractor rigthRay;
+    // Start is called before the first frame update
+    private GameObject selectedObj;
     public GameObject bedroomSpawner;
     public GameObject bedroomTrainning;
     public GameObject livingRoomSpawner;
@@ -26,11 +29,12 @@ public class XRInputManager : MonoBehaviour
         basicControls.Catalog.performed += ctx => OnOpenCatalog();
         basicControls.Cancel.performed += ctx => spawnFunc.hidePreview();
         basicControls.Confirm.performed += ctx => spawnFunc.setInPlace();
+        basicControls.Rotate.performed += ctx => spawnFunc.rotateItem();
     }
 
     private void RequestPauseMenu()
     {
-        if (uiControler.isGameStarted && !uiControler.isCatalogOpen)
+        if (uiControler.isGameStarted && !uiControler.isCatalogOpen && rigthRay.firstInteractableSelected == null)
         {
             uiControler.TooglePauseMenu(true);
         }
@@ -38,7 +42,7 @@ public class XRInputManager : MonoBehaviour
 
     private void OnOpenCatalog()
     {
-        if (uiControler.isGameStarted && !uiControler.isPaused)
+        if (uiControler.isGameStarted && !uiControler.isPaused && rigthRay.firstInteractableSelected == null)
         {
             uiControler.ToogleCatalogMenu(true);
             spawnFunc.hidePreview();
@@ -48,7 +52,31 @@ public class XRInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(selectedObj != null)
+            selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
+        if(rigthRay.isSelectActive && rigthRay.firstInteractableSelected != null)
+        {
+            Vector3 moveY = Vector3.zero;
 
+            selectedObj =  rigthRay.firstInteractableSelected.colliders[0].gameObject;
+
+            unfreezePosition();
+
+            selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
+
+            if(basicControls.Pause.IsPressed()){
+                Debug.Log( selectedObj + " should go up by " + (selectedObj.transform.position.y + 0.1f) );
+                selectedObj.GetComponent<SpacingValidation>().moveInY(0.1f);
+            }
+            else if(basicControls.Catalog.IsPressed()){ 
+                Debug.Log( selectedObj + " should go down by " + (selectedObj.transform.position.y - 0.1f) );
+                selectedObj.GetComponent<SpacingValidation>().moveInY(-0.1f);
+
+            }
+        }
+        else if(!rigthRay.isSelectActive && selectedObj != null){
+            freezePosition();
+        }
     }
 
     private void OnEnable()
@@ -73,5 +101,18 @@ public class XRInputManager : MonoBehaviour
             gameObject.transform.position = bedroomSpawner.transform.position;
             bedroomTrainning.SetActive(!uiControler.didSelectFreeMode);
         }
+    }
+
+    private void freezePosition(){
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    private void unfreezePosition(){
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ;
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY; 
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY; 
     }
 }

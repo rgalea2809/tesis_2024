@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2336604268063001136}
   - component: {fileID: 1085087914411349972}
   - component: {fileID: 4818907843966664257}
-  m_Layer: 0
+  - component: {fileID: -6135604761488714933}
+  m_Layer: 6
   m_Name: OneSeaterSofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,6 +253,21 @@ MonoBehaviour:
   destroyActionReference: {fileID: -264986529859989497, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 1085087914411349972}
   rotationAngle: 90
+--- !u!114 &-6135604761488714933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41120342718481153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f516016bc64da46b13f162e0a8be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &1048254515933269931
 PrefabInstance:
   m_ObjectHideFlags: 0

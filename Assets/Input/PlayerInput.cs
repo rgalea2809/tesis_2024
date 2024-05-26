@@ -234,6 +234,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Button"",
+                    ""id"": ""51c49955-5ae2-4254-a832-7a0b60774de5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -273,11 +282,22 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""62dd643a-64fe-4933-a806-2484baaf6248"",
-                    ""path"": ""<XRController>{RightHand}/{PrimaryButton}"",
+                    ""path"": ""<XRController>{RightHand}/{TriggerButton}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f856df87-133e-4135-ab97-3b8d0e3c630f"",
+                    ""path"": ""<XRController>{RightHand}/{PrimaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -300,6 +320,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_XRInputs_Cancel = m_XRInputs.FindAction("Cancel", throwIfNotFound: true);
         m_XRInputs_Pause = m_XRInputs.FindAction("Pause", throwIfNotFound: true);
         m_XRInputs_Confirm = m_XRInputs.FindAction("Confirm", throwIfNotFound: true);
+        m_XRInputs_Rotate = m_XRInputs.FindAction("Rotate", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -451,6 +472,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_XRInputs_Cancel;
     private readonly InputAction m_XRInputs_Pause;
     private readonly InputAction m_XRInputs_Confirm;
+    private readonly InputAction m_XRInputs_Rotate;
     public struct XRInputsActions
     {
         private @PlayerInput m_Wrapper;
@@ -459,6 +481,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Cancel => m_Wrapper.m_XRInputs_Cancel;
         public InputAction @Pause => m_Wrapper.m_XRInputs_Pause;
         public InputAction @Confirm => m_Wrapper.m_XRInputs_Confirm;
+        public InputAction @Rotate => m_Wrapper.m_XRInputs_Rotate;
         public InputActionMap Get() { return m_Wrapper.m_XRInputs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -480,6 +503,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Confirm.started += instance.OnConfirm;
             @Confirm.performed += instance.OnConfirm;
             @Confirm.canceled += instance.OnConfirm;
+            @Rotate.started += instance.OnRotate;
+            @Rotate.performed += instance.OnRotate;
+            @Rotate.canceled += instance.OnRotate;
         }
 
         private void UnregisterCallbacks(IXRInputsActions instance)
@@ -496,6 +522,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Confirm.started -= instance.OnConfirm;
             @Confirm.performed -= instance.OnConfirm;
             @Confirm.canceled -= instance.OnConfirm;
+            @Rotate.started -= instance.OnRotate;
+            @Rotate.performed -= instance.OnRotate;
+            @Rotate.canceled -= instance.OnRotate;
         }
 
         public void RemoveCallbacks(IXRInputsActions instance)
@@ -528,5 +557,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnCancel(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
     }
 }
