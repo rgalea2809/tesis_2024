@@ -34,6 +34,7 @@ public class XRInputManager : MonoBehaviour
 
     private void RequestPauseMenu()
     {
+        Debug.Log("Requested pause menu");
         if (uiControler.isGameStarted && !uiControler.isCatalogOpen && rigthRay.firstInteractableSelected == null)
         {
             uiControler.TooglePauseMenu(true);
@@ -52,29 +53,32 @@ public class XRInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(selectedObj != null)
+        if (selectedObj != null)
             selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
-        if(rigthRay.isSelectActive && rigthRay.firstInteractableSelected != null)
+        if (rigthRay.isSelectActive && rigthRay.firstInteractableSelected != null)
         {
             Vector3 moveY = Vector3.zero;
 
-            selectedObj =  rigthRay.firstInteractableSelected.colliders[0].gameObject;
+            selectedObj = rigthRay.firstInteractableSelected.colliders[0].gameObject;
 
             unfreezePosition();
 
             selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
 
-            if(basicControls.Pause.IsPressed()){
-                Debug.Log( selectedObj + " should go up by " + (selectedObj.transform.position.y + 0.1f) );
+            if (basicControls.Pause.IsPressed())
+            {
+                Debug.Log(selectedObj + " should go up by " + (selectedObj.transform.position.y + 0.1f));
                 selectedObj.GetComponent<SpacingValidation>().moveInY(0.1f);
             }
-            else if(basicControls.Catalog.IsPressed()){ 
-                Debug.Log( selectedObj + " should go down by " + (selectedObj.transform.position.y - 0.1f) );
+            else if (basicControls.Catalog.IsPressed())
+            {
+                Debug.Log(selectedObj + " should go down by " + (selectedObj.transform.position.y - 0.1f));
                 selectedObj.GetComponent<SpacingValidation>().moveInY(-0.1f);
 
             }
         }
-        else if(!rigthRay.isSelectActive && selectedObj != null){
+        else if (!rigthRay.isSelectActive && selectedObj != null)
+        {
             freezePosition();
         }
     }
@@ -103,16 +107,18 @@ public class XRInputManager : MonoBehaviour
         }
     }
 
-    private void freezePosition(){
+    private void freezePosition()
+    {
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    private void unfreezePosition(){
+    private void unfreezePosition()
+    {
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ;
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY; 
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY; 
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY;
+        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
     }
 }

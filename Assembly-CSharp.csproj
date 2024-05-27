@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerUI.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\XRKnob.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\ClawMachine\UfoAbductionForce.cs" />
+    <Compile Include="Assets\Scripts\XRScripts\GameObjectsScripts\SpacingValidation.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\ClawMachine\FlippyDoor.cs" />
     <Compile Include="Assets\Scripts\XRScripts\UI\volumeCreation.cs" />
     <Compile Include="Assets\Brick Project Studio\Apartment Kit\Common\Scripts &amp; Animation\Slide\opencloseSlide.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Scripts\InteractablesScripts\cubeTest.cs" />
     <Compile Include="Assets\Brick Project Studio\_BPS Basic Assets\Common\Scripts and Animations\First Person Player\MouseLook.cs" />
     <Compile Include="Assets\Brick Project Studio\Apartment Kit\Common\Scripts &amp; Animation\Closet\ClosetopencloseDoor.cs" />
+    <Compile Include="Assets\Scripts\XRScripts\UI\TwoPointsLine.cs" />
     <Compile Include="Assets\Scripts\XRScripts\UI\fillXRCatalog.cs" />
     <Compile Include="Assets\Scripts\UIScripts\MainMenuFunctions.cs" />
     <Compile Include="Assets\Brick Project Studio\Apartment Kit\Common\Scripts &amp; Animation\Z Axis -1\Drawer_Pull_Zopp.cs" />
