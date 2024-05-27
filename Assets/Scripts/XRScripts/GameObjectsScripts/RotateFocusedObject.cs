@@ -9,42 +9,55 @@ public class RotateFocusedObject : MonoBehaviour
 {
     // References
     public InputActionReference rotateReference = null;
+    public InputActionReference destroyActionReference = null;
     public XRGrabInteractable interactableReference = null;
 
     // Properties
     public float rotationAngle = 45.0f;
-    private bool canRotate = false;
+    private bool canInteract = false;
 
 
     private void Awake()
     {
         rotateReference.action.performed += RotateObject;
-        interactableReference.hoverEntered.AddListener(EnableRotation);
-        interactableReference.hoverExited.AddListener(DisableRotation);
+        destroyActionReference.action.performed += DestroyObject;
+        interactableReference.hoverEntered.AddListener(EnableInteraction);
+        interactableReference.hoverExited.AddListener(DisableInteraction);
     }
 
     private void OnDestroy()
     {
         rotateReference.action.performed -= RotateObject;
+        destroyActionReference.action.performed -= DestroyObject;
         interactableReference.hoverEntered.RemoveAllListeners();
         interactableReference.hoverExited.RemoveAllListeners();
     }
 
-    private void EnableRotation(HoverEnterEventArgs arguments)
+    private void EnableInteraction(HoverEnterEventArgs arguments)
     {
-        canRotate = true;
+        canInteract = true;
     }
 
-    private void DisableRotation(HoverExitEventArgs arguments)
+    private void DisableInteraction(HoverExitEventArgs arguments)
     {
-        canRotate = false;
+        canInteract = false;
     }
 
     private void RotateObject(InputAction.CallbackContext context)
     {
-        if (canRotate)
+        if (canInteract)
         {
             gameObject.transform.Rotate(0.0f, rotationAngle, 0.0f, Space.Self);
+        }
+
+    }
+
+    private void DestroyObject(InputAction.CallbackContext context)
+    {
+        Debug.Log("Got destroyed");
+        if (canInteract)
+        {
+            Destroy(gameObject);
         }
 
     }

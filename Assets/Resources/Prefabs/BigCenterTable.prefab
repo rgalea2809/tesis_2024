@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3213405692103329927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0.088, z: 0}
   m_LocalScale: {x: 0.6, y: 1.2, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -57,7 +57,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &4424609503573642706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  destroyActionReference: {fileID: -264986529859989497, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   interactableReference: {fileID: 4247421138642660309}
   rotationAngle: 90
 --- !u!114 &-4555007710946743063
@@ -289,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c255c835d1ad884eb4deedf58dd627f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.49999976
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c255c835d1ad884eb4deedf58dd627f, type: 3}
       propertyPath: m_LocalPosition.z
