@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 3523742}
   - component: {fileID: 3523741}
   - component: {fileID: 3523740}
+  - component: {fileID: 3523743}
   m_Layer: 0
   m_Name: BookShelf
   m_TagString: Untagged
@@ -266,6 +267,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3523738}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3523743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3523738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 1055469601}
+  meshReference: {fileID: 3523741}
 --- !u!1 &4818369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4638,7 +4653,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.14
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -5147,7 +5162,7 @@ MonoBehaviour:
   m_Vertical: 1
   m_MovementType: 2
   m_Elasticity: 0.1
-  m_Inertia: 1
+  m_Inertia: 0
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 1
   m_Viewport: {fileID: 435818640}
@@ -5718,6 +5733,7 @@ GameObject:
   - component: {fileID: 483587594}
   - component: {fileID: 483587593}
   - component: {fileID: 483587592}
+  - component: {fileID: 483587595}
   m_Layer: 0
   m_Name: TableFrame
   m_TagString: Untagged
@@ -5813,6 +5829,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483587590}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &483587595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483587590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 440668590}
+  meshReference: {fileID: 483587593}
 --- !u!1 &498561396
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,6 +6382,7 @@ GameObject:
   - component: {fileID: 526108820}
   - component: {fileID: 526108819}
   - component: {fileID: 526108818}
+  - component: {fileID: 526108821}
   m_Layer: 0
   m_Name: Sofa1Frame
   m_TagString: Untagged
@@ -6447,6 +6478,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526108816}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &526108821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526108816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 837081893}
+  meshReference: {fileID: 526108819}
 --- !u!1 &529421332
 GameObject:
   m_ObjectHideFlags: 0
@@ -12322,6 +12367,7 @@ GameObject:
   - component: {fileID: 1190816295}
   - component: {fileID: 1190816294}
   - component: {fileID: 1190816293}
+  - component: {fileID: 1190816296}
   m_Layer: 0
   m_Name: TvBase
   m_TagString: Untagged
@@ -12417,6 +12463,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190816291}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1190816296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190816291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 415746144}
+  meshReference: {fileID: 1190816294}
 --- !u!1001 &1220955071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13275,6 +13335,7 @@ GameObject:
   - component: {fileID: 1307730472}
   - component: {fileID: 1307730471}
   - component: {fileID: 1307730470}
+  - component: {fileID: 1307730473}
   m_Layer: 0
   m_Name: Sofa2Frame (1)
   m_TagString: Untagged
@@ -13370,6 +13431,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307730468}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1307730473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307730468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 1176231466}
+  meshReference: {fileID: 1307730471}
 --- !u!4 &1308206484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010446659238, guid: 81ed4e584e6c4894596fd0ac2c996d98, type: 3}
@@ -14988,6 +15063,7 @@ GameObject:
   - component: {fileID: 1448435167}
   - component: {fileID: 1448435166}
   - component: {fileID: 1448435165}
+  - component: {fileID: 1448435168}
   m_Layer: 0
   m_Name: ClosetFrame
   m_TagString: Untagged
@@ -15083,6 +15159,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448435163}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1448435168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448435163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 135942512}
+  meshReference: {fileID: 1448435166}
 --- !u!1001 &1448842379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15520,6 +15610,7 @@ GameObject:
   - component: {fileID: 1479595053}
   - component: {fileID: 1479595052}
   - component: {fileID: 1479595051}
+  - component: {fileID: 1479595054}
   m_Layer: 0
   m_Name: ChairFrame
   m_TagString: Untagged
@@ -15615,6 +15706,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479595049}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1479595054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479595049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 657335267}
+  meshReference: {fileID: 1479595052}
 --- !u!1 &1484154388
 GameObject:
   m_ObjectHideFlags: 0
@@ -16318,6 +16423,7 @@ GameObject:
   - component: {fileID: 1530617654}
   - component: {fileID: 1530617653}
   - component: {fileID: 1530617652}
+  - component: {fileID: 1530617655}
   m_Layer: 0
   m_Name: DeskFrame
   m_TagString: Untagged
@@ -16413,6 +16519,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530617650}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1530617655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530617650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 1873882344}
+  meshReference: {fileID: 1530617653}
 --- !u!1 &1533378209
 GameObject:
   m_ObjectHideFlags: 0
@@ -16953,6 +17073,7 @@ GameObject:
   - component: {fileID: 1585268837}
   - component: {fileID: 1585268836}
   - component: {fileID: 1585268835}
+  - component: {fileID: 1585268838}
   m_Layer: 0
   m_Name: NightTableFrame
   m_TagString: Untagged
@@ -17048,6 +17169,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585268833}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1585268838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585268833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 1617635013}
+  meshReference: {fileID: 1585268836}
 --- !u!1001 &1593710255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23746,6 +23881,7 @@ GameObject:
   - component: {fileID: 2087211340}
   - component: {fileID: 2087211339}
   - component: {fileID: 2087211338}
+  - component: {fileID: 2087211341}
   m_Layer: 0
   m_Name: Sofa3Frame (2)
   m_TagString: Untagged
@@ -23841,6 +23977,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087211336}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2087211341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087211336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 1597344698}
+  meshReference: {fileID: 2087211339}
 --- !u!1 &2109198961
 GameObject:
   m_ObjectHideFlags: 0
@@ -23853,6 +24003,7 @@ GameObject:
   - component: {fileID: 2109198965}
   - component: {fileID: 2109198964}
   - component: {fileID: 2109198963}
+  - component: {fileID: 2109198966}
   m_Layer: 0
   m_Name: BedFrame
   m_TagString: Untagged
@@ -23948,6 +24099,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109198961}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2109198966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109198961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketReference: {fileID: 24177668}
+  meshReference: {fileID: 2109198964}
 --- !u!43 &2109455432
 Mesh:
   m_ObjectHideFlags: 0
