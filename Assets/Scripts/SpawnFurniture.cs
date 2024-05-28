@@ -86,4 +86,8 @@ public class SpawnFurniture : MonoBehaviour
         }
     }
 
+    public bool getIsInPreview(){
+        return isInPreview;
+    }
+
 }

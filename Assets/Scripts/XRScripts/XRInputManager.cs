@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -9,6 +10,13 @@ public class XRInputManager : MonoBehaviour
     [SerializeField] private UIXRControler uiControler;
     [SerializeField] private SpawnFurniture spawnFunc;
     [SerializeField] private XRRayInteractor rigthRay;
+
+    [SerializeField] private TextMeshProUGUI xControls;
+    [SerializeField] private TextMeshProUGUI yControls;
+    [SerializeField] private TextMeshProUGUI aControls;
+    [SerializeField] private TextMeshProUGUI bControls;
+    [SerializeField] private TextMeshProUGUI ltControls;
+
     // Start is called before the first frame update
     private GameObject selectedObj;
     public GameObject bedroomSpawner;
@@ -53,10 +61,20 @@ public class XRInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(spawnFunc.getIsInPreview()){
+            bControls.text = "Cancelar";
+            ltControls.text = "Colocar mueble";
+        }
+        else{
+            bControls.text = "Eliminar mueble";
+            ltControls.text = "Interactuar con menus";
+        }
         if (selectedObj != null)
             selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
         if (rigthRay.isSelectActive && rigthRay.firstInteractableSelected != null)
         {
+            yControls.text = "Mover mueble arriba";
+            xControls.text = "Mover mueble abajo";
             Vector3 moveY = Vector3.zero;
 
             selectedObj = rigthRay.firstInteractableSelected.colliders[0].gameObject;
@@ -79,6 +97,8 @@ public class XRInputManager : MonoBehaviour
         }
         else if (!rigthRay.isSelectActive && selectedObj != null)
         {
+            yControls.text = "Abrir Pausa";
+            xControls.text = "Abrir Catalogo";
             freezePosition();
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class UIXRControler : MonoBehaviour
@@ -12,6 +13,9 @@ public class UIXRControler : MonoBehaviour
     [SerializeField] private GameObject catalogMenu;
     [SerializeField] private GameObject volumeCreationMenu;
 
+    [SerializeField] private GameObject LeftControllerUI;
+    [SerializeField] private GameObject RightControllerUI;
+
     public bool isGameStarted = false;
     public bool didSelectFreeMode = false;
     public bool didSelectLivingRoomType = false;
@@ -19,6 +23,8 @@ public class UIXRControler : MonoBehaviour
     public bool isPaused = false;
 
     public bool isCatalogOpen = false;
+
+    private bool isControlerHelpActive = true;
 
     void Start()
     {
@@ -107,6 +113,12 @@ public class UIXRControler : MonoBehaviour
     public void ToogleIsGameStarted()
     {
         isGameStarted = !isGameStarted;
+    }
+
+    public void ToogleControlerUI(){
+        isControlerHelpActive = !isControlerHelpActive;
+        LeftControllerUI.SetActive(isControlerHelpActive);
+        RightControllerUI.SetActive(isControlerHelpActive);
     }
 
     private void HideAllMenus()
