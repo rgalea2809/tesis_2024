@@ -14,7 +14,8 @@ public class SpacingValidation : MonoBehaviour
     private bool hasCollided;
 
     void OnCollisionStay(Collision collision){
-        hasCollided = true;
+        if(collision.gameObject.layer != 7)
+            hasCollided = true;
     }
 
     void OnCollisionExit(Collision collision){
