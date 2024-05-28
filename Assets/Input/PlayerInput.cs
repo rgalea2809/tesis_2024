@@ -243,6 +243,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToogleDistances"",
+                    ""type"": ""Button"",
+                    ""id"": ""0533d6b0-f017-48d6-85aa-8a611f689cce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -300,6 +309,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6677accb-df6c-4882-8a72-80a7e4e84174"",
+                    ""path"": ""<XRController>{LeftHand}/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToogleDistances"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -321,6 +341,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_XRInputs_Pause = m_XRInputs.FindAction("Pause", throwIfNotFound: true);
         m_XRInputs_Confirm = m_XRInputs.FindAction("Confirm", throwIfNotFound: true);
         m_XRInputs_Rotate = m_XRInputs.FindAction("Rotate", throwIfNotFound: true);
+        m_XRInputs_ToogleDistances = m_XRInputs.FindAction("ToogleDistances", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -473,6 +494,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_XRInputs_Pause;
     private readonly InputAction m_XRInputs_Confirm;
     private readonly InputAction m_XRInputs_Rotate;
+    private readonly InputAction m_XRInputs_ToogleDistances;
     public struct XRInputsActions
     {
         private @PlayerInput m_Wrapper;
@@ -482,6 +504,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_XRInputs_Pause;
         public InputAction @Confirm => m_Wrapper.m_XRInputs_Confirm;
         public InputAction @Rotate => m_Wrapper.m_XRInputs_Rotate;
+        public InputAction @ToogleDistances => m_Wrapper.m_XRInputs_ToogleDistances;
         public InputActionMap Get() { return m_Wrapper.m_XRInputs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -506,6 +529,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Rotate.started += instance.OnRotate;
             @Rotate.performed += instance.OnRotate;
             @Rotate.canceled += instance.OnRotate;
+            @ToogleDistances.started += instance.OnToogleDistances;
+            @ToogleDistances.performed += instance.OnToogleDistances;
+            @ToogleDistances.canceled += instance.OnToogleDistances;
         }
 
         private void UnregisterCallbacks(IXRInputsActions instance)
@@ -525,6 +551,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Rotate.started -= instance.OnRotate;
             @Rotate.performed -= instance.OnRotate;
             @Rotate.canceled -= instance.OnRotate;
+            @ToogleDistances.started -= instance.OnToogleDistances;
+            @ToogleDistances.performed -= instance.OnToogleDistances;
+            @ToogleDistances.canceled -= instance.OnToogleDistances;
         }
 
         public void RemoveCallbacks(IXRInputsActions instance)
@@ -558,5 +587,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnToogleDistances(InputAction.CallbackContext context);
     }
 }

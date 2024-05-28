@@ -17,6 +17,11 @@ public class XRInputManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bControls;
     [SerializeField] private TextMeshProUGUI ltControls;
 
+    [SerializeField] private LineRenderer TLine;
+    [SerializeField] private LineRenderer BLine;
+    [SerializeField] private LineRenderer LLine;
+    [SerializeField] private LineRenderer RLine;
+
     // Start is called before the first frame update
     private GameObject selectedObj;
     public GameObject bedroomSpawner;
@@ -24,7 +29,7 @@ public class XRInputManager : MonoBehaviour
     public GameObject livingRoomSpawner;
     public GameObject livingRoomTrainning;
 
-    private XRInputManager xrInputs;
+    private bool isDistanceUIActive = true;
     private PlayerInput playerInput;
     private PlayerInput.XRInputsActions basicControls;
     // Start is called before the first frame update
@@ -38,6 +43,7 @@ public class XRInputManager : MonoBehaviour
         basicControls.Cancel.performed += ctx => spawnFunc.hidePreview();
         basicControls.Confirm.performed += ctx => spawnFunc.setInPlace();
         basicControls.Rotate.performed += ctx => spawnFunc.rotateItem();
+        basicControls.ToogleDistances.performed += ctx => isDistanceUIActive = !isDistanceUIActive;
     }
 
     private void RequestPauseMenu()
@@ -61,6 +67,7 @@ public class XRInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        uiControler.ToogleDistanceUI(rigthRay.firstInteractableSelected != null && isDistanceUIActive);
         if(spawnFunc.getIsInPreview()){
             bControls.text = "Cancelar";
             ltControls.text = "Colocar mueble";
@@ -73,26 +80,28 @@ public class XRInputManager : MonoBehaviour
             selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
         if (rigthRay.isSelectActive && rigthRay.firstInteractableSelected != null)
         {
+
             yControls.text = "Mover mueble arriba";
             xControls.text = "Mover mueble abajo";
-            Vector3 moveY = Vector3.zero;
 
             selectedObj = rigthRay.firstInteractableSelected.colliders[0].gameObject;
 
             unfreezePosition();
+            
+            SpacingValidation sv =  selectedObj.GetComponent<SpacingValidation>();
 
-            selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
+            sv.CheckDistanseFromWalls();
+
+            showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y);
+
 
             if (basicControls.Pause.IsPressed())
             {
-                Debug.Log(selectedObj + " should go up by " + (selectedObj.transform.position.y + 0.1f));
-                selectedObj.GetComponent<SpacingValidation>().moveInY(0.1f);
+                sv.moveInY(0.1f);
             }
             else if (basicControls.Catalog.IsPressed())
             {
-                Debug.Log(selectedObj + " should go down by " + (selectedObj.transform.position.y - 0.1f));
-                selectedObj.GetComponent<SpacingValidation>().moveInY(-0.1f);
-
+                sv.moveInY(-0.1f);
             }
         }
         else if (!rigthRay.isSelectActive && selectedObj != null)
@@ -100,6 +109,7 @@ public class XRInputManager : MonoBehaviour
             yControls.text = "Abrir Pausa";
             xControls.text = "Abrir Catalogo";
             freezePosition();
+            hideDistance();
         }
     }
 
@@ -140,5 +150,45 @@ public class XRInputManager : MonoBehaviour
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY;
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+    }
+
+    private void showDistance(Vector3 origin, Vector3[] hitPoints, double[] distances, float rotation){
+        
+        TLine.positionCount = 2;
+        TLine.SetPosition(0, origin);
+        TLine.SetPosition(1, hitPoints[0]);
+        
+        BLine.positionCount = 2;
+        BLine.SetPosition(0, origin);
+        BLine.SetPosition(1, hitPoints[1]);
+        
+        LLine.positionCount = 2;
+        LLine.SetPosition(0, origin);
+        LLine.SetPosition(1, hitPoints[2]);
+        
+        RLine.positionCount = 2;
+        RLine.SetPosition(0, origin);
+        RLine.SetPosition(1, hitPoints[3]);
+
+        uiControler.setDistance(distances[0],distances[1],distances[2],distances[3],rotation);
+    }
+
+    private void hideDistance(){
+         
+        TLine.positionCount = 2;
+        TLine.SetPosition(0, Vector3.zero);
+        TLine.SetPosition(1, Vector3.zero);
+        
+        BLine.positionCount = 2;
+        BLine.SetPosition(0, Vector3.zero);
+        BLine.SetPosition(1, Vector3.zero);
+        
+        LLine.positionCount = 2;
+        LLine.SetPosition(0, Vector3.zero);
+        LLine.SetPosition(1, Vector3.zero);
+        
+        RLine.positionCount = 2;
+        RLine.SetPosition(0, Vector3.zero);
+        RLine.SetPosition(1, Vector3.zero);
     }
 }
