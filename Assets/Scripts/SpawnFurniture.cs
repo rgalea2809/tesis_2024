@@ -65,7 +65,6 @@ public class SpawnFurniture : MonoBehaviour
     {
         if (isInPreview)
         {
-            Debug.Log("positon on spawning: " + spawiningPosition.transform.position.y);
             Vector3 newObjectPos = new(spawiningPosition.position.x, spawiningPosition.position.y - spawiningPosition.localScale.y/2 + 0.001f, spawiningPosition.position.z);
             if(isVolume)
                 UnityEngine.Object.Instantiate(obj, postionPreview.transform.position, postionPreview.transform.localRotation);

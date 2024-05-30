@@ -54,7 +54,6 @@ public class RotateFocusedObject : MonoBehaviour
 
     private void DestroyObject(InputAction.CallbackContext context)
     {
-        Debug.Log("Got destroyed");
         if (canInteract)
         {
             Destroy(gameObject);

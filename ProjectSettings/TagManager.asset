@@ -15,6 +15,7 @@ TagManager:
   - SofaUnaPlaza
   - SofaTresPlazas
   - Mesa
+  - Desk
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,7 @@ TagManager:
   - Ground
   - Roof
   - ControlUI
-  - 
-  - 
+  - Wall
   - 
   - 
   - 

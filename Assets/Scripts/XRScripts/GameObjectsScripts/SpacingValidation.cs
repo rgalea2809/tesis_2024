@@ -11,10 +11,29 @@ public class SpacingValidation : MonoBehaviour
 
     private Vector3 lastValidPosition;
     
+    [SerializeField] private GameObject ValidDistanceBox;
+    
     private bool hasCollided;
+    private static bool isOnValidDistance = true;
 
     private Vector3[] collisionPoints;
     private double[] distances;
+
+    void OnTriggerStay(Collider other){
+        if (!other.isTrigger)
+        {
+            isOnValidDistance = false;
+            ValidDistanceBox.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit(Collider other){
+        if (!other.isTrigger)
+        {
+            isOnValidDistance = true;
+            ValidDistanceBox.SetActive(false);
+        }
+    }
 
     void OnCollisionStay(Collision collision){
         if(collision.gameObject.layer != 7)
@@ -87,5 +106,9 @@ public class SpacingValidation : MonoBehaviour
 
     public double[] getDistances(){
         return distances;
+    }
+
+    public bool getIsOnValidDistance(){
+        return isOnValidDistance;
     }
 }

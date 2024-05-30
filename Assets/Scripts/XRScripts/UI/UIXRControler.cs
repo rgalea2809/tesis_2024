@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class UIXRControler : MonoBehaviour
 {
+
+    [SerializeField] private SpacingValidation logicHelper;
+    [SerializeField] private GameObject errorMessage;
+
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject controlsMenu;
@@ -47,6 +51,10 @@ public class UIXRControler : MonoBehaviour
         catalogMenu.SetActive(false);
         volumeCreationMenu.SetActive(false);
         gameEndMenu.SetActive(false);
+    }
+
+    void Update(){
+        errorMessage.SetActive(!logicHelper.getIsOnValidDistance());
     }
 
 
@@ -138,7 +146,6 @@ public class UIXRControler : MonoBehaviour
     }
 
     public void setDistance(double tDistance,double bDistance,double lDistance,double rDistance,float rotation){
-        Debug.Log(rotation);
         if(rotation == 0f)
         {
             lastOneEightyRotation = 0f;

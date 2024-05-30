@@ -12,7 +12,6 @@ public class SpawnPosTracker : MonoBehaviour
     }
 
     private void trackRay(){
-        Debug.Log(transform.position.y);
         Ray ray = new Ray(rayOrigin.position, rayOrigin.forward);
         RaycastHit hitInfo;
         bool isLookingGround = Physics.Raycast(ray, out hitInfo, 100f,mask);

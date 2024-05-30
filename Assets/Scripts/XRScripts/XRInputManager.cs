@@ -37,7 +37,6 @@ public class XRInputManager : MonoBehaviour
     {
         playerInput = new PlayerInput();
         basicControls = playerInput.XRInputs;
-        Debug.Log(basicControls);
         basicControls.Pause.performed += ctx => RequestPauseMenu();
         basicControls.Catalog.performed += ctx => OnOpenCatalog();
         basicControls.Cancel.performed += ctx => spawnFunc.hidePreview();
@@ -95,11 +94,11 @@ public class XRInputManager : MonoBehaviour
             showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y);
 
 
-            if (basicControls.Pause.IsPressed())
+            if (basicControls.Pause.WasPerformedThisFrame())
             {
                 sv.moveInY(0.1f);
             }
-            else if (basicControls.Catalog.IsPressed())
+            else if (basicControls.Catalog.WasPerformedThisFrame())
             {
                 sv.moveInY(-0.1f);
             }
