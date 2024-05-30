@@ -11,6 +11,8 @@ public class UIXRControler : MonoBehaviour
     [SerializeField] private GameObject roomSelectionMenu;
     [SerializeField] private GameObject catalogMenu;
     [SerializeField] private GameObject volumeCreationMenu;
+    [SerializeField] private GameObject gameEndMenu;
+    [SerializeField] private GameObject socketsNotFilledErrorPrompt;
 
     public bool isGameStarted = false;
     public bool didSelectFreeMode = false;
@@ -29,6 +31,7 @@ public class UIXRControler : MonoBehaviour
         roomSelectionMenu.SetActive(false);
         catalogMenu.SetActive(false);
         volumeCreationMenu.SetActive(false);
+        gameEndMenu.SetActive(false);
     }
 
 
@@ -118,5 +121,15 @@ public class UIXRControler : MonoBehaviour
         roomSelectionMenu.SetActive(false);
         catalogMenu.SetActive(false);
         volumeCreationMenu.SetActive(false);
+    }
+
+    public void ToggleGameEndMenu(bool flag)
+    {
+        gameEndMenu.SetActive(flag);
+    }
+
+    public void ToggleSocketsNotFilled(bool flag)
+    {
+        socketsNotFilledErrorPrompt.SetActive(flag);
     }
 }
