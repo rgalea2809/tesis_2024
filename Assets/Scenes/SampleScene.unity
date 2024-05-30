@@ -719,8 +719,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 24177666}
-  - component: {fileID: 24177668}
   - component: {fileID: 24177667}
+  - component: {fileID: 24177669}
   m_Layer: 0
   m_Name: BedSocket
   m_TagString: Untagged
@@ -764,7 +764,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.12, y: 1, z: 9.78}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &24177668
+--- !u!114 &24177669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 24177665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -824,6 +824,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: Cama
 --- !u!4 &25882863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2348451932945742354, guid: e4a073a915d15da469c414beeb6fef2b, type: 3}
@@ -2113,8 +2114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 135942510}
-  - component: {fileID: 135942512}
   - component: {fileID: 135942511}
+  - component: {fileID: 135942512}
   m_Layer: 0
   m_Name: ClosetSocket
   m_TagString: Untagged
@@ -2167,7 +2168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 135942509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -2218,6 +2219,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: Ropero
 --- !u!1001 &136496887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5671,8 +5673,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415746142}
-  - component: {fileID: 415746144}
   - component: {fileID: 415746143}
+  - component: {fileID: 415746144}
   m_Layer: 0
   m_Name: TvSocket
   m_TagString: Untagged
@@ -5725,7 +5727,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 415746141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -5776,6 +5778,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: MuebleTV
 --- !u!4 &427857151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4442052917208002244, guid: 57b8e39375d93984895e498850c28ef7, type: 3}
@@ -6049,8 +6052,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440668588}
-  - component: {fileID: 440668590}
   - component: {fileID: 440668589}
+  - component: {fileID: 440668590}
   m_Layer: 0
   m_Name: TableSocket
   m_TagString: Untagged
@@ -6103,7 +6106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 440668587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -6154,6 +6157,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: Mesa
 --- !u!1 &443995147
 GameObject:
   m_ObjectHideFlags: 0
@@ -8616,8 +8620,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657335265}
-  - component: {fileID: 657335267}
   - component: {fileID: 657335266}
+  - component: {fileID: 657335267}
   m_Layer: 0
   m_Name: ChairSocket
   m_TagString: Untagged
@@ -8670,7 +8674,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 657335264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -8721,6 +8725,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: Silla
 --- !u!1 &658432132
 GameObject:
   m_ObjectHideFlags: 0
@@ -10297,8 +10302,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837081891}
-  - component: {fileID: 837081893}
   - component: {fileID: 837081892}
+  - component: {fileID: 837081893}
   m_Layer: 0
   m_Name: Sofa1Socket
   m_TagString: Untagged
@@ -10351,7 +10356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 837081890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -10402,6 +10407,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: SofaDosPlazas
 --- !u!1 &839732739
 GameObject:
   m_ObjectHideFlags: 0
@@ -10455,7 +10461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3905a313526b24692d58db98714706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socketReference: {fileID: 24177668}
+  socketReference: {fileID: 24177669}
   canvasReference: {fileID: 839732745}
 --- !u!114 &839732742
 MonoBehaviour:
@@ -12342,10 +12348,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055469599}
-  - component: {fileID: 1055469601}
   - component: {fileID: 1055469600}
+  - component: {fileID: 1055469601}
   m_Layer: 0
-  m_Name: BookShelf
+  m_Name: BookShelfSocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12396,7 +12402,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1055469598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -12447,6 +12453,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: Librero
 --- !u!1 &1059788401
 GameObject:
   m_ObjectHideFlags: 0
@@ -14052,8 +14059,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1176231464}
-  - component: {fileID: 1176231466}
   - component: {fileID: 1176231465}
+  - component: {fileID: 1176231466}
   m_Layer: 0
   m_Name: Sofa2Socket
   m_TagString: Untagged
@@ -14106,7 +14113,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176231463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -14157,6 +14164,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: SofaUnaPlaza
 --- !u!1 &1186479075
 GameObject:
   m_ObjectHideFlags: 0
@@ -19684,8 +19692,8 @@ Transform:
   m_LocalScale: {x: 0.069, y: 1, z: 0.057}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 596039398}
   - {fileID: 1617635011}
+  - {fileID: 596039398}
   m_Father: {fileID: 461836071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1585268835
@@ -19849,8 +19857,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597344696}
-  - component: {fileID: 1597344698}
   - component: {fileID: 1597344697}
+  - component: {fileID: 1597344698}
   m_Layer: 0
   m_Name: Sofa3Socket
   m_TagString: Untagged
@@ -19903,7 +19911,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1597344695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -19954,6 +19962,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: SofaTresPlazas
 --- !u!1001 &1601312633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20104,8 +20113,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1617635011}
-  - component: {fileID: 1617635013}
   - component: {fileID: 1617635012}
+  - component: {fileID: 1617635013}
   m_Layer: 0
   m_Name: NightTableSocket
   m_TagString: Untagged
@@ -20158,7 +20167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1617635010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -20209,6 +20218,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: MesaDeNoche
 --- !u!1 &1618902822
 GameObject:
   m_ObjectHideFlags: 0
@@ -24220,8 +24230,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1873882342}
-  - component: {fileID: 1873882344}
   - component: {fileID: 1873882343}
+  - component: {fileID: 1873882344}
   m_Layer: 0
   m_Name: DeskSocket
   m_TagString: Untagged
@@ -24274,7 +24284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873882341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ec692ab110df348a88e3615aab646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2147297817}
@@ -24325,6 +24335,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: Escritorio
 --- !u!1 &1874408821
 GameObject:
   m_ObjectHideFlags: 0
@@ -27109,7 +27120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2ab7e557749de4594dc7c9aeb37e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socketReference: {fileID: 24177668}
+  socketReference: {fileID: 24177669}
   meshReference: {fileID: 2109198964}
 --- !u!43 &2109455432
 Mesh:

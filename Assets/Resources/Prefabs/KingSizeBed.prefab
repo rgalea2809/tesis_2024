@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8536606353445073323}
   m_Layer: 6
   m_Name: KingSizeBed
-  m_TagString: Untagged
+  m_TagString: Cama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

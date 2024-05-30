@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cama
+  - Escritorio
+  - Ropero
+  - MesaDeNoche
+  - Silla
+  - SofaDosPlazas
+  - MuebleTV
+  - Librero
+  - SofaUnaPlaza
+  - SofaTresPlazas
+  - Mesa
   layers:
   - Default
   - TransparentFX
