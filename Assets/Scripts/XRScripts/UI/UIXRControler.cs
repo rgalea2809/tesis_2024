@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 public class UIXRControler : MonoBehaviour
@@ -14,6 +16,17 @@ public class UIXRControler : MonoBehaviour
     [SerializeField] private GameObject gameEndMenu;
     [SerializeField] private GameObject socketsNotFilledErrorPrompt;
 
+    [SerializeField] private GameObject LeftControllerUI;
+    [SerializeField] private GameObject RightControllerUI;
+
+    [SerializeField] private GameObject DistanceUI;
+    [SerializeField] private TextMeshProUGUI topDistance;
+    [SerializeField] private TextMeshProUGUI bottomDistance;
+    [SerializeField] private TextMeshProUGUI leftDistance;
+    [SerializeField] private TextMeshProUGUI rigthDistance;
+
+    private float lastOneEightyRotation = 0;
+
     public bool isGameStarted = false;
     public bool didSelectFreeMode = false;
     public bool didSelectLivingRoomType = false;
@@ -21,6 +34,8 @@ public class UIXRControler : MonoBehaviour
     public bool isPaused = false;
 
     public bool isCatalogOpen = false;
+
+    private bool isControlerHelpActive = true;
 
     void Start()
     {
@@ -110,6 +125,50 @@ public class UIXRControler : MonoBehaviour
     public void ToogleIsGameStarted()
     {
         isGameStarted = !isGameStarted;
+    }
+
+    public void ToogleControlerUI(){
+        isControlerHelpActive = !isControlerHelpActive;
+        LeftControllerUI.SetActive(isControlerHelpActive);
+        RightControllerUI.SetActive(isControlerHelpActive);
+    }
+
+    public void ToogleDistanceUI(bool flag){
+        DistanceUI.SetActive(flag);
+    }
+
+    public void setDistance(double tDistance,double bDistance,double lDistance,double rDistance,float rotation){
+        Debug.Log(rotation);
+        if(rotation == 0f)
+        {
+            lastOneEightyRotation = 0f;
+            topDistance.text = tDistance + " m";
+            bottomDistance.text = bDistance + " m";
+            leftDistance.text = lDistance + " m";
+            rigthDistance.text = rDistance + " m";
+        }
+        else if((rotation == 0.7071068f || rotation == -0.7071068f) && lastOneEightyRotation ==0f)
+        {
+            topDistance.text = lDistance + " m";
+            bottomDistance.text = rDistance + " m";
+            leftDistance.text = bDistance + " m";
+            rigthDistance.text = tDistance + " m";
+        }
+        else if(rotation == 1f || rotation == -1f)
+        {
+            lastOneEightyRotation = 1f;
+            topDistance.text = bDistance + " m";
+            bottomDistance.text = tDistance + " m";
+            leftDistance.text = rDistance + " m";
+            rigthDistance.text = lDistance + " m";
+        }
+        else if((rotation == 0.7071068f || rotation == -0.7071068f) && lastOneEightyRotation == 1f)
+        {   
+            topDistance.text = rDistance + " m";
+            bottomDistance.text = lDistance + " m";
+            leftDistance.text = tDistance + " m";
+            rigthDistance.text = bDistance + " m";
+        }
     }
 
     private void HideAllMenus()

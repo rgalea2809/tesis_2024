@@ -25,6 +25,7 @@ TagManager:
   - Interactable
   - Ground
   - Roof
+  - ControlUI
   - 
   - 
   - 
