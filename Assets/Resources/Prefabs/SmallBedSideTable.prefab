@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4620795762642530609}
   m_Layer: 6
   m_Name: SmallBedSideTable
-  m_TagString: Untagged
+  m_TagString: MesaDeNoche
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

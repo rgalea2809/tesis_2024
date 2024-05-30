@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6535102025374281185}
   - component: {fileID: 7988971453884078005}
-  - component: {fileID: 1043649459920450676}
   - component: {fileID: 5822510175976643620}
   - component: {fileID: 1766630265727145687}
   - component: {fileID: 2258561028026173168}
+  - component: {fileID: 7880029106781746519}
   m_Layer: 6
   m_Name: LDesk
-  m_TagString: Untagged
+  m_TagString: Desk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,33 +60,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!54 &7880029106781746519
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3010032167746756388}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 10000
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 2
 --- !u!114 &5822510175976643620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateReference: {fileID: -4605005795866530631, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   destroyActionReference: {fileID: -264986529859989497, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  interactableReference: {fileID: 7749326494849843992}
+  interactableReference: {fileID: 0}
   rotationAngle: 90
 --- !u!114 &2258561028026173168
 MonoBehaviour:
@@ -270,6 +243,33 @@ MonoBehaviour:
   rayMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!54 &7880029106781746519
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010032167746756388}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 10000
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 2
 --- !u!1 &4884158336007476712
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4148852226693863065}
   m_Layer: 6
   m_Name: TvCabinet
-  m_TagString: Untagged
+  m_TagString: MuebleTV
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
