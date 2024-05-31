@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class SpawnFurniture : MonoBehaviour
 {
+    private UIXRControler uicontroler;
     private static GameObject obj;
     public GameObject postionPreview;
     private static bool isInPreview = false;
@@ -15,6 +16,7 @@ public class SpawnFurniture : MonoBehaviour
     void Start()
     {
         isInPreview = false;
+        uicontroler = GetComponent<UIXRControler>();
     }
 
     public void Spawn(string objName)
@@ -23,7 +25,6 @@ public class SpawnFurniture : MonoBehaviour
         if (obj != null)
         {
             isVolume = false;
-            spawiningPosition.position = new Vector3(spawiningPosition.position.x, obj.transform.localScale.y / 2, spawiningPosition.position.z);
             spawiningPosition.localScale = new(spawiningPosition.localScale.x, obj.transform.localScale.y, spawiningPosition.localScale.z);
             postionPreview.transform.localScale = obj.transform.localScale;
             isInPreview = true;
@@ -37,7 +38,6 @@ public class SpawnFurniture : MonoBehaviour
     public void Spawn(float heigth, float width, float length)
     {
         obj = (GameObject)Resources.Load<GameObject>("Prefabs/Cube");
-        spawiningPosition.position = new Vector3(spawiningPosition.position.x, heigth / 2, spawiningPosition.position.z);
         spawiningPosition.localScale = new(spawiningPosition.localScale.x, heigth, spawiningPosition.localScale.z);
         if (obj != null)
         {
@@ -65,12 +65,18 @@ public class SpawnFurniture : MonoBehaviour
     {
         if (isInPreview)
         {
-            Vector3 newObjectPos = new(spawiningPosition.position.x, spawiningPosition.position.y - spawiningPosition.localScale.y/2 + 0.001f, spawiningPosition.position.z);
-            if(isVolume)
-                UnityEngine.Object.Instantiate(obj, postionPreview.transform.position, postionPreview.transform.localRotation);
-            else
-                UnityEngine.Object.Instantiate(obj, newObjectPos, postionPreview.transform.localRotation);
-            hidePreview();
+            if(postionPreview.GetComponent<previewPosChecker>().isSpawnPosValid && (spawiningPosition.position.y - spawiningPosition.localScale.y/2 ) <= 1.5)
+            {
+                Vector3 newObjectPos = new(spawiningPosition.position.x, spawiningPosition.position.y - spawiningPosition.localScale.y/2, spawiningPosition.position.z);
+                if(isVolume)
+                {
+                    obj.GetComponent<SpacingValidation>().isAVolume = true;
+                    UnityEngine.Object.Instantiate(obj, postionPreview.transform.position, postionPreview.transform.localRotation);
+                }
+                else
+                    UnityEngine.Object.Instantiate(obj, newObjectPos, postionPreview.transform.localRotation);
+                hidePreview();
+            }
         }
     }
 

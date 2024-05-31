@@ -99,5 +99,6 @@ public class fillXRCatalog : MonoBehaviour
     private void whenClicked(string itemName){
         spawnFunct.Spawn(itemName);
         uiControler.ToogleCatalogMenu(false);
+        uiControler.ToogleIsCatalogOpen(false);
     }
 }

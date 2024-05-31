@@ -47,10 +47,10 @@ public class XRInputManager : MonoBehaviour
 
     private void RequestPauseMenu()
     {
-        Debug.Log("Requested pause menu");
         if (uiControler.isGameStarted && !uiControler.isCatalogOpen && rigthRay.firstInteractableSelected == null)
         {
             uiControler.TooglePauseMenu(true);
+            uiControler.ToogleIsPaused(true);
         }
     }
 
@@ -59,6 +59,7 @@ public class XRInputManager : MonoBehaviour
         if (uiControler.isGameStarted && !uiControler.isPaused && rigthRay.firstInteractableSelected == null)
         {
             uiControler.ToogleCatalogMenu(true);
+            uiControler.ToogleIsCatalogOpen(true);
             spawnFunc.hidePreview();
         }
     }
@@ -91,10 +92,11 @@ public class XRInputManager : MonoBehaviour
 
             sv.CheckDistanseFromWalls();
 
-            showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y);
+
+            showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y,sv.isAVolume,selectedObj.transform.localScale.y);
 
 
-            if (basicControls.Pause.WasPerformedThisFrame())
+            if (basicControls.Pause.WasPerformedThisFrame() && sv.canGoHigher)
             {
                 sv.moveInY(0.1f);
             }
@@ -151,7 +153,10 @@ public class XRInputManager : MonoBehaviour
         selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
     }
 
-    private void showDistance(Vector3 origin, Vector3[] hitPoints, double[] distances, float rotation){
+    private void showDistance(Vector3 origin, Vector3[] hitPoints, double[] distances, float rotation, bool isAVolume, float heigth){
+        if(isAVolume){
+            origin = new Vector3(origin.x, origin.y - heigth/2,origin.z);
+        }
         
         TLine.positionCount = 2;
         TLine.SetPosition(0, origin);

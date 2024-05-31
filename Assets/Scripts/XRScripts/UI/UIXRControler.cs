@@ -7,8 +7,6 @@ using UnityEngine;
 public class UIXRControler : MonoBehaviour
 {
 
-    [SerializeField] private SpacingValidation logicHelper;
-    [SerializeField] private GameObject errorMessage;
 
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
@@ -29,6 +27,12 @@ public class UIXRControler : MonoBehaviour
     [SerializeField] private TextMeshProUGUI leftDistance;
     [SerializeField] private TextMeshProUGUI rigthDistance;
 
+    
+    [SerializeField] private SpacingValidation logicHelper;
+    [SerializeField] private GameObject spaceErrorModal;
+
+    [SerializeField] private TextMeshProUGUI errorWindowMessage;
+
     private float lastOneEightyRotation = 0;
 
     public bool isGameStarted = false;
@@ -40,6 +44,8 @@ public class UIXRControler : MonoBehaviour
     public bool isCatalogOpen = false;
 
     private bool isControlerHelpActive = true;
+
+    public bool isPreviwPosValid = true;
 
     void Start()
     {
@@ -54,9 +60,15 @@ public class UIXRControler : MonoBehaviour
     }
 
     void Update(){
-        errorMessage.SetActive(!logicHelper.getIsOnValidDistance());
+        spaceErrorModal.SetActive(!logicHelper.getIsOnValidDistance() && !isPaused && !isCatalogOpen);
+        if(logicHelper.getIsOnValidDistance())
+        {
+            errorWindowMessage.text = "Coloca todos los mueble antes de finalizar";
+        }
+        else{
+            errorWindowMessage.text = "Espacios entre muebles invalido. Deben haber por lo menos 60 cm entre los muebles con area roja";
+        }
     }
-
 
     // Actions Handlers
     public void SelectFreeMode()
@@ -95,8 +107,12 @@ public class UIXRControler : MonoBehaviour
     public void TooglePauseMenu(bool flag)
     {
         pauseMenu.SetActive(flag);
+    }
+
+    public void ToogleIsPaused(bool flag){
         isPaused = flag;
     }
+
     public void ToogleControlsMenu(bool flag)
     {
         controlsMenu.SetActive(flag);
@@ -112,6 +128,9 @@ public class UIXRControler : MonoBehaviour
     public void ToogleCatalogMenu(bool flag)
     {
         catalogMenu.SetActive(flag);
+    }
+
+    public void ToogleIsCatalogOpen(bool flag){
         isCatalogOpen = flag;
     }
     public void ToogleVolumeCreationMenu(bool flag)

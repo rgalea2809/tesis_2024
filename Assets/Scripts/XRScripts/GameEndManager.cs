@@ -14,6 +14,8 @@ public class GameEndManager : MonoBehaviour
     // References
     [SerializeField] private UIXRControler uiXRController;
 
+    [SerializeField] private SpacingValidation logicHelper;
+
     // Main Camera
     public Camera mainCamera = null;
 
@@ -67,7 +69,10 @@ public class GameEndManager : MonoBehaviour
     {
         if (uiXRController.didSelectFreeMode)
         {
-            HandleGameEnd();
+            if(logicHelper.getIsOnValidDistance())
+                HandleGameEnd();
+            else
+                ShowSocketsNotFilledError();
         }
         else
         {

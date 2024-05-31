@@ -80,10 +80,10 @@
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\ClawMachine\UfoAbductionForce.cs" />
     <Compile Include="Assets\Scripts\XRScripts\GameObjectsScripts\SpacingValidation.cs" />
     <Compile Include="Assets\VR Assets\UI 3D Examples\UI_3D\Scripts\ClawMachine\FlippyDoor.cs" />
+    <Compile Include="Assets\Scripts\XRScripts\GameEndManager.cs" />
     <Compile Include="Assets\Scripts\XRScripts\UI\volumeCreation.cs" />
     <Compile Include="Assets\Brick Project Studio\Apartment Kit\Common\Scripts &amp; Animation\Slide\opencloseSlide.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMotor.cs" />
-    <Compile Include="Assets\GameEndManager.cs" />
     <Compile Include="Assets\Scripts\XRScripts\UI\CardProperties.cs" />
     <Compile Include="Assets\Brick Project Studio\_BPS Basic Assets\Common\Scripts and Animations\First Person Player\SceneSwitchGen.cs" />
     <Compile Include="Assets\Brick Project Studio\_BPS Basic Assets\Common\Scripts and Animations\Doors\opencloseDoor.cs" />
@@ -121,6 +121,7 @@
     <Compile Include="Assets\Scripts\UIScripts\FillCatalogMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerLook.cs" />
     <Compile Include="Assets\XRSocketTagInteractor.cs" />
+    <Compile Include="Assets\Scripts\XRScripts\GameObjectsScripts\previewPosChecker.cs" />
     <Compile Include="Assets\Brick Project Studio\Apartment Kit\Common\Scripts &amp; Animation\OvenOpen\OvenFlip.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInteract.cs" />
     <Compile Include="Assets\Brick Project Studio\_BPS Basic Assets\Common\Scripts and Animations\Doors\opencloseStallDoor.cs" />
