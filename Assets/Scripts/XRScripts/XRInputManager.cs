@@ -24,6 +24,7 @@ public class XRInputManager : MonoBehaviour
 
     // Start is called before the first frame update
     private GameObject selectedObj;
+    public GameObject lobbySpawner;
     public GameObject bedroomSpawner;
     public GameObject bedroomTrainning;
     public GameObject livingRoomSpawner;
@@ -76,8 +77,10 @@ public class XRInputManager : MonoBehaviour
             bControls.text = "Eliminar mueble";
             ltControls.text = "Interactuar con menus";
         }
+
         if (selectedObj != null)
             selectedObj.GetComponent<SpacingValidation>().CheckDistanseFromWalls();
+            
         if (rigthRay.isSelectActive && rigthRay.firstInteractableSelected != null)
         {
 
@@ -91,10 +94,10 @@ public class XRInputManager : MonoBehaviour
             SpacingValidation sv =  selectedObj.GetComponent<SpacingValidation>();
 
             sv.CheckDistanseFromWalls();
+            sv.isBeingGrabed = true;
 
-
-            showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y,sv.isAVolume,selectedObj.transform.localScale.y);
-
+            if(isDistanceUIActive)
+                showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y,sv.isAVolume,selectedObj.transform.localScale.y);
 
             if (basicControls.Pause.WasPerformedThisFrame() && sv.canGoHigher)
             {
@@ -110,6 +113,7 @@ public class XRInputManager : MonoBehaviour
             yControls.text = "Abrir Pausa";
             xControls.text = "Abrir Catalogo";
             freezePosition();
+            selectedObj.GetComponent<SpacingValidation>().isBeingGrabed = false;
             hideDistance();
         }
     }
@@ -136,6 +140,10 @@ public class XRInputManager : MonoBehaviour
             gameObject.transform.position = bedroomSpawner.transform.position;
             bedroomTrainning.SetActive(!uiControler.didSelectFreeMode);
         }
+    }
+    
+    public void goBackToLobby(){
+        gameObject.transform.position = lobbySpawner.transform.position;
     }
 
     private void freezePosition()

@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 6671235283519163359}
   - component: {fileID: -8959234344011481179}
   - component: {fileID: 7129692425457193847}
-  m_Layer: 6
+  - component: {fileID: 2953942666700630585}
+  m_Layer: 11
   m_Name: BedSideTable
   m_TagString: MesaDeNoche
   m_Icon: {fileID: 0}
@@ -58,8 +59,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.52, z: 1}
-  m_Center: {x: 0, y: 0.24, z: 0}
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &1927120086894392508
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &2120990252599920767
 MonoBehaviour:
@@ -271,6 +272,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 8139016364846804011}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &7129692425457193847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -284,14 +287,35 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 5249
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.85, y: 0.52, z: 3.18}
-  m_Center: {x: 0, y: 0.24, z: 0}
+  m_Size: {x: 2.85, y: 1, z: 3.18}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &2953942666700630585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955686460173661711}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 129
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.59}
+  m_Center: {x: 0, y: 0.5, z: -0.795}
 --- !u!1 &8139016364846804011
 GameObject:
   m_ObjectHideFlags: 0

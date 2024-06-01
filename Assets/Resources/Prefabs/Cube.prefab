@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.8307248, y: 0.5, z: 1.1706287}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 0.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7108808660811937615}
@@ -136,7 +136,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &5370238284885130921
 MonoBehaviour:
@@ -335,11 +335,10 @@ MonoBehaviour:
   rayMask:
     serializedVersion: 2
     m_Bits: 1024
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 128
   ValidDistanceBox: {fileID: 9129042792263880889}
+  isBeingGrabed: 0
   isAVolume: 1
+  canGoHigher: 1
 --- !u!1 &9129042792263880889
 GameObject:
   m_ObjectHideFlags: 0

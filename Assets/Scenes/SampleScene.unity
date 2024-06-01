@@ -576,7 +576,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1495
+    m_Bits: 1048023
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -9646,6 +9646,7 @@ Transform:
   - {fileID: 901973147}
   - {fileID: 215068839}
   - {fileID: 1309103796}
+  - {fileID: 1499118892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &248331812
@@ -12509,6 +12510,7 @@ MonoBehaviour:
   BLine: {fileID: 1184516061}
   LLine: {fileID: 297780903}
   RLine: {fileID: 1137479681}
+  lobbySpawner: {fileID: 1499118891}
   bedroomSpawner: {fileID: 1912177899}
   bedroomTrainning: {fileID: 461836070}
   livingRoomSpawner: {fileID: 732777457}
@@ -17372,6 +17374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postionPreview: {fileID: 704924349}
   spawiningPosition: {fileID: 2147449352}
+  furnitureContainer: {fileID: 2143505230}
 --- !u!1001 &672673194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28618,6 +28621,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81ed4e584e6c4894596fd0ac2c996d98, type: 3}
+--- !u!1 &1499118891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499118892}
+  m_Layer: 0
+  m_Name: LobbySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1499118892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499118891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42, y: 25.9, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 247271157}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1499751907 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6901989996354403113, guid: d681bdaaec7056b42b6ca381f3235509, type: 3}
@@ -29146,6 +29180,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UIXRControler, Assembly-CSharp
         m_MethodName: ToogleIsPaused
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 398581881}
+        m_TargetAssemblyTypeName: XRInputManager, Assembly-CSharp
+        m_MethodName: goBackToLobby
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 672593247}
+        m_TargetAssemblyTypeName: SpawnFurniture, Assembly-CSharp
+        m_MethodName: DespawnAllFurniture
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -38321,6 +38379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postionPreview: {fileID: 704924349}
   spawiningPosition: {fileID: 2147449352}
+  furnitureContainer: {fileID: 0}
 --- !u!1 &1709238550
 GameObject:
   m_ObjectHideFlags: 0
@@ -38483,7 +38542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1715017345
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44024,6 +44083,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogicHelper
       objectReference: {fileID: 0}
+    - target: {fileID: 4090425469929205580, guid: 3f1d837dc6faccd4697772f562798760, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090425469929205580, guid: 3f1d837dc6faccd4697772f562798760, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090425469929205580, guid: 3f1d837dc6faccd4697772f562798760, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 7707691027940047310, guid: 3f1d837dc6faccd4697772f562798760, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.48
@@ -45659,6 +45730,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2143505230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143505231}
+  m_Layer: 0
+  m_Name: FurnitureContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2143505231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143505230}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.512758, y: 0.668284, z: 30.087809}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147297816
 GameObject:
   m_ObjectHideFlags: 0
@@ -45780,3 +45882,4 @@ SceneRoots:
   - {fileID: 1874518503}
   - {fileID: 890887513}
   - {fileID: 1972490918}
+  - {fileID: 2143505231}

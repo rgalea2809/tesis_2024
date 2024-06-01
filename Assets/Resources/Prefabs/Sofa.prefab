@@ -98,7 +98,8 @@ GameObject:
   - component: {fileID: 1615409781615952548}
   - component: {fileID: -8044259712475827769}
   - component: {fileID: 7746102953930826706}
-  m_Layer: 6
+  - component: {fileID: 8143267787399039497}
+  m_Layer: 16
   m_Name: Sofa
   m_TagString: Silla
   m_Icon: {fileID: 0}
@@ -141,8 +142,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &2218220511203708287
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &4110500769078608393
 MonoBehaviour:
@@ -354,6 +355,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 5740693754331828963}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &7746102953930826706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -367,7 +370,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 5249
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -375,6 +378,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.37, y: 1, z: 2.5}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &8143267787399039497
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168502305905124180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 129
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.25}
+  m_Center: {x: 0, y: 0.5, z: -0.625}
 --- !u!1001 &7892060171197387703
 PrefabInstance:
   m_ObjectHideFlags: 0

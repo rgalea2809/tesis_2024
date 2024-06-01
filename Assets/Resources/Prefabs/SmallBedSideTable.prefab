@@ -98,7 +98,8 @@ GameObject:
   - component: {fileID: 5137052358696783705}
   - component: {fileID: -4620795762642530609}
   - component: {fileID: 7449559303444497742}
-  m_Layer: 6
+  - component: {fileID: 4832584822795127211}
+  m_Layer: 11
   m_Name: SmallBedSideTable
   m_TagString: MesaDeNoche
   m_Icon: {fileID: 0}
@@ -141,8 +142,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &7495899743796490232
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &2963534057504910799
 MonoBehaviour:
@@ -354,6 +355,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 1786306891953528650}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &7449559303444497742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -367,7 +370,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 5249
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -375,6 +378,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.61, y: 1, z: 4.16}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &4832584822795127211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064975142483202532}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 129
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 2.08}
+  m_Center: {x: 0, y: 0.5, z: -1.04}
 --- !u!1001 &3075506271467343947
 PrefabInstance:
   m_ObjectHideFlags: 0

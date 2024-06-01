@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 5645270350211774953}
   - component: {fileID: 4148852226693863065}
   - component: {fileID: 242508028466744822}
-  m_Layer: 6
+  - component: {fileID: 5205628166353614680}
+  m_Layer: 17
   m_Name: TvCabinet
   m_TagString: MuebleTV
   m_Icon: {fileID: 0}
@@ -58,8 +59,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &4227510541355241085
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &9202162557094402059
 MonoBehaviour:
@@ -271,6 +272,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 7301017748265451170}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &242508028466744822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -284,7 +287,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 263297
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -292,6 +295,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.86, y: 1, z: 2.33}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &5205628166353614680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951129381725122681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 129
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.165}
+  m_Center: {x: 0, y: 0.5, z: -0.5825}
 --- !u!1 &7301017748265451170
 GameObject:
   m_ObjectHideFlags: 0

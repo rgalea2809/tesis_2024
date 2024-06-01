@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 6849418116867558200}
   - component: {fileID: -6459960664835054407}
   - component: {fileID: 4899270649582801184}
-  m_Layer: 6
+  m_Layer: 15
   m_Name: Chair
   m_TagString: Silla
   m_Icon: {fileID: 0}
@@ -142,8 +142,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &6464013743082591915
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &2804929659930095092
 MonoBehaviour:
@@ -355,6 +355,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 2698073255963168123}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &4899270649582801184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -368,7 +370,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 17537
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

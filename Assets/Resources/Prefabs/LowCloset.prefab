@@ -98,7 +98,8 @@ GameObject:
   - component: {fileID: 846044275077584013}
   - component: {fileID: 5953824169431513347}
   - component: {fileID: 5511795050679632499}
-  m_Layer: 6
+  - component: {fileID: 2054514255050068970}
+  m_Layer: 13
   m_Name: LowCloset
   m_TagString: Ropero
   m_Icon: {fileID: 0}
@@ -141,8 +142,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &5992482501150315296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &2720871263493118053
 MonoBehaviour:
@@ -354,6 +355,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 426140596588362767}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &5511795050679632499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -367,7 +370,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 1153
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -375,6 +378,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.33, y: 1, z: 4}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &2054514255050068970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576404630937161878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 129
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 2}
+  m_Center: {x: 0, y: 0.5, z: -1}
 --- !u!1001 &7809745952395853441
 PrefabInstance:
   m_ObjectHideFlags: 0

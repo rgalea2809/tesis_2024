@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 7591293954141069089}
   - component: {fileID: -6160812346090048273}
   - component: {fileID: 5743118899253136576}
-  m_Layer: 6
+  - component: {fileID: 7392874631983520342}
+  m_Layer: 16
   m_Name: ThreeSeaterSofa
   m_TagString: SofaTresPlazas
   m_Icon: {fileID: 0}
@@ -58,8 +59,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &3711322934626277276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &5350361671745737278
 MonoBehaviour:
@@ -271,6 +272,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 2043155660700457100}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &5743118899253136576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -284,7 +287,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 590977
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -292,6 +295,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.57, y: 1, z: 2.5}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &7392874631983520342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821121411468482862}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 524417
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.25}
+  m_Center: {x: 0, y: 0.5, z: -0.625}
 --- !u!1 &2043155660700457100
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class SpawnFurniture : MonoBehaviour
     private bool isVolume = false;
     [SerializeField] public Transform spawiningPosition;
 
+    [SerializeField] private GameObject furnitureContainer;
+
     void Start()
     {
         isInPreview = false;
@@ -71,10 +73,10 @@ public class SpawnFurniture : MonoBehaviour
                 if(isVolume)
                 {
                     obj.GetComponent<SpacingValidation>().isAVolume = true;
-                    UnityEngine.Object.Instantiate(obj, postionPreview.transform.position, postionPreview.transform.localRotation);
+                    UnityEngine.Object.Instantiate(obj, postionPreview.transform.position, postionPreview.transform.localRotation,furnitureContainer.transform);
                 }
                 else
-                    UnityEngine.Object.Instantiate(obj, newObjectPos, postionPreview.transform.localRotation);
+                    UnityEngine.Object.Instantiate(obj, newObjectPos, postionPreview.transform.localRotation,furnitureContainer.transform);
                 hidePreview();
             }
         }
@@ -100,6 +102,12 @@ public class SpawnFurniture : MonoBehaviour
 
     public bool getIsInPreview(){
         return isInPreview;
+    }
+
+    public void DespawnAllFurniture() {
+        while (furnitureContainer.transform.childCount > 0) {
+            DestroyImmediate(furnitureContainer.transform.GetChild(0).gameObject);
+        }
     }
 
 }

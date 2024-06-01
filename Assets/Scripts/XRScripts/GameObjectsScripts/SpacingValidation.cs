@@ -13,10 +13,10 @@ public class SpacingValidation : MonoBehaviour
     
     [SerializeField] private GameObject ValidDistanceBox;
 
+    private bool isOnGround = true;
+    public bool isBeingGrabed = false;
     public bool isAVolume = false;
-
     public bool canGoHigher = true;
-    
     private bool hasCollided;
     private static bool isOnValidDistance = true;
 
@@ -42,10 +42,14 @@ public class SpacingValidation : MonoBehaviour
     void OnCollisionStay(Collision collision){
         if(collision.gameObject.layer != 7)
             hasCollided = true;
+        else
+            isOnGround = true;
     }
 
     void OnCollisionExit(Collision collision){
         hasCollided = false;
+        if(collision.gameObject.layer == 7)
+         isOnGround = false;
     }
 
     void Start()
@@ -59,6 +63,10 @@ public class SpacingValidation : MonoBehaviour
         collisionPoints = new Vector3[4];
         distances = new double[4];
         CheckYPosition();
+        if(!isOnGround && !isBeingGrabed)
+        {
+            transform.position = new Vector3(transform.position.x,transform.position.y - 0.1f, transform.position.z);
+        }  
     }
 
     public void moveInY(float moveDistance){

@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4475199191893616914}
   - component: {fileID: -3460425669768746740}
   - component: {fileID: 2026011211751580898}
-  m_Layer: 6
+  m_Layer: 18
   m_Name: CornerShelf
   m_TagString: Librero
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &7692308090961793915
 MonoBehaviour:
@@ -354,6 +354,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 3679119121403751169}
+  isAVolume: 0
+  canGoHigher: 1
 --- !u!65 &2026011211751580898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -367,7 +369,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 132225
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
