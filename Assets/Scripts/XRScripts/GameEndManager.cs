@@ -69,7 +69,7 @@ public class GameEndManager : MonoBehaviour
     {
         if (uiXRController.didSelectFreeMode)
         {
-            if(logicHelper.getIsOnValidDistance())
+            if (logicHelper.getIsOnValidDistance())
                 HandleGameEnd();
             else
                 ShowSocketsNotFilledError();
@@ -204,5 +204,14 @@ public class GameEndManager : MonoBehaviour
                              width,
                              height,
                              System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
+    }
+
+    public void TriggerExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is exiting");
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
