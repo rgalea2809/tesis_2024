@@ -11,6 +11,7 @@ public class RotateFocusedObject : MonoBehaviour
     public InputActionReference rotateReference = null;
     public InputActionReference destroyActionReference = null;
     public XRGrabInteractable interactableReference = null;
+    private UIXRControler uiXRController = null;
 
     // Properties
     public float rotationAngle = 45.0f;
@@ -19,6 +20,12 @@ public class RotateFocusedObject : MonoBehaviour
 
     private void Awake()
     {
+        GameObject mainCanvas = GameObject.Find("Main Canvas");
+        if (mainCanvas != null)
+        {
+            uiXRController = mainCanvas.GetComponent<UIXRControler>();
+        }
+
         rotateReference.action.performed += RotateObject;
         destroyActionReference.action.performed += DestroyObject;
         interactableReference.hoverEntered.AddListener(EnableInteraction);
@@ -56,7 +63,9 @@ public class RotateFocusedObject : MonoBehaviour
     {
         if (canInteract)
         {
-            Destroy(gameObject);
+            // Call UIXRControler delete furniture method
+            // Destroy(gameObject);
+            uiXRController.TriggerDeleteFurniture(gameObject);
         }
 
     }
