@@ -10,6 +10,9 @@ public class SpacingValidation : MonoBehaviour
 {
     [SerializeField] private LayerMask rayMask;
     private Vector3 lastValidPosition;
+    private Vector3 collisionVector;
+
+    private Vector3 gravity;
     
     [SerializeField] private GameObject ValidDistanceBox;
 
@@ -23,51 +26,39 @@ public class SpacingValidation : MonoBehaviour
     private Vector3[] collisionPoints;
     private double[] distances;
 
+
     void OnTriggerStay(Collider other){
         if (!other.isTrigger)
         {
-            isOnValidDistance = false;
             ValidDistanceBox.SetActive(true);
+            isOnValidDistance = false;
         }
     }
 
     void OnTriggerExit(Collider other){
         if (!other.isTrigger)
         {
-            isOnValidDistance = true;
             ValidDistanceBox.SetActive(false);
+            isOnValidDistance = true;
         }
     }
 
-    void OnCollisionStay(Collision collision){
-        if(collision.gameObject.layer != 7)
-            hasCollided = true;
-        else
-            isOnGround = true;
-    }
-
-    void OnCollisionExit(Collision collision){
-        hasCollided = false;
-        if(collision.gameObject.layer == 7)
-         isOnGround = false;
-    }
 
     void Start()
     {
         lastValidPosition = transform.position;
+        collisionPoints = new Vector3[4];
+        distances = new double[4];
     }
 
     // Update is called once per frame
     void Update()
     {
-        collisionPoints = new Vector3[4];
-        distances = new double[4];
         CheckYPosition();
-        if(!isOnGround && !isBeingGrabed)
-        {
-            transform.position = new Vector3(transform.position.x,transform.position.y - 0.1f, transform.position.z);
-        }  
+        
+
     }
+
 
     public void moveInY(float moveDistance){
             transform.position = new Vector3(transform.position.x,transform.position.y + moveDistance, transform.position.z);
@@ -112,14 +103,6 @@ public class SpacingValidation : MonoBehaviour
         distances[1] = distanceFromBotWall;
         distances[2] = distanceFromLeftWall;
         distances[3] = distanceFromRigthWall;
-        
-        if(distanceFromTopWall >= 0 && distanceFromBotWall >= 0 && distanceFromLeftWall >= 0 && distanceFromRigthWall >= 0 && !hasCollided)
-        {
-            lastValidPosition = transform.position;
-        }
-        else{
-            transform.position = lastValidPosition;
-        }
     }
 
     public Vector3[] getCollisionPoints(){
@@ -151,5 +134,9 @@ public class SpacingValidation : MonoBehaviour
                 canGoHigher = true;
             }
         }
+    }
+
+    void OnDestroy (){
+        isOnValidDistance =true;
     }
 }

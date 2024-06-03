@@ -11,6 +11,8 @@ public class XRInputManager : MonoBehaviour
     [SerializeField] private SpawnFurniture spawnFunc;
     [SerializeField] private XRRayInteractor rigthRay;
 
+    [SerializeField] private Rigidbody unFreezeConstraints;
+
     [SerializeField] private TextMeshProUGUI xControls;
     [SerializeField] private TextMeshProUGUI yControls;
     [SerializeField] private TextMeshProUGUI aControls;
@@ -89,7 +91,8 @@ public class XRInputManager : MonoBehaviour
 
             selectedObj = rigthRay.firstInteractableSelected.colliders[0].gameObject;
 
-            unfreezePosition();
+            selectedObj.GetComponent<Rigidbody>().mass = 1;
+            selectedObj.GetComponent<Rigidbody>().constraints = unFreezeConstraints.constraints;
             
             SpacingValidation sv =  selectedObj.GetComponent<SpacingValidation>();
 
@@ -110,10 +113,14 @@ public class XRInputManager : MonoBehaviour
         }
         else if (!rigthRay.isSelectActive && selectedObj != null)
         {
+            
+            selectedObj.GetComponent<Rigidbody>().mass = 10000;
+            selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             yControls.text = "Abrir Pausa";
             xControls.text = "Abrir Catalogo";
-            freezePosition();
+            // freezePosition();
             selectedObj.GetComponent<SpacingValidation>().isBeingGrabed = false;
+            
             hideDistance();
         }
     }
