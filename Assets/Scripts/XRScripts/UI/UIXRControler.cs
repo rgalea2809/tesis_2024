@@ -16,6 +16,7 @@ public class UIXRControler : MonoBehaviour
     [SerializeField] private GameObject gameEndMenu;
     [SerializeField] private GameObject socketsNotFilledErrorPrompt;
     [SerializeField] private GameObject deleteFurnitureMenu;
+    [SerializeField] private GameObject exitMenu;
 
     [SerializeField] private GameObject LeftControllerUI;
     [SerializeField] private GameObject RightControllerUI;
@@ -223,17 +224,6 @@ public class UIXRControler : MonoBehaviour
         }
     }
 
-    private void HideAllMenus()
-    {
-        mainMenu.SetActive(false);
-        pauseMenu.SetActive(false);
-        controlsMenu.SetActive(false);
-        creditsMenu.SetActive(false);
-        roomSelectionMenu.SetActive(false);
-        catalogMenu.SetActive(false);
-        volumeCreationMenu.SetActive(false);
-    }
-
     public void ToggleGameEndMenu(bool flag)
     {
         gameEndMenu.SetActive(flag);
@@ -247,5 +237,9 @@ public class UIXRControler : MonoBehaviour
     public void ToggleDeleteFurnitureMenu(bool flag)
     {
         deleteFurnitureMenu.SetActive(flag);
+    }
+
+    public void ToogleExitMenu(bool flag){
+        exitMenu.SetActive(flag);
     }
 }

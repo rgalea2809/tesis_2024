@@ -86,7 +86,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!114 &642282749171843916
 MonoBehaviour:
@@ -275,6 +275,7 @@ MonoBehaviour:
   isBeingGrabed: 0
   isAVolume: 0
   canGoHigher: 1
+  canGoLower: 0
 --- !u!65 &1049726732533539299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -315,7 +316,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.835}
+  m_Size: {x: 0.95, y: 1, z: 1.835}
   m_Center: {x: 0, y: 0.5, z: -0.9175}
 --- !u!1 &6597069340990490170
 GameObject:

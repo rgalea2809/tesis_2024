@@ -169,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!114 &2720871263493118053
 MonoBehaviour:
@@ -358,6 +358,7 @@ MonoBehaviour:
   isBeingGrabed: 0
   isAVolume: 0
   canGoHigher: 1
+  canGoLower: 0
 --- !u!65 &5511795050679632499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -398,7 +399,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 2}
+  m_Size: {x: 0.95, y: 1, z: 2}
   m_Center: {x: 0, y: 0.5, z: -1}
 --- !u!1001 &7809745952395853441
 PrefabInstance:

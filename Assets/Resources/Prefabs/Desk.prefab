@@ -169,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!114 &3605833622051871751
 MonoBehaviour:
@@ -358,6 +358,7 @@ MonoBehaviour:
   isBeingGrabed: 0
   isAVolume: 0
   canGoHigher: 1
+  canGoLower: 0
 --- !u!65 &7805713821089682389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -392,13 +393,13 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 32897
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.5}
+  m_Size: {x: 0.95, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0.5, z: -0.75}
 --- !u!1001 &5600140238779253807
 PrefabInstance:

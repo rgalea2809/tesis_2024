@@ -12,6 +12,7 @@ public class XRInputManager : MonoBehaviour
     [SerializeField] private XRRayInteractor rigthRay;
 
     [SerializeField] private Rigidbody unFreezeConstraints;
+    [SerializeField] private Rigidbody freezeConstraints;
 
     [SerializeField] private TextMeshProUGUI xControls;
     [SerializeField] private TextMeshProUGUI yControls;
@@ -98,15 +99,20 @@ public class XRInputManager : MonoBehaviour
 
             sv.CheckDistanseFromWalls();
             sv.isBeingGrabed = true;
+ 
+            TLine.gameObject.SetActive(isDistanceUIActive);
+            BLine.gameObject.SetActive(isDistanceUIActive);
+            LLine.gameObject.SetActive(isDistanceUIActive);
+            RLine.gameObject.SetActive(isDistanceUIActive);
 
-            if(isDistanceUIActive)
-                showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y,sv.isAVolume,selectedObj.transform.localScale.y);
+
+            showDistance(selectedObj.transform.position,sv.getCollisionPoints(),sv.getDistances(),selectedObj.transform.rotation.y,sv.isAVolume,selectedObj.transform.localScale.y);
 
             if (basicControls.Pause.WasPerformedThisFrame() && sv.canGoHigher)
             {
                 sv.moveInY(0.1f);
             }
-            else if (basicControls.Catalog.WasPerformedThisFrame())
+            else if (basicControls.Catalog.WasPerformedThisFrame() && sv.canGoLower)
             {
                 sv.moveInY(-0.1f);
             }
@@ -115,10 +121,9 @@ public class XRInputManager : MonoBehaviour
         {
             
             selectedObj.GetComponent<Rigidbody>().mass = 10000;
-            selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            selectedObj.GetComponent<Rigidbody>().constraints = freezeConstraints.constraints;
             yControls.text = "Abrir Pausa";
             xControls.text = "Abrir Catalogo";
-            // freezePosition();
             selectedObj.GetComponent<SpacingValidation>().isBeingGrabed = false;
             
             hideDistance();
@@ -151,21 +156,6 @@ public class XRInputManager : MonoBehaviour
     
     public void goBackToLobby(){
         gameObject.transform.position = lobbySpawner.transform.position;
-    }
-
-    private void freezePosition()
-    {
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-    }
-
-    private void unfreezePosition()
-    {
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
     }
 
     private void showDistance(Vector3 origin, Vector3[] hitPoints, double[] distances, float rotation, bool isAVolume, float heigth){

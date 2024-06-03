@@ -9,18 +9,13 @@ using Debug = UnityEngine.Debug;
 public class SpacingValidation : MonoBehaviour
 {
     [SerializeField] private LayerMask rayMask;
-    private Vector3 lastValidPosition;
-    private Vector3 collisionVector;
-
-    private Vector3 gravity;
-    
     [SerializeField] private GameObject ValidDistanceBox;
 
-    private bool isOnGround = true;
     public bool isBeingGrabed = false;
     public bool isAVolume = false;
     public bool canGoHigher = true;
-    private bool hasCollided;
+
+    public bool canGoLower = false;
     private static bool isOnValidDistance = true;
 
     private Vector3[] collisionPoints;
@@ -43,10 +38,8 @@ public class SpacingValidation : MonoBehaviour
         }
     }
 
-
     void Start()
     {
-        lastValidPosition = transform.position;
         collisionPoints = new Vector3[4];
         distances = new double[4];
     }
@@ -55,7 +48,6 @@ public class SpacingValidation : MonoBehaviour
     void Update()
     {
         CheckYPosition();
-        
 
     }
 
@@ -125,6 +117,12 @@ public class SpacingValidation : MonoBehaviour
             else{
                 canGoHigher = true;
             }
+            if(transform.position.y - transform.localScale.y/2 > 0.5){
+                canGoLower = true;
+            }
+            else{
+                canGoLower = false;
+            }
         }
         else{
             if(transform.position.y >= 1.5){
@@ -132,6 +130,12 @@ public class SpacingValidation : MonoBehaviour
             }
             else{
                 canGoHigher = true;
+            }
+            if(transform.position.y > 0.5){
+                canGoLower = true;
+            }
+            else{
+                canGoLower = false;
             }
         }
     }

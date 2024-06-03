@@ -210,8 +210,13 @@ public class GameEndManager : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Game is exiting");
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
+    public void stopConfettie(){
+        livingRoomConfetti.gameObject.SetActive(false);
+        bedroomConfetti.gameObject.SetActive(false);
     }
 }
