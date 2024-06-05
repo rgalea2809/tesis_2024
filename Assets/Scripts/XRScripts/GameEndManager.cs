@@ -45,7 +45,7 @@ public class GameEndManager : MonoBehaviour
     // Living room camera
     public Camera livingRoomCamera = null;
 
-    bool canEndGame = false;
+    public bool canEndGame = false;
 
 
     // Start is called before the first frame update
@@ -109,7 +109,7 @@ public class GameEndManager : MonoBehaviour
         ShowPhotoPrompt();
     }
 
-    private bool HasFilledSockets()
+   public bool HasFilledSockets()
     {
         if (uiXRController.didSelectLivingRoomType)
         {
@@ -176,7 +176,6 @@ public class GameEndManager : MonoBehaviour
         byte[] bytes = screenShot.EncodeToPNG();
         string filename = BuildScreenShotName(imageWidth, imageHeight);
         System.IO.File.WriteAllBytes(filename, bytes);
-        Debug.Log(string.Format("Took screenshot to: {0}", filename));
 
         camera.enabled = false;
     }

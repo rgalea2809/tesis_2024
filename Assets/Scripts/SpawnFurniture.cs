@@ -1,12 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class SpawnFurniture : MonoBehaviour
 {
     private UIXRControler uicontroler;
+
+    private List<GameObject> furnitureList;
+
+    private static int count = 0;
+
+
     private static GameObject obj;
     public GameObject postionPreview;
     private static bool isInPreview = false;
@@ -19,6 +26,7 @@ public class SpawnFurniture : MonoBehaviour
     {
         isInPreview = false;
         uicontroler = GetComponent<UIXRControler>();
+        furnitureList = new List<GameObject>();
     }
 
     public void Spawn(string objName)
@@ -73,10 +81,12 @@ public class SpawnFurniture : MonoBehaviour
                 if(isVolume)
                 {
                     obj.GetComponent<SpacingValidation>().isAVolume = true;
-                    UnityEngine.Object.Instantiate(obj, postionPreview.transform.position, postionPreview.transform.localRotation,furnitureContainer.transform);
+                    obj = UnityEngine.Object.Instantiate(obj, postionPreview.transform.position, postionPreview.transform.localRotation,furnitureContainer.transform);
+                    
                 }
                 else
-                    UnityEngine.Object.Instantiate(obj, newObjectPos, postionPreview.transform.localRotation,furnitureContainer.transform);
+                    obj = UnityEngine.Object.Instantiate(obj, newObjectPos, postionPreview.transform.localRotation,furnitureContainer.transform);
+                furnitureList.Add(obj);
                 hidePreview();
             }
         }
@@ -105,9 +115,17 @@ public class SpawnFurniture : MonoBehaviour
     }
 
     public void DespawnAllFurniture() {
-        while (furnitureContainer.transform.childCount > 0) {
-            DestroyImmediate(furnitureContainer.transform.GetChild(0).gameObject);
-        }
+        // while (furnitureContainer.transform.childCount > 0) {
+        //     DestroyImmediate(furnitureContainer.transform.GetChild(0).gameObject);
+        // }
+        Debug.Log("aqui" + furnitureList.Count);
+        furnitureList.ForEach(furniture => {
+            Debug.Log(furniture);
+            if(furniture != null)
+                DestroyImmediate(furniture,true);
+        });
+
+        furnitureList.Clear();
     }
 
 }

@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &476081245803026513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1502881656684710023}
+  - component: {fileID: 3163926675341312432}
+  m_Layer: 21
+  m_Name: WindowCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1502881656684710023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476081245803026513}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.074333325, z: 0}
+  m_LocalScale: {x: 1, y: 3.1499996, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3874230484437449536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3163926675341312432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476081245803026513}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.45, z: 1}
+  m_Center: {x: 0, y: 0.225, z: 0}
 --- !u!1 &1839883228334238645
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +171,7 @@ Transform:
   m_LocalScale: {x: 1.8, y: 1.2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1502881656684710023}
   - {fileID: 6609095718863594918}
   - {fileID: 6193934762867580592}
   m_Father: {fileID: 0}
@@ -141,8 +195,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.4, z: 1}
-  m_Center: {x: 0, y: 0.7, z: 0}
+  m_Size: {x: 1, y: 0.8228322, z: 1}
+  m_Center: {x: 0, y: 0.4114161, z: 0}
 --- !u!54 &9005947588386001273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -354,7 +408,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ValidDistanceBox: {fileID: 1839883228334238645}
-  isBeingGrabed: 0
+  isBeingGrabed: 1
   isAVolume: 0
   canGoHigher: 1
   canGoLower: 0
@@ -371,7 +425,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 101505
+    m_Bits: 2198657
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

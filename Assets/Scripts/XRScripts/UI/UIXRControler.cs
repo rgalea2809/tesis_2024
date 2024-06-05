@@ -234,6 +234,10 @@ public class UIXRControler : MonoBehaviour
         socketsNotFilledErrorPrompt.SetActive(flag);
     }
 
+    public void ToogleGameEndMenu(bool flag){
+        gameEndMenu.SetActive(flag);
+    }
+
     public void ToggleDeleteFurnitureMenu(bool flag)
     {
         deleteFurnitureMenu.SetActive(flag);

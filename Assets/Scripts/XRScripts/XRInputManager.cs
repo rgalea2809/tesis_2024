@@ -10,6 +10,7 @@ public class XRInputManager : MonoBehaviour
     [SerializeField] private UIXRControler uiControler;
     [SerializeField] private SpawnFurniture spawnFunc;
     [SerializeField] private XRRayInteractor rigthRay;
+    [SerializeField] private GameEndManager gameEnd;
 
     [SerializeField] private Rigidbody unFreezeConstraints;
     [SerializeField] private Rigidbody freezeConstraints;
@@ -25,6 +26,7 @@ public class XRInputManager : MonoBehaviour
     [SerializeField] private LineRenderer LLine;
     [SerializeField] private LineRenderer RLine;
 
+    [SerializeField] private SpacingValidation logicHelper;
     // Start is called before the first frame update
     private GameObject selectedObj;
     public GameObject lobbySpawner;
@@ -33,7 +35,10 @@ public class XRInputManager : MonoBehaviour
     public GameObject livingRoomSpawner;
     public GameObject livingRoomTrainning;
 
+    
+
     private bool isDistanceUIActive = true;
+    private bool hasGameEndMenuBeenClosed = false;
     private PlayerInput playerInput;
     private PlayerInput.XRInputsActions basicControls;
     // Start is called before the first frame update
@@ -71,6 +76,11 @@ public class XRInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!uiControler.didSelectFreeMode &&  gameEnd.HasFilledSockets() && logicHelper.getIsOnValidDistance() && !hasGameEndMenuBeenClosed){
+            gameEnd.RequestGameEnd();
+            uiControler.ToogleIsPaused(true);
+        }
+
         uiControler.ToogleDistanceUI(rigthRay.firstInteractableSelected != null && isDistanceUIActive);
         if(spawnFunc.getIsInPreview()){
             bControls.text = "Cancelar";
@@ -199,5 +209,9 @@ public class XRInputManager : MonoBehaviour
         RLine.positionCount = 2;
         RLine.SetPosition(0, Vector3.zero);
         RLine.SetPosition(1, Vector3.zero);
+    }
+
+    public void toogleHasGameEndMenuBeenClosed(bool flag){
+        hasGameEndMenuBeenClosed = flag;
     }
 }

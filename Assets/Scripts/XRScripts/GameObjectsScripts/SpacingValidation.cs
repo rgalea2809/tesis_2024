@@ -21,6 +21,17 @@ public class SpacingValidation : MonoBehaviour
     private Vector3[] collisionPoints;
     private double[] distances;
 
+    void OnCollisionEnter(Collision collision){
+        if (collision.gameObject.layer == 7){
+            canGoLower = false;
+        }
+    }
+
+    void OnCollisionExit(Collision collision){
+        if(collision.gameObject.layer == 7){
+            canGoLower = true;
+        }
+    }
 
     void OnTriggerStay(Collider other){
         if (!other.isTrigger)
@@ -117,12 +128,6 @@ public class SpacingValidation : MonoBehaviour
             else{
                 canGoHigher = true;
             }
-            if(transform.position.y - transform.localScale.y/2 > 0.5){
-                canGoLower = true;
-            }
-            else{
-                canGoLower = false;
-            }
         }
         else{
             if(transform.position.y >= 1.5){
@@ -130,12 +135,6 @@ public class SpacingValidation : MonoBehaviour
             }
             else{
                 canGoHigher = true;
-            }
-            if(transform.position.y > 0.5){
-                canGoLower = true;
-            }
-            else{
-                canGoLower = false;
             }
         }
     }
