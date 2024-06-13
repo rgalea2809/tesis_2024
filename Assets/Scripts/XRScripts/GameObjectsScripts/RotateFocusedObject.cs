@@ -17,7 +17,6 @@ public class RotateFocusedObject : MonoBehaviour
     public float rotationAngle = 45.0f;
     private bool canInteract = false;
 
-
     private void Awake()
     {
         GameObject mainCanvas = GameObject.Find("Main Canvas");
