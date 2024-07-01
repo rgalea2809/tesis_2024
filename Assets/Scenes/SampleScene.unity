@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 3523739}
   - component: {fileID: 3523742}
   - component: {fileID: 3523741}
-  - component: {fileID: 3523740}
   - component: {fileID: 3523743}
   m_Layer: 0
   m_Name: BookShelf
@@ -196,28 +195,6 @@ Transform:
   - {fileID: 1164837587}
   m_Father: {fileID: 972582407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &3523740
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3523738}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &3523741
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13976,7 +13953,6 @@ GameObject:
   - component: {fileID: 483587591}
   - component: {fileID: 483587594}
   - component: {fileID: 483587593}
-  - component: {fileID: 483587592}
   - component: {fileID: 483587595}
   m_Layer: 0
   m_Name: TableFrame
@@ -14002,28 +13978,6 @@ Transform:
   - {fileID: 375208522}
   m_Father: {fileID: 972582407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &483587592
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483587590}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &483587593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15151,7 +15105,6 @@ GameObject:
   - component: {fileID: 526108817}
   - component: {fileID: 526108820}
   - component: {fileID: 526108819}
-  - component: {fileID: 526108818}
   - component: {fileID: 526108821}
   m_Layer: 0
   m_Name: Sofa1Frame
@@ -15177,28 +15130,6 @@ Transform:
   - {fileID: 1819562545}
   m_Father: {fileID: 972582407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &526108818
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526108816}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &526108819
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25477,7 +25408,6 @@ GameObject:
   - component: {fileID: 1190816292}
   - component: {fileID: 1190816295}
   - component: {fileID: 1190816294}
-  - component: {fileID: 1190816293}
   - component: {fileID: 1190816296}
   m_Layer: 0
   m_Name: TvBase
@@ -25503,28 +25433,6 @@ Transform:
   - {fileID: 1026080523}
   m_Father: {fileID: 972582407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1190816293
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190816291}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1190816294
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26649,7 +26557,6 @@ GameObject:
   - component: {fileID: 1307730469}
   - component: {fileID: 1307730472}
   - component: {fileID: 1307730471}
-  - component: {fileID: 1307730470}
   - component: {fileID: 1307730473}
   m_Layer: 0
   m_Name: Sofa2Frame (1)
@@ -26675,28 +26582,6 @@ Transform:
   - {fileID: 1489897817}
   m_Father: {fileID: 972582407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1307730470
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307730468}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1307730471
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29092,7 +28977,6 @@ GameObject:
   - component: {fileID: 1448435164}
   - component: {fileID: 1448435167}
   - component: {fileID: 1448435166}
-  - component: {fileID: 1448435165}
   - component: {fileID: 1448435168}
   m_Layer: 0
   m_Name: ClosetFrame
@@ -29118,28 +29002,6 @@ Transform:
   - {fileID: 1533320196}
   m_Father: {fileID: 461836071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1448435165
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448435163}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1448435166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29801,7 +29663,6 @@ GameObject:
   - component: {fileID: 1479595050}
   - component: {fileID: 1479595053}
   - component: {fileID: 1479595052}
-  - component: {fileID: 1479595051}
   - component: {fileID: 1479595054}
   m_Layer: 0
   m_Name: ChairFrame
@@ -29827,28 +29688,6 @@ Transform:
   - {fileID: 187963676}
   m_Father: {fileID: 461836071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1479595051
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479595049}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1479595052
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31271,7 +31110,6 @@ GameObject:
   - component: {fileID: 1530617651}
   - component: {fileID: 1530617654}
   - component: {fileID: 1530617653}
-  - component: {fileID: 1530617652}
   - component: {fileID: 1530617655}
   m_Layer: 0
   m_Name: DeskFrame
@@ -31297,28 +31135,6 @@ Transform:
   - {fileID: 550914489}
   m_Father: {fileID: 461836071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1530617652
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530617650}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1530617653
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37257,7 +37073,6 @@ GameObject:
   - component: {fileID: 1585268834}
   - component: {fileID: 1585268837}
   - component: {fileID: 1585268836}
-  - component: {fileID: 1585268835}
   - component: {fileID: 1585268838}
   m_Layer: 0
   m_Name: NightTableFrame
@@ -37283,28 +37098,6 @@ Transform:
   - {fileID: 596039398}
   m_Father: {fileID: 461836071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1585268835
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585268833}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1585268836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -40987,7 +40780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1737448943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47737,7 +47530,6 @@ GameObject:
   - component: {fileID: 2087211337}
   - component: {fileID: 2087211340}
   - component: {fileID: 2087211339}
-  - component: {fileID: 2087211338}
   - component: {fileID: 2087211341}
   m_Layer: 0
   m_Name: Sofa3Frame (2)
@@ -47763,28 +47555,6 @@ Transform:
   - {fileID: 1175039282}
   m_Father: {fileID: 972582407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2087211338
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087211336}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2087211339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47876,7 +47646,6 @@ GameObject:
   - component: {fileID: 2109198962}
   - component: {fileID: 2109198965}
   - component: {fileID: 2109198964}
-  - component: {fileID: 2109198963}
   - component: {fileID: 2109198966}
   m_Layer: 0
   m_Name: BedFrame
@@ -47902,28 +47671,6 @@ Transform:
   - {fileID: 839732740}
   m_Father: {fileID: 461836071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2109198963
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2109198961}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2109198964
 MeshRenderer:
   m_ObjectHideFlags: 0

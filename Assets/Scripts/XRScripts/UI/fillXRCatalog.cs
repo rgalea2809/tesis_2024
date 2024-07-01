@@ -65,6 +65,7 @@ public class fillXRCatalog : MonoBehaviour
     }
 
     public void fillCatalogFunc(int currentRoom){
+        Debug.Log("todook");
         cleanCatalog();
         CatalogInfo assetList = JsonUtility.FromJson<CatalogInfo>(jsonFile.text);
         menuLabel.text = assetList.catalogInfo[currentRoom].room;
