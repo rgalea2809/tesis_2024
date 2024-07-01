@@ -142,4 +142,8 @@ public class SpacingValidation : MonoBehaviour
     void OnDestroy (){
         isOnValidDistance =true;
     }
+
+    public void DeactivateValidDistanceBox(){
+        ValidDistanceBox.SetActive(false);
+    }
 }

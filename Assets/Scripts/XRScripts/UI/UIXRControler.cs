@@ -33,6 +33,8 @@ public class UIXRControler : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI errorWindowMessage;
 
+    [SerializeField] private SpawnFurniture spawnFunct;
+
     private float lastOneEightyRotation = 0;
 
     public bool isGameStarted = false;
@@ -241,6 +243,7 @@ public class UIXRControler : MonoBehaviour
     public void ToggleDeleteFurnitureMenu(bool flag)
     {
         deleteFurnitureMenu.SetActive(flag);
+        spawnFunct.DeactivateAllValidDistancesBox();
     }
 
     public void ToogleExitMenu(bool flag){

@@ -11,6 +11,12 @@ public class SpawnFurniture : MonoBehaviour
 
     private List<GameObject> furnitureList;
 
+    [SerializeField] private GameObject BedRoomDoor;
+    [SerializeField] private GameObject BedRoomWindow;
+    [SerializeField] private GameObject LivingRoomDoor;
+    [SerializeField] private GameObject LivingRoomWindow;
+
+
     private static int count = 0;
 
 
@@ -126,6 +132,17 @@ public class SpawnFurniture : MonoBehaviour
         });
 
         furnitureList.Clear();
+    }
+
+    public void DeactivateAllValidDistancesBox(){
+        furnitureList.ForEach(furniture =>{
+            if(furniture != null)
+                furniture.GetComponent<SpacingValidation>().DeactivateValidDistanceBox();
+        });
+        BedRoomDoor.GetComponent<SpacingValidation>().DeactivateValidDistanceBox();
+        BedRoomWindow.GetComponent<SpacingValidation>().DeactivateValidDistanceBox();
+        LivingRoomDoor.GetComponent<SpacingValidation>().DeactivateValidDistanceBox();
+        LivingRoomWindow.GetComponent<SpacingValidation>().DeactivateValidDistanceBox();
     }
 
 }
