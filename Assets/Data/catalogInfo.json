@@ -1,0 +1,235 @@
+{
+    "catalogInfo":[
+        {
+            "room": "Dormitorio",
+            "categories":[
+                {
+                    "category": "Camas",
+                    "types":[
+                        {
+                            "size":"1 plaza",
+                            "width": "0.90 m",
+                            "length": "1.90 m",
+                            "thumbnail": "cama-1-plaza",
+                            "prefab":"SingleSizeBed"
+                        },
+                        {
+                            "size":"1.5 plaza",
+                            "width": "1.35 m",
+                            "length": "1.90 m",
+                            "thumbnail": "cama-1-5-plaza",
+                            "prefab":"OneFiveSizeBed"
+                        },
+                        {
+                            "size":"Queen",
+                            "width": "1.50 m",
+                            "length": "1.90 m",
+                            "thumbnail": "cama-queen",
+                            "prefab":"QueenSizeBed"
+                        },
+                        {
+                            "size":"King",
+                            "width": "1.80 m",
+                            "length": "2.00 m",
+                            "thumbnail": "cama-king",
+                            "prefab":"KingSizeBed"
+                        }
+                    ]
+                },
+                {
+                    "category": "Escritorios",
+                    "types":[
+                        {
+                            "size":"Mediano",
+                            "width": "1.35 m",
+                            "length": "0.60 m",
+                            "thumbnail": "desk",
+                            "prefab":"Desk"
+                        },
+                        {
+                            "size":"Esquina",
+                            "width": "1.75 m",
+                            "length": "1.30 m",
+                            "thumbnail": "escritorio-esquina",
+                            "prefab":"LDesk"
+                        }
+                    ]
+                },
+                {
+                    "category": "Mesas de noche",
+                    "types":[
+                        {
+                            "size":"Mediana",
+                            "width": "0.65 m",
+                            "length": "0.55 m",
+                            "thumbnail": "mesa-de-noche-pequeña",
+                            "prefab":"BedSideTable"
+                        },
+                        {
+                            "size":"Pequeña",
+                            "width": "0.46 m",
+                            "length": "0.38 m",
+                            "thumbnail": "mesa-de-noche-pequeña",
+                            "prefab":"SmallBedSideTable"
+                        }
+                    ]
+                },
+                {
+                    "category": "Armarios",
+                    "types":[
+                        {
+                            "size":"Bajo",
+                            "width": "0.90 m",
+                            "length": "0.40 m",
+                            "thumbnail": "armario-bajo",
+                            "prefab":"LowCloset"
+                        },
+                        {
+                            "size":"Mediano",
+                            "width": "0.90 m",
+                            "length": "0.60 m",
+                            "thumbnail": "armario",
+                            "prefab":"Closet"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "2.00 m",
+                            "length": "0.47 m",
+                            "thumbnail": "armario-grande",
+                            "prefab":"BigCloset"
+                        }
+                    ]
+                },
+                {
+                    "category": "Asientos",
+                    "types":[
+                        {
+                            "size":"Silla",
+                            "width": "0.60 m",
+                            "length": "0.60 m",
+                            "thumbnail": "silla-dormitorio",
+                            "prefab":"Chair"
+                        },
+                        {
+                            "size":"Sillon",
+                            "width": "0.80 m",
+                            "length": "0.87 m",
+                            "thumbnail": "sofa-dormitorio",
+                            "prefab":"Sofa"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "room": "Sala",
+            "categories":[
+                {
+                    "category": "Sofás",
+                    "types":[
+                        {
+                            "size":"1 plaza",
+                            "width": "0.80 m",
+                            "length": "0.80 m",
+                            "thumbnail": "sofa-sala-individual",
+                            "prefab":"OneSeaterSofa"
+                        },
+                        {
+                            "size":"2 plazas",
+                            "width": "1.50 m",
+                            "length": "0.80 m",
+                            "thumbnail": "sofa-sala-2-plazas",
+                            "prefab":"TwoSeaterSofa"
+                        },
+                        {
+                            "size":"3 plazas",
+                            "width": "2.10 m",
+                            "length": "0.80 m",
+                            "thumbnail": "sofa-sala-3-plazas",
+                            "prefab":"ThreeSeaterSofa"
+                        }
+                    ]
+                },
+                {
+                    "category": "Mesas auxiliares",
+                    "types":[
+                        {
+                            "size":"Pequeña",
+                            "width": "0.40 m",
+                            "length": "0.30 m",
+                            "thumbnail": "mesa-de-centro-pequeña",
+                            "prefab":"SmallCenterTable"
+                        },
+                        {
+                            "size":"Mediana",
+                            "width": "0.50 m",
+                            "length": "0.50 m",
+                            "thumbnail": "mesa-de-centro",
+                            "prefab":"CenterTable"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "0.60 m",
+                            "length": "0.50 m",
+                            "thumbnail": "mesa-de-centro-grande",
+                            "prefab":"BigCenterTable"
+                        }
+                    ]
+                },
+                {
+                    "category": "Gabinetes",
+                    "types":[
+                        {
+                            "size":"Mediano",
+                            "width": "1.40 m",
+                            "length": "0.90 m",
+                            "thumbnail": "gabinete-tv",
+                            "prefab":"TvCabinet"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "2.00 m",
+                            "length": "0.45 m",
+                            "thumbnail": "gabinete-tv-grande",
+                            "prefab":"BigTVCabinet"
+                        }
+                    ]
+                },
+                {
+                    "category": "Estanterías",
+                    "types":[
+                        {
+                            "size":"Pequeña",
+                            "width": "0.50 m",
+                            "length": "0.40 m",
+                            "thumbnail": "estanteria-pequeña",
+                            "prefab":"SmallShelf"
+                        },
+                        {
+                            "size":"Mediana",
+                            "width": "1.20 m",
+                            "length": "0.40 m",
+                            "thumbnail": "estanteria-grande",
+                            "prefab":"Shelf"
+                        },
+                        {
+                            "size":"Grande",
+                            "width": "1.50 m",
+                            "length": "0.40 m",
+                            "thumbnail": "estanteria-grande",
+                            "prefab":"BigShelf"
+                        },
+                        {
+                            "size":"Esquina",
+                            "width": "0.30 m",
+                            "length": "0.30 m",
+                            "thumbnail": "estanteria-esquina",
+                            "prefab":"CornerShelf"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -40,6 +40,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "7ffccb9b-7c97-4b25-b31a-d1f9a8751446",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Catalog",
+                    "type": "Button",
+                    "id": "7c4d30cf-6c36-45a1-a41d-96d0c8f791c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -128,6 +146,156 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ec7dfb7-6bcc-40be-b13d-9422670b74f5",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f7def7da-c33e-4f30-8b0c-359eb3ed14f9",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Catalog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "XRInputs",
+            "id": "d3115572-e316-455d-812c-0d61caa837a5",
+            "actions": [
+                {
+                    "name": "Catalog",
+                    "type": "Button",
+                    "id": "0cf27e07-a744-400b-8229-fd1897144cc7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "a1434289-e38c-4ae3-aaf8-fa4edfeb5984",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "9e19122b-615d-4e75-acce-04cf8d1c95e7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "05ca94be-60d9-4168-b330-c9aadc083797",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Rotate",
+                    "type": "Button",
+                    "id": "51c49955-5ae2-4254-a832-7a0b60774de5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToogleDistances",
+                    "type": "Button",
+                    "id": "0533d6b0-f017-48d6-85aa-8a611f689cce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ddee1071-e5db-4cac-965d-b569f0096d82",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Catalog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c9ffe67-0f80-46b1-98ea-6a58636b377f",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de4782b2-48bd-4972-a839-e8c9791ec205",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62dd643a-64fe-4933-a806-2484baaf6248",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f856df87-133e-4135-ab97-3b8d0e3c630f",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6677accb-df6c-4882-8a72-80a7e4e84174",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToogleDistances",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

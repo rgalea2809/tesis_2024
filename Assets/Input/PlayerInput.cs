@@ -62,6 +62,24 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ffccb9b-7c97-4b25-b31a-d1f9a8751446"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Catalog"",
+                    ""type"": ""Button"",
+                    ""id"": ""7c4d30cf-6c36-45a1-a41d-96d0c8f791c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,6 +170,156 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ec7dfb7-6bcc-40be-b13d-9422670b74f5"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f7def7da-c33e-4f30-8b0c-359eb3ed14f9"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Catalog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""XRInputs"",
+            ""id"": ""d3115572-e316-455d-812c-0d61caa837a5"",
+            ""actions"": [
+                {
+                    ""name"": ""Catalog"",
+                    ""type"": ""Button"",
+                    ""id"": ""0cf27e07-a744-400b-8229-fd1897144cc7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""a1434289-e38c-4ae3-aaf8-fa4edfeb5984"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e19122b-615d-4e75-acce-04cf8d1c95e7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""05ca94be-60d9-4168-b330-c9aadc083797"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Button"",
+                    ""id"": ""51c49955-5ae2-4254-a832-7a0b60774de5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToogleDistances"",
+                    ""type"": ""Button"",
+                    ""id"": ""0533d6b0-f017-48d6-85aa-8a611f689cce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ddee1071-e5db-4cac-965d-b569f0096d82"",
+                    ""path"": ""<XRController>{LeftHand}/{PrimaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Catalog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c9ffe67-0f80-46b1-98ea-6a58636b377f"",
+                    ""path"": ""<XRController>{RightHand}/{SecondaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de4782b2-48bd-4972-a839-e8c9791ec205"",
+                    ""path"": ""<XRController>{LeftHand}/{SecondaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""62dd643a-64fe-4933-a806-2484baaf6248"",
+                    ""path"": ""<XRController>{RightHand}/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f856df87-133e-4135-ab97-3b8d0e3c630f"",
+                    ""path"": ""<XRController>{RightHand}/{PrimaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6677accb-df6c-4882-8a72-80a7e4e84174"",
+                    ""path"": ""<XRController>{LeftHand}/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToogleDistances"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +332,16 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_BasicControls_Look = m_BasicControls.FindAction("Look", throwIfNotFound: true);
         m_BasicControls_Push = m_BasicControls.FindAction("Push", throwIfNotFound: true);
         m_BasicControls_Interact = m_BasicControls.FindAction("Interact", throwIfNotFound: true);
+        m_BasicControls_Pause = m_BasicControls.FindAction("Pause", throwIfNotFound: true);
+        m_BasicControls_Catalog = m_BasicControls.FindAction("Catalog", throwIfNotFound: true);
+        // XRInputs
+        m_XRInputs = asset.FindActionMap("XRInputs", throwIfNotFound: true);
+        m_XRInputs_Catalog = m_XRInputs.FindAction("Catalog", throwIfNotFound: true);
+        m_XRInputs_Cancel = m_XRInputs.FindAction("Cancel", throwIfNotFound: true);
+        m_XRInputs_Pause = m_XRInputs.FindAction("Pause", throwIfNotFound: true);
+        m_XRInputs_Confirm = m_XRInputs.FindAction("Confirm", throwIfNotFound: true);
+        m_XRInputs_Rotate = m_XRInputs.FindAction("Rotate", throwIfNotFound: true);
+        m_XRInputs_ToogleDistances = m_XRInputs.FindAction("ToogleDistances", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -229,6 +407,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_BasicControls_Look;
     private readonly InputAction m_BasicControls_Push;
     private readonly InputAction m_BasicControls_Interact;
+    private readonly InputAction m_BasicControls_Pause;
+    private readonly InputAction m_BasicControls_Catalog;
     public struct BasicControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -237,6 +417,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_BasicControls_Look;
         public InputAction @Push => m_Wrapper.m_BasicControls_Push;
         public InputAction @Interact => m_Wrapper.m_BasicControls_Interact;
+        public InputAction @Pause => m_Wrapper.m_BasicControls_Pause;
+        public InputAction @Catalog => m_Wrapper.m_BasicControls_Catalog;
         public InputActionMap Get() { return m_Wrapper.m_BasicControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +440,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @Catalog.started += instance.OnCatalog;
+            @Catalog.performed += instance.OnCatalog;
+            @Catalog.canceled += instance.OnCatalog;
         }
 
         private void UnregisterCallbacks(IBasicControlsActions instance)
@@ -274,6 +462,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @Catalog.started -= instance.OnCatalog;
+            @Catalog.performed -= instance.OnCatalog;
+            @Catalog.canceled -= instance.OnCatalog;
         }
 
         public void RemoveCallbacks(IBasicControlsActions instance)
@@ -291,11 +485,108 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         }
     }
     public BasicControlsActions @BasicControls => new BasicControlsActions(this);
+
+    // XRInputs
+    private readonly InputActionMap m_XRInputs;
+    private List<IXRInputsActions> m_XRInputsActionsCallbackInterfaces = new List<IXRInputsActions>();
+    private readonly InputAction m_XRInputs_Catalog;
+    private readonly InputAction m_XRInputs_Cancel;
+    private readonly InputAction m_XRInputs_Pause;
+    private readonly InputAction m_XRInputs_Confirm;
+    private readonly InputAction m_XRInputs_Rotate;
+    private readonly InputAction m_XRInputs_ToogleDistances;
+    public struct XRInputsActions
+    {
+        private @PlayerInput m_Wrapper;
+        public XRInputsActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Catalog => m_Wrapper.m_XRInputs_Catalog;
+        public InputAction @Cancel => m_Wrapper.m_XRInputs_Cancel;
+        public InputAction @Pause => m_Wrapper.m_XRInputs_Pause;
+        public InputAction @Confirm => m_Wrapper.m_XRInputs_Confirm;
+        public InputAction @Rotate => m_Wrapper.m_XRInputs_Rotate;
+        public InputAction @ToogleDistances => m_Wrapper.m_XRInputs_ToogleDistances;
+        public InputActionMap Get() { return m_Wrapper.m_XRInputs; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(XRInputsActions set) { return set.Get(); }
+        public void AddCallbacks(IXRInputsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_XRInputsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_XRInputsActionsCallbackInterfaces.Add(instance);
+            @Catalog.started += instance.OnCatalog;
+            @Catalog.performed += instance.OnCatalog;
+            @Catalog.canceled += instance.OnCatalog;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @Confirm.started += instance.OnConfirm;
+            @Confirm.performed += instance.OnConfirm;
+            @Confirm.canceled += instance.OnConfirm;
+            @Rotate.started += instance.OnRotate;
+            @Rotate.performed += instance.OnRotate;
+            @Rotate.canceled += instance.OnRotate;
+            @ToogleDistances.started += instance.OnToogleDistances;
+            @ToogleDistances.performed += instance.OnToogleDistances;
+            @ToogleDistances.canceled += instance.OnToogleDistances;
+        }
+
+        private void UnregisterCallbacks(IXRInputsActions instance)
+        {
+            @Catalog.started -= instance.OnCatalog;
+            @Catalog.performed -= instance.OnCatalog;
+            @Catalog.canceled -= instance.OnCatalog;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @Confirm.started -= instance.OnConfirm;
+            @Confirm.performed -= instance.OnConfirm;
+            @Confirm.canceled -= instance.OnConfirm;
+            @Rotate.started -= instance.OnRotate;
+            @Rotate.performed -= instance.OnRotate;
+            @Rotate.canceled -= instance.OnRotate;
+            @ToogleDistances.started -= instance.OnToogleDistances;
+            @ToogleDistances.performed -= instance.OnToogleDistances;
+            @ToogleDistances.canceled -= instance.OnToogleDistances;
+        }
+
+        public void RemoveCallbacks(IXRInputsActions instance)
+        {
+            if (m_Wrapper.m_XRInputsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IXRInputsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_XRInputsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_XRInputsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public XRInputsActions @XRInputs => new XRInputsActions(this);
     public interface IBasicControlsActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnPush(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnCatalog(InputAction.CallbackContext context);
+    }
+    public interface IXRInputsActions
+    {
+        void OnCatalog(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
+        void OnToogleDistances(InputAction.CallbackContext context);
     }
 }

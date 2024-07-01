@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cama
+  - Escritorio
+  - Ropero
+  - MesaDeNoche
+  - Silla
+  - SofaDosPlazas
+  - MuebleTV
+  - Librero
+  - SofaUnaPlaza
+  - SofaTresPlazas
+  - Mesa
+  - Desk
   layers:
   - Default
   - TransparentFX
@@ -12,21 +24,21 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Roof
+  - ControlUI
+  - Wall
+  - BedSideTable
+  - Bed
+  - Closet
+  - Desk
+  - Chair
+  - Sofa
+  - Cabinet
+  - Shelf
+  - CenterTable
+  - LowCloset
+  - WindowIgnore
   - 
   - 
   - 
